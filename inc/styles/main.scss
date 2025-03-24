@@ -1701,49 +1701,60 @@ button:focus {border:none;
 }
 
 
-/**********************
- # Post
-***********************/
-.post-section .box-container {margin:auto;}
+/*
+ ***********
+  # Post
+ ***********
+*/
+.post-section  {
 
-.post-section .box-container .box {margin-bottom:3rem;}
+    .box-container {margin:auto;
 
-.post-section .box figure {width:90%;
-                           margin:auto;}
+        .box {margin-bottom:3rem;
 
-.post-section .box figure img {width:100%;
-                               height:26rem;
-                               object-fit:cover;}
+                figure {width:90%;
+                        margin:auto;
 
-.post-section .box figure .content {padding:2rem 0;}
+                    img {width:100%;
+                         height:26rem;
+                         object-fit:cover;}
 
-.post-section .box figure .content .post-header {display:flex; 
-                                                 justify-content:space-between;}
+                    .content {padding:2rem 0;
 
-.post-section .box figure .content .post-header .post-date {font-size:1.6rem;
-                                                            color:var(--gray9);}
+                        .post-header {display:flex; 
+                                      justify-content:space-between;
 
-.post-section .box figure .content .post-header .post-comments {font-size:1.6rem;
-                                                                color:var(--gray9);}
+                            .post-date {font-size:1.6rem;
+                                        color:var(--gray9);}
 
-.post-section .box figure .content .post-header #pi {margin-right:0.4rem;}
+                            .post-comments {font-size:1.6rem;
+                                            color:var(--gray9);}
 
-.post-section .box figure .content h3 {font-size:1.9rem;
-                                       font-weight:bold;
-                                       margin:1.5rem 0 1rem;}
+                            #pi {margin-right:0.4rem;}
+                        }
 
-.post-section .box figure .content p {color:var(--gray9);
-                                      font-size:1.5rem;
-                                       margin-bottom:2rem;}
+                        h3 {font-size:1.9rem;
+                            font-weight:bold;
+                            margin:1.5rem 0 1rem;}
 
-.post-section .box figure .content .post-button {color:var(--black);
-                                                 font-size:1.6rem;
-                                                 font-weight:bold;
-                                                 display:flex;
-                                                 align-items:center;}
+                        p {color:var(--gray9);
+                           font-size:1.5rem;
+                           margin-bottom:2rem;}
 
-.post-section .box figure .content .post-button .fa-angle-right {font-size:2rem;
-                                                                 margin-left:0.5rem;}
+                        .post-button {color:var(--black);
+                                      font-size:1.6rem;
+                                      font-weight:bold;
+                                      display:flex;
+                                      align-items:center;
+
+                            .fa-angle-right {font-size:2rem;
+                                             margin-left:0.5rem;}
+                        }
+                    }
+                }
+            }
+    }
+}
 
 /*************************
  # Newsletter-Section
@@ -2023,7 +2034,3 @@ footer .footer-widget .thumb .thumb-menu img {width:9.5rem;
       html {font-size:50%}
 
 }
-
-
-
-

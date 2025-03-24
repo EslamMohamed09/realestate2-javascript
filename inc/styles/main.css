@@ -2132,72 +2132,62 @@ button:focus {
     justify-content: space-between;
   }
 }
-/**********************
- # Post
-***********************/
+/*
+ ***********
+  # Post
+ ***********
+*/
 .post-section .box-container {
   margin: auto;
 }
-
 .post-section .box-container .box {
   margin-bottom: 3rem;
 }
-
-.post-section .box figure {
+.post-section .box-container .box figure {
   width: 90%;
   margin: auto;
 }
-
-.post-section .box figure img {
+.post-section .box-container .box figure img {
   width: 100%;
   height: 26rem;
   object-fit: cover;
 }
-
-.post-section .box figure .content {
+.post-section .box-container .box figure .content {
   padding: 2rem 0;
 }
-
-.post-section .box figure .content .post-header {
+.post-section .box-container .box figure .content .post-header {
   display: flex;
   justify-content: space-between;
 }
-
-.post-section .box figure .content .post-header .post-date {
+.post-section .box-container .box figure .content .post-header .post-date {
   font-size: 1.6rem;
   color: var(--gray9);
 }
-
-.post-section .box figure .content .post-header .post-comments {
+.post-section .box-container .box figure .content .post-header .post-comments {
   font-size: 1.6rem;
   color: var(--gray9);
 }
-
-.post-section .box figure .content .post-header #pi {
+.post-section .box-container .box figure .content .post-header #pi {
   margin-right: 0.4rem;
 }
-
-.post-section .box figure .content h3 {
+.post-section .box-container .box figure .content h3 {
   font-size: 1.9rem;
   font-weight: bold;
   margin: 1.5rem 0 1rem;
 }
-
-.post-section .box figure .content p {
+.post-section .box-container .box figure .content p {
   color: var(--gray9);
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
-
-.post-section .box figure .content .post-button {
+.post-section .box-container .box figure .content .post-button {
   color: var(--black);
   font-size: 1.6rem;
   font-weight: bold;
   display: flex;
   align-items: center;
 }
-
-.post-section .box figure .content .post-button .fa-angle-right {
+.post-section .box-container .box figure .content .post-button .fa-angle-right {
   font-size: 2rem;
   margin-left: 0.5rem;
 }
