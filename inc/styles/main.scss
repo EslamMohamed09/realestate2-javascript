@@ -1756,66 +1756,77 @@ button:focus {border:none;
     }
 }
 
-/*************************
+/*
+ *********************
  # Newsletter-Section
- *************************/
+ *********************
+*/
 .newsletter-section {min-height:25rem;
                      padding:0;
-                     background-color:var(--blue18);}
+                     background-color:var(--blue18);
 
-.newsletter-section .col-left {display:flex;
-                               justify-content:center;
-                               align-items:center;}
+    .col-left {display:flex;
+               justify-content:center;
+               align-items:center;
 
-.newsletter-section .col-left .content h2 {font-size:3rem;}
+        .content {
+            h2 {font-size:3rem;}
 
-.newsletter-section .col-left .content h2,
-.newsletter-section .col-left .content p {color:var(--blue9);
-                                          text-transform:uppercase;}
+            h2,
+            p {color:var(--blue9);
+               text-transform:uppercase;}
+        }
+    }
 
-.newsletter-section .col-right {background-color:var(--blue16);
-                                min-height:25rem;
-                                padding-top:10rem;}
+    .col-right {background-color:var(--blue16);
+                min-height:25rem;
+                padding-top:10rem;
 
-.newsletter-section .col-right .form-newsletter {width:80%;
-                                                 display:flex;
-                                                 margin:auto;}
+        .form-newsletter {width:80%;
+                          display:flex;
+                          margin:auto;
 
-.newsletter-section .col-right .form-newsletter .email-input {width:75%;
-                                                              height:5rem;
-                                                              border:none;
-                                                              outline:none;
-                                                              color:#fff;
-                                                              text-transform:lowercase;
-                                                              background-color:var(--blue18);
-                                                              border-radius:0;}
+            .email-input {width:75%;
+                          height:5rem;
+                          border:none;
+                          outline:none;
+                          color:#fff;
+                          text-transform:lowercase;
+                          background-color:var(--blue18);
+                          border-radius:0;}
 
-.newsletter-section .col-right .form-newsletter .email-input:focus {border:none;
-                                                                    outline:none !important;}  
+            .email-input:focus {border:none;
+                                outline:none !important;}  
 
-.newsletter-section .col-right .form-newsletter .btn-default {border:none;
-                                                              padding:0.5rem 1.5rem;
-                                                              display:flex;
-                                                              color:#fff;
-                                                              background-color:var(--blue10);
-                                                              font-size:1.5rem;
-                                                              text-align:center;
-                                                              justify-content:center;
-                                                              align-items:center;
-                                                              text-transform:uppercase;
-                                                              border-radius:0;
-                                                              transition:0.5s linear;}
+            .btn-default {border:none;
+                          padding:0.5rem 1.5rem;
+                          display:flex;
+                          color:#fff;
+                          background-color:var(--blue10);
+                          font-size:1.5rem;
+                          text-align:center;
+                          justify-content:center;
+                          align-items:center;
+                          text-transform:uppercase;
+                          border-radius:0;
+                          transition:0.5s linear;
 
-.newsletter-section .col-right .form-newsletter .btn-default:hover {border:none;
-                                                                    color:var(--blue9);
-                                                                    background-color:var(--blue18);}
+                &:hover {border:none;
+                         color:var(--blue9);
+                         background-color:var(--blue18);}
+            
 
-.newsletter-section .col-right .form-newsletter .btn-default .fa-envelope {background:none;
-                                                                           padding:0;
-                                                                           border-radius:0;
-                                                                           margin-left:4px;}
+                .fa-envelope {background:none;
+                                padding:0;
+                                border-radius:0;
+                                margin-left:4px;
 
-.newsletter-section .col-right .form-newsletter .btn-default:hover .fa-envelope {color:var(--blue9);}
+                    &:hover .fa-envelope {color:var(--blue9);}
+                }
+            }
+        }
+    }
+}
 
 /********************
  # Footer

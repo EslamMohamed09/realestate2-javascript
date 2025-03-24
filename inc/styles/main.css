@@ -2192,43 +2192,39 @@ button:focus {
   margin-left: 0.5rem;
 }
 
-/*************************
+/*
+ *********************
  # Newsletter-Section
- *************************/
+ *********************
+*/
 .newsletter-section {
   min-height: 25rem;
   padding: 0;
   background-color: var(--blue18);
 }
-
 .newsletter-section .col-left {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .newsletter-section .col-left .content h2 {
   font-size: 3rem;
 }
-
 .newsletter-section .col-left .content h2,
 .newsletter-section .col-left .content p {
   color: var(--blue9);
   text-transform: uppercase;
 }
-
 .newsletter-section .col-right {
   background-color: var(--blue16);
   min-height: 25rem;
   padding-top: 10rem;
 }
-
 .newsletter-section .col-right .form-newsletter {
   width: 80%;
   display: flex;
   margin: auto;
 }
-
 .newsletter-section .col-right .form-newsletter .email-input {
   width: 75%;
   height: 5rem;
@@ -2239,12 +2235,10 @@ button:focus {
   background-color: var(--blue18);
   border-radius: 0;
 }
-
 .newsletter-section .col-right .form-newsletter .email-input:focus {
   border: none;
   outline: none !important;
 }
-
 .newsletter-section .col-right .form-newsletter .btn-default {
   border: none;
   padding: 0.5rem 1.5rem;
@@ -2259,21 +2253,18 @@ button:focus {
   border-radius: 0;
   transition: 0.5s linear;
 }
-
 .newsletter-section .col-right .form-newsletter .btn-default:hover {
   border: none;
   color: var(--blue9);
   background-color: var(--blue18);
 }
-
 .newsletter-section .col-right .form-newsletter .btn-default .fa-envelope {
   background: none;
   padding: 0;
   border-radius: 0;
   margin-left: 4px;
 }
-
-.newsletter-section .col-right .form-newsletter .btn-default:hover .fa-envelope {
+.newsletter-section .col-right .form-newsletter .btn-default .fa-envelope:hover .fa-envelope {
   color: var(--blue9);
 }
 
