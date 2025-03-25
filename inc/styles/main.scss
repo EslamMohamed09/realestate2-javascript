@@ -1395,98 +1395,108 @@ button:focus {border:none;
 /*****************************
  # Interior Design For Floor
 ******************************/
-#interiorDesign .tabs_wrap {padding:20px;
-                            border-bottom:1px solid #ebedec;}
+#interiorDesign {
 
-#interiorDesign .tabs_wrap ul {display:-webkit-box;
-                               display:-ms-flexbox;
-                               display:flex;
-                               flex-wrap:wrap;
-                               -webkit-box-pack:center;
-                               -ms-flex-pack:center;
-                               justify-content:center;}
+      .tabs_wrap {padding:20px;
+                  border-bottom:1px solid #ebedec;
 
-#interiorDesign .tabs_wrap ul li {text-align:center;
-                                  background:#e9ecf1;
-                                  border-right:1px solid #c1c4c9;
-                                  padding:1.4rem 3rem 1.3rem;
-                                  font-size:1.6rem;
-                                  cursor:pointer;
-                                  -webkit-transition:all 0.2s ease;
-                                  -o-transition:all 0.2s ease;
-                                  transition:all 0.2s ease;}
+            ul {display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                flex-wrap:wrap;
+                -webkit-box-pack:center;
+                -ms-flex-pack:center;
+                justify-content:center;
 
-#interiorDesign .tabs_wrap ul li:first-child {border-top-left-radius:25px;
-	                                        border-bottom-left-radius:25px;}
+                  li {text-align:center;
+                      background:#e9ecf1;
+                      border-right:1px solid #c1c4c9;
+                      padding:1.4rem 3rem 1.3rem;
+                      font-size:1.6rem;
+                      cursor:pointer;
+                      -webkit-transition:all 0.2s ease;
+                      -o-transition:all 0.2s ease;
+                      transition:all 0.2s ease;
 
-#interiorDesign .tabs_wrap ul li:last-child {border-right:0px;
-                                             border-top-right-radius:25px;
-                                             border-bottom-right-radius:25px;}
+                        &:first-child {border-top-left-radius:25px;
+	                                 border-bottom-left-radius:25px;}
 
-#interiorDesign .tabs_wrap ul li:hover,
-#interiorDesign .tabs_wrap ul li.btn-active {background:var(--blue9);
-                                             color:#fff;}
+                        &:last-child {border-right:0px;
+                                      border-top-right-radius:25px;
+                                      border-bottom-right-radius:25px;}
 
-
-#interiorDesign .items-group {width:90%;
-                              display:block;
-                              padding:0;
-                              margin:7rem auto 0;}
-
-#interiorDesign .items-group .item_wrap {padding:0;
-                                         cursor:pointer;
-                                         display:none;}
+                        &:hover,
+                        &.btn-active {background:var(--blue9);
+                                      color:#fff;}
+                  }
+            }
+      }
 
 
-#interiorDesign .items-group .item_wrap .row,
-#interiorDesign .items-group .item_wrap .row .item_left,
-#interiorDesign .items-group .item_wrap .row .item_right {padding:0;
-                                                          margin:0;}
+      .items-group {width:90%;
+                    display:block;
+                    padding:0;
+                    margin:7rem auto 0;
+
+            .item_wrap {padding:0;
+                        cursor:pointer;
+                        display:none;
+
+                  .row,
+                  .row .item_left,
+                  .row .item_right {padding:0;
+                                         margin:0;}
 
 
-#interiorDesign .items-group .item_wrap .row .item_left {display:flex;}
+                  .item_left {display:flex;
 
-#interiorDesign .items-group .item_wrap .item_left .image {width:75%;
-                                                           height:45rem;
-                                                           margin:auto;}
+                        .image {width:75%;
+                                height:45rem;
+                                margin:auto;
 
-#interiorDesign .items-group .item_wrap .item_left .image img {width:100%;
-                                                               height:100%;
-                                                               object-fit:cover;}
+                              img {width:100%;
+                                   height:100%;
+                                   object-fit:cover;}
+                        }
+                  }
 
+                  .item_right {display:flex;
+                               align-items:center;
 
+                        .details {width:100%;
+	                            height:80%;
+                                  margin:auto;
+                                  padding:0;
 
-#interiorDesign .items-group .item_wrap .item_right {display:flex;
-                                                     align-items:center;}
+                              h3 {font-weight:bold;}
 
-#interiorDesign .items-group .item_wrap .item_right .details {width:100%;
-	                                                        height:80%;
-                                                              margin:auto;
-                                                              padding:0;}
+                              ul {padding:0;
+                                  margin:0;
+                                  margin-top:4rem;
 
-#interiorDesign .items-group .item_wrap .item_right .details h3 {font-weight:bold;}
+                                    li {display:flex;
+                                        justify-content:space-between;
+                                        align-items:center;
+                                        padding:0.5rem 1rem;
+                                        margin:1rem 0;
 
-#interiorDesign .items-group .item_wrap .item_right .details ul {padding:0;
-                                                                 margin:0;
-                                                                 margin-top:4rem;}
+                                          &:nth-child(2),
+                                          &:nth-child(4) {background-color:var(--lightblue5);}
 
-#interiorDesign .items-group .item_wrap .item_right .details ul li {display:flex;
-                                                                    justify-content:space-between;
-                                                                    align-items:center;
-                                                                    padding:0.5rem 1rem;
-                                                                    margin:1rem 0;}
+                                          span,
+                                          p {color:var(--gray10);
+                                             font-size:1.7rem;}
+                                    }
+                              }
+                        }
 
-#interiorDesign .items-group .item_wrap .item_right .details ul li:nth-child(2),
-#interiorDesign .items-group .item_wrap .item_right .details ul li:nth-child(4) {background-color:var(--lightblue5);}
+                        ul li span {font-weight:bold;}
 
-#interiorDesign .items-group .item_wrap .item_right .details ul li span,
-#interiorDesign .items-group .item_wrap .item_right .details ul li p {color:var(--gray10);
-                                                                      font-size:1.7rem;}
-
-#interiorDesign .items-group .item_wrap .item_right ul li span {font-weight:bold;}
-
-#interiorDesign .items-group .item_wrap .item_right .details ul li p {margin:auto 0;}
-
+                        .details ul li p {margin:auto 0;}
+                  }
+            }
+      }
+}
 
 @media (max-width:700px){
 
