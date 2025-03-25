@@ -2273,18 +2273,19 @@ button:focus {
 *********************/
 .main-footer {
   background: linear-gradient(180deg, rgb(55, 55, 163) 5%, var(--blue18) 90%);
+  /* Third col */
+  /*** UL  ***/
+  /*** custom html  ***/
+  /*** social links  ***/
 }
-
 .main-footer .main-footer-content {
   width: 100%;
   margin: auto;
   padding: 2rem;
 }
-
 .main-footer .footer-widget {
   padding: 2rem;
 }
-
 .main-footer .footer-widget .footer-title {
   font-size: 2rem;
   border-bottom: 1.9px solid #fff;
@@ -2293,7 +2294,6 @@ button:focus {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
-
 .main-footer .footer-widget p {
   color: var(--light1);
   font-size: 1.5rem;
@@ -2301,58 +2301,45 @@ button:focus {
   font-weight: bold;
   margin: 2rem 0 3rem;
 }
-
-/* Third col */
-footer .footer-widget .thumb {
+.main-footer footer .footer-widget .thumb {
   padding: 0;
   margin: 0;
   display: inline;
 }
-
-footer .footer-widget .thumb .thumb-menu {
+.main-footer footer .footer-widget .thumb .thumb-menu {
   padding: 0;
   margin: -1px;
 }
-
-footer .footer-widget .thumb .thumb-menu img {
+.main-footer footer .footer-widget .thumb .thumb-menu img {
   width: 9.5rem;
   height: 8rem;
   object-fit: cover;
   padding: 0;
   margin: -1px;
 }
-
-/*** UL  ***/
 .main-footer .footer-widget ul {
   padding: 0;
 }
-
 .main-footer .footer-widget ul li {
   margin-bottom: 1.5rem;
 }
-
 .main-footer .footer-widget ul li a {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--light1);
 }
-
 .main-footer .footer-widget ul li:hover {
   margin-left: 0.5rem;
 }
-
 .main-footer .footer-widget ul li:hover a {
   color: blueviolet;
 }
-
-/*** custom html  ***/
 .main-footer .footer-widget .co-details {
   margin-bottom: 1.4rem;
   display: flex;
   align-items: center;
   color: #999;
 }
-
 .main-footer .footer-widget .co-details #fi {
   margin-right: 0.8rem;
   padding: 0.6rem;
@@ -2363,7 +2350,6 @@ footer .footer-widget .thumb .thumb-menu img {
   background-color: rgb(255, 255, 255);
   box-shadow: var(--box-shadow5);
 }
-
 .main-footer .footer-widget .co-details a,
 .main-footer .footer-widget .co-details span {
   color: var(--light1);
@@ -2372,19 +2358,15 @@ footer .footer-widget .thumb .thumb-menu img {
   text-shadow: var(--box-shadow);
   letter-spacing: 0.1rem;
 }
-
 .main-footer .footer-widget .co-details span {
   letter-spacing: 0.3rem;
 }
-
-/*** social links  ***/
 .main-footer .footer-widget .wp-block-social-links {
   display: flex;
   padding: 0;
   margin-top: 3rem;
   gap: 0.5rem;
 }
-
 .main-footer .footer-widget .wp-block-social-links .wp-block-social-link {
   background-color: transparent;
   width: 2.5rem;
@@ -2396,24 +2378,20 @@ footer .footer-widget .thumb .thumb-menu img {
   border-radius: 50%;
   transition: all 0.3s linear;
 }
-
 .main-footer .footer-widget .wp-block-social-links .wp-block-social-link a {
   color: #fff;
   padding: 0;
   font-size: 1.6rem;
   transition: all 0.3s linear;
 }
-
 .main-footer .footer-widget .wp-block-social-links .wp-block-social-link:hover {
   transform: scale(1.09);
   margin: 0;
   background-color: #fff;
 }
-
 .main-footer .footer-widget .wp-block-social-links .wp-block-social-link:hover a {
   color: var(--blue18);
 }
-
 .main-footer .footer-bottom {
   display: flex;
   text-align: right;
@@ -2422,7 +2400,6 @@ footer .footer-widget .thumb .thumb-menu img {
   box-shadow: 0 0 3px rgb(134, 123, 196);
   padding: 1.5rem 0;
 }
-
 .main-footer .footer-bottom .copyright {
   width: 65%;
   padding-left: 1rem;
@@ -2431,25 +2408,21 @@ footer .footer-widget .thumb .thumb-menu img {
   font-weight: bold;
   color: var(--white);
 }
-
 .main-footer .footer-bottom .copyright span {
   color: var(--violet5);
   text-shadow: var(--box-shadow1);
 }
-
 .main-footer .footer-bottom .policy {
   width: 35%;
   display: flex;
   padding-right: 2rem;
   justify-content: flex-end;
 }
-
 .main-footer .footer-bottom .policy a {
   color: rgb(238, 22, 22);
   font-size: 1.1rem;
   font-weight: bold;
 }
-
 .main-footer .footer-bottom .policy a:last-child {
   margin-left: 2rem;
 }
