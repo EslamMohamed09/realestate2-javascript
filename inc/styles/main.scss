@@ -1110,171 +1110,184 @@ button:focus {border:none;
 
 
 
-/**********************
- # Builds & Lands
-***********************/
-#builds-sell {position:relative;}
+/*
+ *****************
+  # Builds & Lands
+ *****************
+*/
+#builds-sell {position:relative;
 
-#builds-sell .box-container {width:100%;}
+      .box-container {width:100%;
 
-#builds-sell .box-container .box {width:90%;
-                                      overflow:hidden;
-                                      display:block;
-                                      border-radius:0;
-                                      margin:1rem auto;
-                                      transition:all 0.7s linear;
-                                      box-shadow:var(--box-shadow1);}
-                 
+            .box {width:90%;
+                  overflow:hidden;
+                  display:block;
+                  border-radius:0;
+                  margin:1rem auto;
+                  transition:all 0.7s linear;
+                  box-shadow:var(--box-shadow1);
 
-#builds-sell .box-container .box .image {position:relative;
-                                         overflow:hidden;
-                                         border-radius:0;
-                                         height:30rem}
+                  .image {position:relative;
+                          overflow:hidden;
+                          border-radius:0;
+                          height:30rem;
 
-#builds-sell .box-container .box .image::before {content:"";
-                                                     position:absolute;
-                                                     inset:0;
-                                                     z-index:0;
-                                                     background:linear-gradient(to top, hsla(0, 0%, 0%, 0.95), transparent 30%);}
+                        &::before {content:"";
+                                   position:absolute;
+                                   inset:0;
+                                   z-index:0;
+                                   background:linear-gradient(to top, hsla(0, 0%, 0%, 0.95), transparent 30%);}
 
-#builds-sell .box-container .box .image img {width:100%;
-                                                 height:100%;
-                                                 object-fit:cover;
-                                                 transition:all 0.5s linear;}
+                        img {width:100%;
+                             height:100%;
+                             object-fit:cover;
+                             transition:all 0.5s linear;}
 
-#builds-sell .box-container .box .image span {position:absolute;
-                                                  left:1rem;
-                                                  bottom:1rem;
-                                                  padding:0;
-                                                  display:flex;
-                                                  align-items:center;
-                                                  justify-content:center;}
+                        span {position:absolute;
+                              left:1rem;
+                              bottom:1rem;
+                              padding:0;
+                              display:flex;
+                              align-items:center;
+                              justify-content:center;
 
-#builds-sell .box-container .box .image span .fa-map-marker-alt {font-size:1.7rem;
-                                                                     color:var(--white);
-                                                                     text-shadow:var(--box-shadow4);}
+                              .fa-map-marker-alt {font-size:1.7rem;
+                                                  color:var(--white);
+                                                  text-shadow:var(--box-shadow4);}
 
-#builds-sell .box-container .box .image span address {color:var(--white);
-                                                          font-size:1.6rem;
-                                                          font-weight:bold;
-                                                          margin:0;
-                                                          margin-left:1rem;
-                                                          text-shadow:var(--box-shadow4);}
+                              address {color:var(--white);
+                                       font-size:1.6rem;
+                                       font-weight:bold;
+                                       margin:0;
+                                       margin-left:1rem;
+                                       text-shadow:var(--box-shadow4);}
+                        }
 
-#builds-sell .box-container .box .image .figure-icons {position:absolute;
-                                                           right:1rem;
-                                                           bottom:0.1rem;
-                                                           display:flex;
-                                                           gap:1rem;}
+                        .figure-icons {position:absolute;
+                                       right:1rem;
+                                       bottom:0.1rem;
+                                       display:flex;
+                                       gap:1rem;
 
-#builds-sell .box-container .box .image .figure-icons p {color:var(--white);}
+                              p {color:var(--white);
 
-#builds-sell .box-container .box .image .figure-icons p #api {margin-right:0.5rem;}
+                                 #api {margin-right:0.5rem;}
+                              }
+                        }
+                  }
 
+                  .content,
+                  .box-footer {padding:2rem;}
 
-#builds-sell .box-container .box .content,
-#builds-sell .box-container .box .box-footer {padding:2rem;}
+                  .content {
+                        h3 {font-size:1.6rem;
+                            color:var(--black);
+                            font-weight:bold;
+                            margin-bottom:1.4rem;}
 
-#builds-sell .box-container .box .content h3 {font-size:1.6rem;
-                                              color:var(--black);
-                                              font-weight:bold;
-                                              margin-bottom:1.4rem;}
+                        p {font-size:1.7rem;
+                           color:var(--gray9);}
 
-#builds-sell .box-container .box .content p {font-size:1.7rem;
-                                             color:var(--gray9);}
+                        .details {display:flex;
+                                  gap:1rem;
+                                  margin-top:3rem;
 
-#builds-sell .box-container .box .content .details {display:flex;
-                                                    gap:1rem;
-                                                    margin-top:3rem;}
+                              p {padding:0.4rem 0.1rem;
+                                 flex:1;
+                                 background-color:var(--light);
+                                 font-size:1.6rem;
+                                 border-right:2.8px solid var(--blue14);
+                                 text-transform:capitalize;
+                                 display:flex;
+                                 align-items:center;
 
-#builds-sell .box-container .box .content .details p {padding:0.4rem 0.1rem;
-                                                      flex:1;
-                                                      background-color:var(--light);
-                                                      font-size:1.6rem;
-                                                      border-right:2.8px solid var(--blue14);
-                                                      text-transform:capitalize;
-                                                      display:flex;
-                                                      align-items:center;}
+                                    &:last-child {border-right:none;}
 
-#builds-sell .box-container .box .content .details p:last-child {border-right:none;}
+                                    #aps {margin-right:1rem;}
+                              }
+                        }
+                  }
 
-#builds-sell .box-container .box .content .details p #aps {margin-right:1rem;}
+                  .box-footer {display:flex;
+                               justify-content:space-between;
 
+                        .buttons {display:flex;
+                                  gap:1rem;
 
-#builds-sell .box-container .box .box-footer {display:flex;
-                                              justify-content:space-between;}
+                              button {border:none;
+                                      width:3.5rem;
+                                      height:3.3rem;
+                                      padding:1rem;
+                                      display:flex;
+                                      align-items:center;
+                                      justify-content:center;
+                                      border-radius:0.5rem;
+                                      background-color:var(--black);
+                                      transition:all 0.3s linear;
 
-#builds-sell .box-container .box .box-footer .buttons {display:flex;
-                                                           gap:1rem;}
+                                    #aps {font-size:1.5rem;
+                                          color:var(--white);}
 
-#builds-sell .box-container .box .box-footer button {border:none;
-                                                     width:3.5rem;
-                                                     height:3.3rem;
-                                                     padding:1rem;
-                                                     display:flex;
-                                                     align-items:center;
-                                                     justify-content:center;
-                                                     border-radius:0.5rem;
-                                                     background-color:var(--black);
-                                                     transition:all 0.3s linear;}
+                                    &:hover {background-color:var(--lightblue7);}
 
-#builds-sell .box-container .box .box-footer button #aps {font-size:1.5rem;
-                                                              color:var(--white);}
+                                    &:hover #aps {color:var(--black);}
+                              }
+                        }
 
-#builds-sell .box-container .box .box-footer button:hover {background-color:var(--lightblue7);}
+                        .price {font-size:1.7rem;
+                                max-width:15rem;
+                                padding:0.8rem 1rem 0.8rem 2.4rem;
+                                clip-path:polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+                                background:radial-gradient(var(--blue10), var(--blue18));
+                                color:var(--white);
+                                text-shadow:var(--box-shadow);}
+                  }
 
-#builds-sell .box-container .box .box-footer button:hover #aps {color:var(--black);}
+                  &:hover .image img {transform:scale(1.04);}
+            }
+      }
 
-#builds-sell .box-container .box .box-footer .price {font-size:1.7rem;
-                                                     max-width:15rem;
-                                                     padding:0.8rem 1rem 0.8rem 2.4rem;
-                                                     clip-path:polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
-                                                     background:radial-gradient(var(--blue10), var(--blue18));
-                                                     color:var(--white);
-                                                     text-shadow:var(--box-shadow);}
+      /* <--> */
+      .owl-nav #slidder-arrow-left {position:absolute;
+                                    top:100%;
+                                    left:3rem;
+                                    width:3.5rem;
+                                    height:3rem;
+                                    font-size:0.1rem;
+                                    color:var(--white);
+                                    background:radial-gradient(var(--blue14), var(--blue18));
+                                    box-shadow:var(--box-shadow1);
+                                    padding:0.5rem;
+                                    transition:all 0.7s ease-out;
+                                    border-radius:0.3rem;}
 
-#builds-sell .box-container .box:hover .image img {transform:scale(1.04);}
-
-/* <--> */
-#builds-sell .owl-nav #slidder-arrow-left {position:absolute;
-                                           top:100%;
-                                           left:3rem;
-                                           width:3.5rem;
-                                           height:3rem;
-                                           font-size:0.1rem;
-                                           color:var(--white);
-                                           background:radial-gradient(var(--blue14), var(--blue18));
-                                           box-shadow:var(--box-shadow1);
-                                           padding:0.5rem;
-                                           transition:all 0.7s ease-out;
-                                           border-radius:0.3rem;}
-
-#builds-sell .owl-nav #slidder-arrow-right {position:absolute;
-                                            top:100%;
-                                            right:3rem;
-                                            width:3.5rem;
-                                            height:3rem;
-                                            padding:0.5rem;
-                                            color:var(--white);
-                                            background:radial-gradient(var(--blue14), var(--blue18));
-                                            box-shadow:var(--box-shadow1);
-                                            transition:all 0.7s ease-out;
-                                            border-radius:0.3rem;}
+      .owl-nav #slidder-arrow-right {position:absolute;
+                                     top:100%;
+                                     right:3rem;
+                                     width:3.5rem;
+                                     height:3rem;
+                                     padding:0.5rem;
+                                     color:var(--white);
+                                     background:radial-gradient(var(--blue14), var(--blue18));
+                                     box-shadow:var(--box-shadow1);
+                                     transition:all 0.7s ease-out;
+                                     border-radius:0.3rem;}
 
 @media (max-width:1200px){
-      #builds-sell .box-container .box .image .figure-icons {top:1rem;}
+      .box-container .box .image .figure-icons {top:1rem;}
 }
 
 @media (max-width:400px){
-      #builds-sell .box-container .box .content .details {display:block;}
+      .box-container .box .content .details {display:block;}
+}
+
 }
 
 
-
 /*
- ************
+ ***********
   # Search
- ************
+ ***********
 */
 .search-section {
       #search-container {background-color:var(--white);
@@ -1343,6 +1356,7 @@ button:focus {border:none;
                   top:-4.1rem;}
       }
 }
+
 @media(max-width:768px){
       .search-section #search-container .input-group {margin-bottom:3rem;}
 }
