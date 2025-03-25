@@ -1342,55 +1342,62 @@ button:focus {border:none;
 
 }
 
-/**********************
- # Aminities
-***********************/
-#aminities .cards-container {width:90%;
-                             margin:auto;}
+/*
+ **************
+  # Aminities
+ **************
+*/
+#aminities {
+      .cards-container {width:90%;
+                        margin:auto;
 
-#aminities .cards-container .card-item {text-align:center;
-                                        min-height:25rem;
-                                        padding-top:2rem;
-                                        background-color:transparent;
-                                        align-items:center;
-                                        justify-content:center;
-                                        border-radius:0.3rem;
-                                        transition:all 0.3s linear;}
+            .card-item {text-align:center;
+                        min-height:25rem;
+                        padding-top:2rem;
+                        background-color:transparent;
+                        align-items:center;
+                        justify-content:center;
+                        border-radius:0.3rem;
+                        transition:all 0.3s linear;
 
-#aminities .cards-container .card-item .icon {width:3rem;
-                                              height:3rem;
-                                              border-radius:50%;
-                                              display:flex;
-                                              align-items:center;
-                                              justify-content:center;
-                                              margin:0 auto 3.2rem;
-                                              padding:2rem;
-                                              background:transparent;}
+                  .icon {width:3rem;
+                         height:3rem;
+                         border-radius:50%;
+                         display:flex;
+                         align-items:center;
+                         justify-content:center;
+                         margin:0 auto 3.2rem;
+                         padding:2rem;
+                         background:transparent;
 
-#aminities .cards-container .card-item .icon #ai {width:4rem;
-                                                  font-size:2.5rem;
-                                                  text-align:center;
-                                                  color:rgb(0, 68, 255);}
+                        #ai {width:4rem;
+                             font-size:2.5rem;
+                             text-align:center;
+                             color:rgb(0, 68, 255);}
+                  }
 
-#aminities .cards-container .card-item h3 {font-weight:bold;
-                                           margin:2rem 0;
-                                           color:var(--green22);}
+                  h3 {font-weight:bold;
+                      margin:2rem 0;
+                      color:var(--green22);}
 
-#aminities .cards-container .card-item .desc {width:85%;
-                                              display:flex;
-                                              padding:0;
-                                              margin:auto;
-                                              text-align:center;
-                                              justify-content:center;}
+                  .desc {width:85%;
+                              display:flex;
+                              padding:0;
+                              margin:auto;
+                              text-align:center;
+                              justify-content:center;
 
-#aminities .cards-container .card-item .desc p {color:var(--black);
-                                                text-align:justify;
-                                                font-size:1.5rem;
-                                                font-weight:normal;
-                                                color:var(--gray8);}
+                        p {color:var(--black);
+                           text-align:justify;
+                           font-size:1.5rem;
+                           font-weight:normal;
+                           color:var(--gray8);}
+                  }
 
-#aminities .cards-container .card-item:hover {box-shadow:var(--box-shadow2);}
-
+                  &:hover {box-shadow:var(--box-shadow2);}
+            }
+      }
+}
 
 /*****************************
  # Interior Design For Floor
@@ -1500,13 +1507,15 @@ button:focus {border:none;
 
 @media (max-width:700px){
 
-      #interiorDesign ul {gap:2rem;} 
+      #interiorDesign ul {gap:2rem;
 
-      #interiorDesign ul li {border-radius:1rem !important;
-                             border-right:0px !important;}
+            li {border-radius:1rem !important;
+                border-right:0px !important;
 
-      #interiorDesign ul li:first-child,
-      #interiorDesign ul li:last-child {border-radius:1rem !important;}
+                  &:first-child,
+                  &:last-child {border-radius:1rem !important;}
+            }
+      }
 }
 
 
