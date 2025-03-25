@@ -1271,75 +1271,80 @@ button:focus {border:none;
 
 
 
-/**********************
- # Search
-***********************/
-.search-section #search-container {background-color:var(--white);
-                                   width:90%;
-                                   margin:auto;
-                                   padding:2rem;
-                                   display:block;
-                                   position:relative;}
+/*
+ ************
+  # Search
+ ************
+*/
+.search-section {
+      #search-container {background-color:var(--white);
+                         width:90%;
+                         margin:auto;
+                         padding:2rem;
+                         display:block;
+                         position:relative;
 
-.search-section #search-container .location-form,
-.search-section #search-container .price-form,
-.search-section #search-container .checkbox-form {margin-bottom:4rem;}
+            .location-form,
+            .price-form,
+            .checkbox-form {margin-bottom:4rem;}
 
-.search-section #search-container .input-group {display:block;
-                                                margin-bottom:2rem;}
+            .input-group {display:block;
+                          margin-bottom:2rem;
 
-.search-section #search-container .input-group input[type="text"] {width:10rem;}
+                  input[type="text"] {width:10rem;}
 
-.search-section #search-container .input-group label {font-size:1.5rem;
-                                                      margin-bottom:1.5rem;
-                                                      font-weight:bold;
-                                                      display:block;}
+                  label {font-size:1.5rem;
+                         margin-bottom:1.5rem;
+                         font-weight:bold;
+                         display:block;}
 
-.search-section #search-container .input-group select {text-align:left;
-                                                       margin-bottom:1rem;
-                                                       font-size:1.6rem;
-                                                       padding:0.8rem;
-                                                       border-radius:0.3rem;
-                                                       cursor:pointer;
-                                                       color:var(--blue19);
-                                                       background:var(--lightblue7);
-                                                       border:1px solid var(--lightblue8);}
+                  select {text-align:left;
+                          margin-bottom:1rem;
+                          font-size:1.6rem;
+                          padding:0.8rem;
+                          border-radius:0.3rem;
+                          cursor:pointer;
+                          color:var(--blue19);
+                          background:var(--lightblue7);
+                          border:1px solid var(--lightblue8);
 
-.search-section #search-container .input-group select option {padding:2rem;
-                                                              font-size:1.6rem;}
+                        option {padding:2rem;
+                                font-size:1.6rem;}
+                  }
 
-.search-section #search-container .input-group .no-range {display:flex;
-                                                          gap:2rem;}
+                  .no-range {display:flex;
+                             gap:2rem;
 
-.search-section #search-container .input-group .no-range .from,
-.search-section #search-container .input-group .no-range .to {display:flex;
-                                                              align-items:center;}
+                        .from,
+                        .to {display:flex;
+                             align-items:center;}
 
-.search-section #search-container .input-group .no-range span {font-size:1.4rem;
-                                                               margin-right:0.7rem;}
+                        span {font-size:1.4rem;
+                              margin-right:0.7rem;}
+                  }
+            }
 
-
-.search-section #search-container .location-form .input-city {width:17rem !important;}
+            .location-form .input-city {width:17rem !important;}
                                                               
-.search-section #search-container .price-form {gap:2rem;}
+            .price-form {gap:2rem;}
 
-.search-section #search-container .checkbox-form {gap:2rem;}
+            .checkbox-form {gap:2rem;
 
-.search-section #search-container .checkbox-form .input-group {display:flex;
-                                                               flex:1 1 15rem;
-                                                               align-items:center;}
+                  .input-group {display:flex;
+                                flex:1 1 15rem;
+                                align-items:center;}
 
-.search-section #search-container .checkbox-form .input-group label {margin-left:1rem;
-                                                                     margin-bottom:0;}
+                  .input-group label {margin-left:1rem;
+                                      margin-bottom:0;}
+            }
 
-
-.search-section #search-container .btn {position:absolute;
-                                        right:0;
-                                        top:-4.1rem;}
-
+            .btn {position:absolute;
+                  right:0;
+                  top:-4.1rem;}
+      }
+}
 @media(max-width:768px){
       .search-section #search-container .input-group {margin-bottom:3rem;}
-
 }
 
 /*
@@ -1399,9 +1404,11 @@ button:focus {border:none;
       }
 }
 
-/*****************************
- # Interior Design For Floor
-******************************/
+/*
+  ****************************
+   # Interior Design For Floor
+  *****************************
+*/
 #interiorDesign {
 
       .tabs_wrap {padding:20px;
