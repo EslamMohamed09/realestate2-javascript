@@ -983,9 +983,10 @@ button:focus {border:none;
   # Apartments-Sell
  *******************
 */
-#apartments-sell {position:relative;
+.sell-apartments-section {position:relative;
 
-      .box-container {width:100%;
+      .slider-wrapper {width:100%;
+                       gap:1.5rem;
 
             .box {width:90%;
                   overflow:hidden;
@@ -1116,32 +1117,46 @@ button:focus {border:none;
       }
 
       /* <--> */
-      .owl-nav {
-            #slidder-arrow-left {position:absolute;
-                                 top:100%;
-                                 left:3rem;
-                                 width:3.5rem;
-                                 height:3rem;
-                                 font-size:0.1rem;
-                                 color:var(--white);
-                                 background:radial-gradient(var(--blue14), var(--blue18));
-                                 box-shadow:var(--box-shadow1);
-                                 padding:0.5rem;
-                                 transition:all 0.5s linear;
-                                 border-radius:0.3rem;}
+      .arrows {
+            .arrow-left {position:absolute;
+                         top:100%;
+                         left:3rem;
+                         width:3.5rem;
+                         height:3rem;
+                         font-size:0.1rem;
+                         color:var(--white);
+                         background:radial-gradient(var(--blue14), var(--blue18));
+                         box-shadow:var(--box-shadow1);
+                         padding:0.5rem;
+                         transition:all 0.5s linear;
+                         border-radius:0.3rem;}
 
-            #slidder-arrow-right {position:absolute;
-                                  top:100%;
-                                  right:3rem;
-                                  width:3.5rem;
-                                  height:3rem;
-                                  padding:0.5rem;
-                                  color:var(--white);
-                                  background:radial-gradient(var(--blue14), var(--blue18));
-                                  box-shadow:var(--box-shadow1);
-                                  transition:all 0.5s linear;
-                                  border-radius:0.3rem;}
+            .arrow-right {position:absolute;
+                          top:100%;
+                          right:3rem;
+                          width:3.5rem;
+                          height:3rem;
+                          padding:0.5rem;
+                          color:var(--white);
+                          background:radial-gradient(var(--blue14), var(--blue18));
+                          box-shadow:var(--box-shadow1);
+                          transition:all 0.5s linear;
+                          border-radius:0.3rem;}
       }
+
+      #sliderdots {margin-top:1rem;
+
+            .dot {display:inline-block;
+                  width:10px;
+                  height:10px;
+                  margin:5px;
+                  background-color:#ccc;
+                  border-radius:50%;
+                  cursor:pointer;}
+
+            .dot.active {background-color:#333;}
+
+     }
 
       @media (max-width:1200px){
             .box-container .box .image .figure-icons {top:1rem;}
