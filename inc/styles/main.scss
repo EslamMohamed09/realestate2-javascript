@@ -903,76 +903,80 @@ button:focus {border:none;
 }
 
 
-/********************
- # services
-*********************/
-.services-section {background-color:var(--light);}
+/*
+ *************
+  # services
+ *************
+*/
+.services-section {background-color:var(--light);
 
-.services-section .box-container {width:90%;
-                                  display:flex;
-                                  flex-wrap:wrap;
-                                  gap:3rem;
-                                  margin:auto;}
+      .box-container {width:90%;
+                      display:flex;
+                      flex-wrap:wrap;
+                      gap:3rem;
+                      margin:auto;
 
-.services-section .box-container .box {flex:1 1 20rem;}
+            .box {flex:1 1 20rem;}
 
-.services-section .box-container figure {text-align:center;
-                                         min-height:35rem;
-                                         padding-top:2rem;
-                                         background-color:var(--lightblue5);
-                                         box-shadow:var(--box-shadow2);
-                                         display:block;
-                                         align-items:center;
-                                         justify-content:center;
-                                         border-radius:0.3rem;
-                                         position:relative;}
+            figure {text-align:center;
+                    min-height:35rem;
+                    padding-top:2rem;
+                    background-color:var(--lightblue5);
+                    box-shadow:var(--box-shadow2);
+                    display:block;
+                    align-items:center;
+                    justify-content:center;
+                    border-radius:0.3rem;
+                    position:relative;
 
-.services-section .box-container figure .image-icon {width:15rem;
-                                                     height:15rem;
-                                                     border-radius:50%;box-shadow:var(--box-shadow1);
-                                                     background:radial-gradient(var(--blue9), var(--blue16));
-                                                     margin:0 auto 3.2rem;
-                                                     padding:3rem;}
+                  .image-icon {width:15rem;
+                               height:15rem;
+                               border-radius:50%;box-shadow:var(--box-shadow1);
+                               background:radial-gradient(var(--blue9), var(--blue16));
+                               margin:0 auto 3.2rem;
+                               padding:3rem;}
 
-.services-section .box-container figure .image-icon img {width:90%;
-                                                         text-align:center;}
+                  .image-icon img {width:90%;
+                                   text-align:center;}
 
-.services-section .box-container figure h3 {font-weight:bold;
-                                            font-size:2rem;
-                                            margin:2rem 0;
-                                            color:var(--gray10);}
+                  h3 {font-weight:bold;
+                      font-size:2rem;
+                      margin:2rem 0;
+                      color:var(--gray10);}
 
-.services-section .box-container figcaption {width:85%;
-                                             display:flex;
-                                             padding:0;
-                                             margin:auto;
-                                             text-align:center;
-                                             justify-content:center;}
+                  figcaption {width:85%;
+                              display:flex;
+                              padding:0;
+                              margin:auto;
+                              text-align:center;
+                              justify-content:center;}
 
-.services-section .box-container figure p {color:var(--black);
-                                           text-align:justify;
-                                           font-size:1.5rem;
-                                           font-weight:bold;
-                                           color:var(--gray8);}
+                  p {color:var(--black);
+                     text-align:justify;
+                     font-size:1.5rem;
+                     font-weight:bold;
+                     color:var(--gray8);}
 
-.services-section .box-container figure::after {position:absolute;
-                                                content:"";
-                                                left:0;
-                                                bottom:0;
-                                                width:0;
-                                                height:0.3rem;
-                                                background-color:rgb(0, 204, 255);
-                                                transition:all 0.5s linear;}
+                  &::after {position:absolute;
+                            content:"";
+                            left:0;
+                            bottom:0;
+                            width:0;
+                            height:0.3rem;
+                            background-color:rgb(0, 204, 255);
+                            transition:all 0.5s linear;}
 
-.services-section .box-container figure:hover::after {width:100%;}
+                  &:hover::after {width:100%;}
+            }
+      }
 
-@media (max-width:768px){
-      .services-section .box-container {width:80%;
-                                        flex-direction:column;}
-
-      .services-section .box-container .box {flex:1 1 5rem;}
+      @media (max-width:768px){
+            .box-container {width:80%;
+                            flex-direction:column;
+                        .box {flex:1 1 5rem;}
+            }
+      }
 }
-
 
 /**********************
  # Apartments-Sell
