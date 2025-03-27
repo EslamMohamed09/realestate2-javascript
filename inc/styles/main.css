@@ -25,6 +25,7 @@
   --gray10:#333;
   --gray11:#222;
   --gray12:#111;
+  --lightgray:rgba(230, 229, 229, 0.082);
   --violet:#ebddf1;
   --violet2:#dfc5ec;
   --violet3:#d8b3eb;
@@ -36,9 +37,6 @@
   --violet9:#70199b;
   --violet10:#4d106b;
   --violet11:#42106b;
-  --violet12:#3c0f61;
-  --violet13:#2d0d47;
-  --violet14:#1b011f;
   --transparent-violet:rgba(99, 49, 192, 0.137);
   --yellow:#fafaf6;
   --yellow1:#f8f8e4;
@@ -92,9 +90,9 @@
   --green:#edfcf1;
   --green1:#dbf7e3;
   --green2:#bdf5ce;
-  --green3:#aef0c244;
-  --green4:#aef0c293;
-  --green5:#aef0c2cb;
+  --green3:#d1f7dc;
+  --green4:#c0f3cf;
+  --green5:#aef0c2;
   --green6:#658f72;
   --green7:#7ef8a3;
   --green8:#60d480;
@@ -113,13 +111,32 @@
   --green21:#053a15;
   --green22:#063113;
   --green23:#05270f;
-  --olive:#05afaf;
-  --olive2:#039292;
-  --olive2:#027a7a;
-  --olive3:#026b6b;
-  --olive4:#015050;
-  --olive5:#004242;
-  --olive6:#013535;
+  --green24:#031a0a;
+  --olive:#eff7f7;
+  --olive1:#e5f5f5;
+  --olive2:#def3f3;
+  --olive3:#dde2e2;
+  --olive4:#cdd1d1;
+  --olive5:#b1f7f7;
+  --olive6:#9ff8f8;
+  --olive7:#87f5f5;
+  --olive8:#85fcfc;
+  --olive9:#5ff7f7;
+  --olive10:#44f7f7;
+  --olive11:#04f7f7;
+  --olive12:#02a8a8;
+  --olive13:#028d8d;
+  --olive14:#3e8181;
+  --olive15:#026b6b;
+  --olive16:#015050;
+  --olive17:#004242;
+  --olive18:#013535;
+  --olive19:#b9c2c2;
+  --olive20:#9ab1b1;
+  --olive21:#7b9494;
+  --olive22:#616666;
+  --olive23:#536e6e;
+  --olive24:#4a7474;
   --transparent-olive:#0aa0a01e;
   --milky:#eef2f7;
   --milky2:#e8ebf0;
@@ -127,8 +144,6 @@
   --milky4:rgb(208, 241, 253);
   --milky5:rgb(183, 233, 253);
   --milky6:#acbfd4;
-  --milky7:#6a7a8d;
-  --milky8:#424b64;
   --aqua:#f1f8f8;
   --aqua1:#eafafa;
   --aqua2:#e3f1f1;
@@ -145,21 +160,19 @@
   --aqua13:#00c7c7;
   --aqua14:#03a7a7;
   --lightblue:#f0f4f7;
-  --lightblue1:#eaeff1;
-  --lightblue2:#e5edf0;
-  --lightblue3:#dee6e9;
-  --lightblue4:#d7dfe2;
-  --lightblue5:#d5dfe2;
-  --lightblue6:#d0e0e6;
-  --lightblue7:#c9d3df;
-  --lightblue8:#acbfd4;
-  --lightblue9:#c9e4ee;
-  --lightblue10:#c2e2ee;
-  --lightblue11:#bfe4f1;
-  --lightblue12:#b7e1f0;
-  --lightblue13:#afdff0;
-  --lightblue14:#a7dcf0;
-  --lightblue15:#a7dcf0;
+  --lightblue1:#eaebf1;
+  --lightblue2:#e5e7f0;
+  --lightblue3:#dee1e9;
+  --lightblue4:#d7d9e2;
+  --lightblue5:#d5d6e2;
+  --lightblue6:#d0d4e6;
+  --lightblue7:#c9d3ee;
+  --lightblue8:#c2caee;
+  --lightblue9:#bfc8f1;
+  --lightblue10:#b7c4f0;
+  --lightblue11:#afc6f0;
+  --lightblue12:#a7b2f0;
+  --lightblue13:#a7baf0;
   --blue:#60c8fc;
   --blue1:#00b7ff;
   --blue2:#38baf9;
@@ -179,12 +192,11 @@
   --blue16:#0c3e77;
   --blue17:#052aa1;
   --blue18:#162753;
-  --blue19:#0e1935;
-  --blue20:#191e2e;
+  --blue19:#2b3a5f;
   --navyblue:#8B8E98;
-  --navyblue2:#343a40;
-  --navyblue3:#2b3a5f;
-  --navyblue4:#2a2e35;
+  --navyblue2:#6a7a8d;
+  --navyblue3:#424b64;
+  --navyblue4:#343a40;
   --navyblue5:#2a2e35;
   --navyblue6:#202733;
   --navyblue7:#32303e;
@@ -247,23 +259,24 @@
   --box-shadow4:0 0 3px #eee;
   --box-shadow5:0 0 6px rgba(0, 0, 0, 0.13);
   --box-shadow6:0 0 3px rgba(2, 2, 2, 0.199);
-  --box-shadow7:0 0 6px rgba(2, 2, 2, 0.199);
-  --box-shadow8:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+  --box-shadow7:0 0 3px rgba(27, 27, 27, 0.116);
+  --box-shadow8:0 0 6px rgba(2, 2, 2, 0.199);
+  --box-shadow9:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
   --orange-box-shadow:0 1px 0.9rem #fd9103c5;
   --red-box-shadow:0 0.1rem 1rem #e9290779;
   --aqua-box-shadow:0 0 6px #00c7c7;
-  --blue-box-shadow:0 0 6px #3356ca48;
-  --blue2-box-shadow:0 0 6px #3356ca65;
+  --blue-box-shadow:0 0 3px #3356ca48;
+  --blue2-box-shadow:0 0 3px #3356ca65;
   --blue3-box-shadow:0 4px 6px rgba(39, 94, 254, 0.28);
   --blue4-box-shadow:0 16px 12px rgba(39, 94, 254, 0.28);
   --blue5-box-shadow:0 0 6px #3356ca;
-  --blue6-box-shadow:0 0.5rem 2rem rgba(55, 0, 255, 0.7);
   --green-box-shadow:0 0 6px #09995d;
   --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
-  --text-shadow:0 0 5px rgb(5, 5, 5);
-  --text-shadow2:0 0 4px #fff;
-  --text-shadow3:0 0 4px #00ffff9f;
-  --text-shadow4:0 0 4px rgb(6, 150, 42);
+  --text-shadow:0 0 2px rgba(5, 5, 5, 0.315);
+  --text-shadow2:0 0 4px rgba(5, 5, 5, 0.692);
+  --text-shadow3:0 0 4px #fff;
+  --text-shadow4:0 0 4px #00ffff9f;
+  --text-shadow5:0 0 4px rgb(6, 150, 42);
 }
 
 ::-webkit-scrollbar {
@@ -286,7 +299,7 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: var(--light);
+  background-color: var(--background-color);
 }
 
 section {
@@ -304,7 +317,6 @@ section {
   margin-bottom: 5rem;
   width: 100%;
 }
-
 .section-heading .sec-title {
   padding: 1rem 2.7rem;
   font-size: 2.5rem;
@@ -316,7 +328,6 @@ section {
   text-shadow: 0 0rem 0.5rem rgba(0, 0, 0, 0.3);
   position: relative;
 }
-
 .section-heading .sec-title span {
   color: var(--blue10);
 }
@@ -382,7 +393,6 @@ select:focus {
   z-index: 0;
   transition: all 0.5s linear;
 }
-
 .btn::before {
   content: "";
   position: absolute;
@@ -395,13 +405,11 @@ select:focus {
   clip-path: circle(0% at 0% 0%);
   transition: all 0.5s linear;
 }
-
 .btn:hover {
   color: var(--white);
   text-shadow: var(--text-shadow2);
   border: 1px solid var(--blue9);
 }
-
 .btn:hover::before {
   clip-path: circle(100%);
 }
@@ -889,7 +897,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border: 6px solid var(--white);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow6);
   border-radius: 1.2rem;
   object-fit: cover;
 }
@@ -902,7 +910,7 @@ button:focus {
   width: 35%;
   height: 20%;
   border: 3px solid var(--white);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow6);
   border-radius: 0.7rem;
 }
 .about-section .row .col-right {
@@ -1060,16 +1068,20 @@ button:focus {
 .sell-apartments-section .section-container .slider-wrapper {
   width: 100%;
   margin: 0 auto;
-  gap: 1.5rem;
+  padding: 0;
+  gap: 2rem;
+  background: transparent;
+  z-index: 5;
 }
 .sell-apartments-section .section-container .slider-wrapper .box {
-  width: 90%;
+  flex: 1 1 20rem;
   overflow: hidden;
   display: block;
   border-radius: 0;
   margin: 1rem auto;
   transition: all 0.7s linear;
-  box-shadow: var(--box-shadow1);
+  box-shadow: var(--box-shadow7);
+  z-index: 6;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .image {
   position: relative;
@@ -1127,7 +1139,7 @@ button:focus {
 }
 .sell-apartments-section .section-container .slider-wrapper .box .content,
 .sell-apartments-section .section-container .slider-wrapper .box .box-footer {
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .content h3 {
   font-size: 1.6rem;
@@ -1142,17 +1154,17 @@ button:focus {
 .sell-apartments-section .section-container .slider-wrapper .box .content .details {
   display: flex;
   gap: 1rem;
-  margin-top: 3rem;
+  margin: 1rem 0;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .content .details p {
   padding: 0.4rem 0.1rem;
   flex: 1;
-  background-color: var(--light);
-  font-size: 1.6rem;
-  border-right: 2.8px solid var(--blue14);
+  font-size: 1.4rem;
   text-transform: capitalize;
   display: flex;
   align-items: center;
+  background-color: var(--light);
+  border-right: 2.8px solid var(--blue14);
 }
 .sell-apartments-section .section-container .slider-wrapper .box .content .details p:last-child {
   border-right: none;
@@ -1601,9 +1613,9 @@ button:focus {
 }
 
 /*
-  ****************************
-   # Interior Design For Floor
-  *****************************
+ ****************************
+  # Interior Design For Floor
+ ****************************
 */
 #interiorDesign .tabs_wrap {
   padding: 20px;
@@ -1725,7 +1737,7 @@ button:focus {
   }
 }
 /*
- ****************** 
+ ******************
    # Property-list
  ******************
 */
@@ -2277,11 +2289,13 @@ footer .footer-bottom .policy a:last-child {
   font-size: 2rem;
   color: var(--white);
   background: radial-gradient(var(--blue10), var(--blue19));
-  box-shadow: var(--box-shadow4);
+  box-shadow: var(--box-shadow7);
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
+  border: 0;
+  outline: 0;
   z-index: 1000;
   opacity: 0;
   transition: all 0.3s linear;
