@@ -303,7 +303,7 @@ body {
 }
 
 section {
-  padding: 1rem 7%;
+  padding: 2rem 7% 3rem;
   margin-bottom: 2rem;
 }
 
@@ -314,7 +314,7 @@ section {
 /*==================== Section Heading ====================*/
 .section-heading {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   width: 100%;
 }
 .section-heading .sec-title {
@@ -328,28 +328,24 @@ section {
   text-shadow: 0 0rem 0.5rem rgba(0, 0, 0, 0.3);
   position: relative;
 }
-.section-heading .sec-title span {
-  color: var(--blue10);
-}
-
-.sec-title::before,
-.sec-title::after {
+.section-heading .sec-title::before, .section-heading .sec-title::after {
   content: "";
   position: absolute;
   width: 9rem;
   height: 2.5px;
 }
-
-.sec-title::before {
+.section-heading .sec-title::before {
   top: 2.4rem;
   left: -8.5rem;
   background-image: linear-gradient(60deg, var(--blue10) 0%, var(--blue18) 100%);
 }
-
-.sec-title::after {
+.section-heading .sec-title::after {
   top: 2.4rem;
   right: -8.5rem;
   background-image: linear-gradient(60deg, var(--blue18) 0%, var(--blue10) 100%);
+}
+.section-heading .sec-title span {
+  color: var(--blue10);
 }
 
 p {
@@ -371,7 +367,6 @@ input {
   border: 1px solid var(--lightblue8);
   box-shadow: var(--box-shadow2);
 }
-
 input:focus {
   outline: none;
 }
@@ -1071,7 +1066,6 @@ button:focus {
   padding: 0;
   gap: 2rem;
   background: transparent;
-  z-index: 5;
 }
 .sell-apartments-section .section-container .slider-wrapper .box {
   flex: 1 1 20rem;
@@ -1081,7 +1075,6 @@ button:focus {
   margin: 1rem auto;
   transition: all 0.7s linear;
   box-shadow: var(--box-shadow7);
-  z-index: 6;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .image {
   position: relative;
@@ -1095,34 +1088,35 @@ button:focus {
   inset: 0;
   z-index: 0;
   background: linear-gradient(to top, hsla(0, 0%, 0%, 0.95), transparent 30%);
+  transition: all 0.6s linear;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.5s linear;
+  transition: all 0.6s ease-in-out;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .image span {
   position: absolute;
-  left: 1rem;
+  left: 0.8rem;
   bottom: 1rem;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .image span .fa-map-marker-alt {
-  font-size: 1.7rem;
+.sell-apartments-section .section-container .slider-wrapper .box .image span svg, .sell-apartments-section .section-container .slider-wrapper .box .image span i {
+  font-size: 1.3rem;
   color: var(--white);
   text-shadow: var(--box-shadow4);
 }
 .sell-apartments-section .section-container .slider-wrapper .box .image span address {
   color: var(--white);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin: 0;
-  margin-left: 1rem;
-  text-shadow: var(--box-shadow4);
+  width: 95%;
+  margin-left: 0.3rem;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .image .figure-icons {
   position: absolute;
@@ -1133,13 +1127,13 @@ button:focus {
 }
 .sell-apartments-section .section-container .slider-wrapper .box .image .figure-icons p {
   color: var(--white);
+  font-size: 1.4rem;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .image .figure-icons p #api {
-  margin-right: 0.5rem;
+.sell-apartments-section .section-container .slider-wrapper .box .image .figure-icons p svg, .sell-apartments-section .section-container .slider-wrapper .box .image .figure-icons p i {
+  margin-right: 0.3rem;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .content,
-.sell-apartments-section .section-container .slider-wrapper .box .box-footer {
-  padding: 2rem 1rem;
+.sell-apartments-section .section-container .slider-wrapper .box .content {
+  padding: 1rem;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .content h3 {
   font-size: 1.6rem;
@@ -1151,12 +1145,12 @@ button:focus {
   font-size: 1.7rem;
   color: var(--gray9);
 }
-.sell-apartments-section .section-container .slider-wrapper .box .content .details {
+.sell-apartments-section .section-container .slider-wrapper .box .content .specifications {
   display: flex;
   gap: 1rem;
   margin: 1rem 0;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .content .details p {
+.sell-apartments-section .section-container .slider-wrapper .box .content .specifications p {
   padding: 0.4rem 0.1rem;
   flex: 1;
   font-size: 1.4rem;
@@ -1166,21 +1160,22 @@ button:focus {
   background-color: var(--light);
   border-right: 2.8px solid var(--blue14);
 }
-.sell-apartments-section .section-container .slider-wrapper .box .content .details p:last-child {
+.sell-apartments-section .section-container .slider-wrapper .box .content .specifications p:last-child {
   border-right: none;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .content .details p #aps {
+.sell-apartments-section .section-container .slider-wrapper .box .content .specifications p svg, .sell-apartments-section .section-container .slider-wrapper .box .content .specifications p i {
   margin-right: 1rem;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .box-footer {
+.sell-apartments-section .section-container .slider-wrapper .box .content .box-footer {
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .box-footer .buttons {
+.sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons {
   display: flex;
   gap: 1rem;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .box-footer button {
+.sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button {
   border: none;
   width: 3.5rem;
   height: 3.3rem;
@@ -1192,27 +1187,26 @@ button:focus {
   background-color: var(--black);
   transition: all 0.3s linear;
 }
-.sell-apartments-section .section-container .slider-wrapper .box .box-footer button #aps {
+.sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button svg, .sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button i {
   font-size: 1.5rem;
   color: var(--white);
 }
-.sell-apartments-section .section-container .slider-wrapper .box .box-footer button:hover {
+.sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button:hover {
   background-color: var(--lightblue7);
 }
-.sell-apartments-section .section-container .slider-wrapper .box .box-footer button:hover #aps {
+.sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button:hover svg, .sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button i {
   color: var(--black);
 }
-.sell-apartments-section .section-container .slider-wrapper .box .box-footer .price {
+.sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .price {
   font-size: 1.7rem;
   max-width: 15rem;
   padding: 0.8rem 1rem 0.8rem 2.4rem;
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
   background: radial-gradient(var(--blue10), var(--blue18));
   color: var(--white);
-  text-shadow: var(--box-shadow);
 }
 .sell-apartments-section .section-container .slider-wrapper .box:hover .image img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 .sell-apartments-section .section-container .arrows {
   width: 100%;

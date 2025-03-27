@@ -320,7 +320,7 @@ html {font-size:53%}
 body {overflow-x:hidden;
       background-color:var(--background-color);}
 
-section {padding:1rem 7%;
+section {padding:2rem 7% 3rem;
          margin-bottom:2rem;}
 
 /* @media (min-width:768px){
@@ -331,7 +331,7 @@ section {padding:1rem 7%;
 
 /*==================== Section Heading ====================*/
 .section-heading {text-align:center;
-                  margin-bottom:5rem;
+                  margin-bottom:2rem;
                   width:100%;
 
       .sec-title {padding:1rem 2.7rem;
@@ -344,23 +344,23 @@ section {padding:1rem 7%;
                   text-shadow:0 0rem 0.5rem rgba(0, 0, 0, 0.3);
                   position:relative;
 
+            &::before,
+            &::after  {content:'';
+                       position:absolute;
+                       width:9rem;
+                       height:2.5px;}
+
+            &::before {top:2.4rem;
+                       left:-8.5rem;
+                       background-image:linear-gradient(60deg, var(--blue10) 0%, var(--blue18) 100%);}
+
+            &::after {top:2.4rem;
+                      right:-8.5rem;
+                      background-image:linear-gradient(60deg, var(--blue18) 0%, var(--blue10) 100%);}
+            
             span {color:var(--blue10);}
       }
 }
-
-.sec-title::before,
-.sec-title::after  {content:'';
-                    position:absolute;
-                    width:9rem;
-                    height:2.5px;}
-
-.sec-title::before {top:2.4rem;
-                    left:-8.5rem;
-                    background-image:linear-gradient(60deg, var(--blue10) 0%, var(--blue18) 100%);}
-
-.sec-title::after {top:2.4rem;
-                   right:-8.5rem;
-                   background-image:linear-gradient(60deg, var(--blue18) 0%, var(--blue10) 100%);}
 
 
 p {font-size:1.7rem;
@@ -375,9 +375,11 @@ input {padding:0.5rem 1rem;
        text-transform:none;
        background-color:var(--lightblue7);
        border:1px solid var(--lightblue8);
-       box-shadow:var(--box-shadow2);}
+       box-shadow:var(--box-shadow2);
 
-input:focus {outline:none;}
+      &:focus {outline:none;}
+}
+
 
 select:focus {outline:none;}       
 
@@ -1010,7 +1012,7 @@ button:focus {border:none;
                              margin:0 auto;
                              padding:0;
                              gap:2rem;
-                             background:transparent;z-index:5;
+                             background:transparent;
 
                   .box {flex:1 1 20rem;
                         overflow:hidden;
@@ -1018,61 +1020,59 @@ button:focus {border:none;
                         border-radius:0;
                         margin:1rem auto;
                         transition:all 0.7s linear;
-                        box-shadow:var(--box-shadow7);z-index:6;
+                        box-shadow:var(--box-shadow7);
 
                         .image {position:relative;
-                              overflow:hidden;
-                              border-radius:0;
-                              height:30rem;
+                                overflow:hidden;
+                                border-radius:0;
+                                height:30rem;
 
                               &::before {content:"";
-                                    position:absolute;
-                                    inset:0;
-                                    z-index:0;
-                                    background:linear-gradient(to top, hsla(0, 0%, 0%, 0.95), transparent 30%);}
+                                         position:absolute;
+                                         inset:0;
+                                         z-index:0;
+                                         background:linear-gradient(to top, hsla(0, 0%, 0%, 0.95), transparent 30%);
+                                         transition:all 0.6s linear;}
 
                               img {width:100%;
-                              height:100%;
-                              object-fit:cover;
-                              transition:all 0.5s linear;}
+                                   height:100%;
+                                   object-fit:cover;
+                                   transition:all 0.6s ease-in-out;}
 
                               span {position:absolute;
-                                    left:1rem;
+                                    left:0.8rem;
                                     bottom:1rem;
                                     padding:0;
                                     display:flex;
                                     align-items:center;
                                     justify-content:center;
 
-                                    .fa-map-marker-alt {font-size:1.7rem;
-                                                      color:var(--white);
-                                                      text-shadow:var(--box-shadow4);}
+                                    svg,i {font-size:1.3rem;
+                                           color:var(--white);
+                                           text-shadow:var(--box-shadow4);}
 
                                     address {color:var(--white);
-                                          font-size:1.6rem;
-                                          font-weight:bold;
-                                          margin:0;
-                                          margin-left:1rem;
-                                          text-shadow:var(--box-shadow4);}
+                                             font-size:1.3rem;
+                                             font-weight:bold;
+                                             margin:0;width:95%;
+                                             margin-left:0.3rem;}
                               }
 
                               .figure-icons {position:absolute;
-                                          right:1rem;
-                                          bottom:0.1rem;
-                                          display:flex;
-                                          gap:1rem;
+                                             right:1rem;
+                                             bottom:0.1rem;
+                                             display:flex;
+                                             gap:1rem;
 
                                     p {color:var(--white);
+                                       font-size:1.4rem;
 
-                                    #api {margin-right:0.5rem;}
+                                       svg,i {margin-right:0.3rem;}
                                     }
                               }
                         }
 
-                        .content,
-                        .box-footer {padding:2rem 1rem;}
-
-                        .content {
+                        .content {padding:1rem;
                               h3 {font-size:1.6rem;
                                   color:var(--black);
                                   font-weight:bold;
@@ -1081,9 +1081,9 @@ button:focus {border:none;
                               p {font-size:1.7rem;
                                  color:var(--gray9);}
 
-                              .details {display:flex;
-                                        gap:1rem;
-                                        margin:1rem 0;
+                              .specifications {display:flex;
+                                               gap:1rem;
+                                               margin:1rem 0;
 
                                     p {padding:0.4rem 0.1rem;
                                        flex:1;
@@ -1096,46 +1096,47 @@ button:focus {border:none;
    
                                        &:last-child {border-right:none;}
 
-                                       #aps {margin-right:1rem;}
+                                       svg,i {margin-right:1rem;}
                                     }
                               }
-                        }
 
-                        .box-footer {display:flex;
-                                     justify-content:space-between;
+                              .box-footer {display:flex;
+                                           justify-content:space-between;
+                                           margin-top:2rem;
 
-                              .buttons {display:flex;
-                                        gap:1rem;}
+                                    .buttons {display:flex;
+                                              gap:1rem;
 
-                              button {border:none;
-                                    width:3.5rem;
-                                    height:3.3rem;
-                                    padding:1rem;
-                                    display:flex;
-                                    align-items:center;
-                                    justify-content:center;
-                                    border-radius:0.5rem;
-                                    background-color:var(--black);
-                                    transition:all 0.3s linear;
+                                          button {border:none;
+                                                  width:3.5rem;
+                                                  height:3.3rem;
+                                                  padding:1rem;
+                                                  display:flex;
+                                                  align-items:center;
+                                                  justify-content:center;
+                                                  border-radius:0.5rem;
+                                                  background-color:var(--black);
+                                                  transition:all 0.3s linear;
 
-                                    #aps {font-size:1.5rem;
-                                          color:var(--white);}
+                                                svg,i {font-size:1.5rem;
+                                                       color:var(--white);}
 
-                                    &:hover {background-color:var(--lightblue7);}
+                                                &:hover {background-color:var(--lightblue7);}
 
-                                    &:hover #aps {color:var(--black);}
+                                                &:hover svg,i {color:var(--black);}
+                                          }
+                                    }
+
+                                    .price {font-size:1.7rem;
+                                            max-width:15rem;
+                                            padding:0.8rem 1rem 0.8rem 2.4rem;
+                                            clip-path:polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+                                            background:radial-gradient(var(--blue10), var(--blue18));
+                                            color:var(--white);}
                               }
+                        }  
 
-                              .price {font-size:1.7rem;
-                                      max-width:15rem;
-                                      padding:0.8rem 1rem 0.8rem 2.4rem;
-                                      clip-path:polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
-                                      background:radial-gradient(var(--blue10), var(--blue18));
-                                      color:var(--white);
-                                      text-shadow:var(--box-shadow);}
-                        }
-
-                        &:hover .image img {transform:scale(1.04);}
+                        &:hover .image img {transform:scale(1.03);}
                   }
             }
 
