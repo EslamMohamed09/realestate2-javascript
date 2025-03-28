@@ -1058,21 +1058,22 @@ button:focus {
 .sell-apartments-section .section-container {
   position: relative;
   padding: 0;
+  width: 100%;
   /* <--> */
 }
 .sell-apartments-section .section-container .slider-wrapper {
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 1rem;
   gap: 2rem;
-  background: transparent;
+  background: rgb(187, 220, 233);
+  overflow: hidden;
 }
 .sell-apartments-section .section-container .slider-wrapper .box {
   flex: 1 1 20rem;
-  overflow: hidden;
   display: block;
   border-radius: 0;
-  margin: 1rem auto;
+  margin: 0;
   transition: all 0.7s linear;
   box-shadow: var(--box-shadow7);
 }
@@ -1183,8 +1184,9 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   background-color: var(--black);
+  border: 1px solid var(--black);
   transition: all 0.3s linear;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button svg, .sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button i {
@@ -1192,7 +1194,7 @@ button:focus {
   color: var(--white);
 }
 .sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button:hover {
-  background-color: var(--lightblue7);
+  background-color: transparent;
 }
 .sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button:hover svg, .sell-apartments-section .section-container .slider-wrapper .box .content .box-footer .buttons button i {
   color: var(--black);
@@ -1229,9 +1231,9 @@ button:focus {
   line-height: 2.1rem;
   text-align: center;
   padding: 0;
-  border-radius: 0;
+  border-radius: 0.2rem;
   color: var(--white);
-  background: var(--black);
+  background: radial-gradient(var(--blue10), var(--blue18));
   border: none;
   cursor: pointer;
 }

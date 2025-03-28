@@ -195,7 +195,20 @@ function dotsSlider(options) {
     let startX = 0;
     let scrollStart = 0;
     let autoSlideInterval;
-    const gapSize = parseFloat(getComputedStyle(document.documentElement).fontSize) * 2;
+
+    const smallScreen = window.innerWidth > 10 && window.innerWidth < 700;
+    const mediumScreen = window.innerWidth > 700 && window.innerWidth < 850;
+    const mediumScreen2 = window.innerWidth > 850 && window.innerWidth < 1200;
+
+    const gapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 4
+                  : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 4.1
+                  : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 3.05
+                                : parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.7;
+
+    const scrollgapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 0
+                                      : parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.1;
+
+
 
     function setupSlider() {
       slides = Array.from(sliderContainer.children);
@@ -229,8 +242,8 @@ function dotsSlider(options) {
         const responsiveSettings = [
             { breakpoint: 10, settings: { slidesToShow: 1, slidesToScroll: 1 }},
             { breakpoint: 360, settings: { slidesToShow: 2, slidesToScroll: 2 }},
-            { breakpoint: 650, settings: { slidesToShow: 3, slidesToScroll: 3 }},
-            { breakpoint: 1000, settings: { slidesToShow: 4, slidesToScroll: 4 }},
+            { breakpoint: 850, settings: { slidesToShow: 3, slidesToScroll: 3 }},
+            { breakpoint: 1230, settings: { slidesToShow: 4, slidesToScroll: 4 }},
             { breakpoint: 1400, settings: { slidesToShow: 5, slidesToScroll: 5 }},
         ];
 
@@ -265,8 +278,8 @@ function dotsSlider(options) {
 
     function scrollToSlide() {
         const wrapperWidth = sliderContainer.clientWidth;
-        const slideWidth = (wrapperWidth - gapSize * (slidesToShow - 1)) / slidesToShow;
-        const scrollPosition = currentIndex * (slideWidth + gapSize);
+        const slideWidth = (wrapperWidth - scrollgapSize * (slidesToShow - 1)) / slidesToShow;
+        const scrollPosition = currentIndex * (slideWidth + scrollgapSize);
     
         function animateScroll(start, end, duration) {
            let startTime = null;

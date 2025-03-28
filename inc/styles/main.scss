@@ -1007,18 +1007,19 @@ button:focus {border:none;
 
       .section-container {position:relative;
                           padding:0;
+                          width:100%;
 
             .slider-wrapper {width:100%;
                              margin:0 auto;
-                             padding:0;
+                             padding:1rem;
                              gap:2rem;
-                             background:transparent;
+                             background:rgb(187, 220, 233);
+                             overflow:hidden;
 
                   .box {flex:1 1 20rem;
-                        overflow:hidden;
                         display:block;
                         border-radius:0;
-                        margin:1rem auto;
+                        margin:0;
                         transition:all 0.7s linear;
                         box-shadow:var(--box-shadow7);
 
@@ -1114,14 +1115,15 @@ button:focus {border:none;
                                                   display:flex;
                                                   align-items:center;
                                                   justify-content:center;
-                                                  border-radius:0.5rem;
+                                                  border-radius:0.25rem;
                                                   background-color:var(--black);
+                                                  border:1px solid var(--black);
                                                   transition:all 0.3s linear;
 
                                                 svg,i {font-size:1.5rem;
                                                        color:var(--white);}
 
-                                                &:hover {background-color:var(--lightblue7);}
+                                                &:hover {background-color:transparent;}
 
                                                 &:hover svg,i {color:var(--black);}
                                           }
@@ -1138,6 +1140,7 @@ button:focus {border:none;
 
                         &:hover .image img {transform:scale(1.03);}
                   }
+
             }
 
             /* <--> */
@@ -1160,9 +1163,9 @@ button:focus {border:none;
                                 line-height:2.1rem;
                                 text-align:center;
                                 padding:0;
-                                border-radius:0;
+                                border-radius:0.2rem;
                                 color:var(--white);
-                                background:var(--black);
+                                background:radial-gradient(var(--blue10), var(--blue18));
                                 border:none;
                                 cursor:pointer;}
 
@@ -1184,11 +1187,15 @@ button:focus {border:none;
                         &.active {background-color:#333;}
                   }
             }
-     }
+      }
 
       @media (max-width:1200px){
             .box-container .box .image .figure-icons {top:1rem;}
       }
+
+      // @media (max-width:768px) {
+      //       .slider-wrapper {padding:1rem 2rem;}
+      // }
 
       @media (max-width:400px){
             .box-container .box .content .details {display:block;}
