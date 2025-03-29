@@ -3,7 +3,7 @@
 /**
  * Header Active
  */
-const header = document.querySelector("[data-header]");
+const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
     this.window.scrollY > 10 ? header.classList.add("active") : header.classList.remove("active");
@@ -58,7 +58,7 @@ searchIcon.addEventListener('click', function () {
 });
 
 
-$('body').css('paddingTop', $('.header').innerHeight() + 50);
+document.body.style.paddingTop = `${header.offsetHeight + 50}px`;
 
 
 $('.slider-home').owlCarousel({
