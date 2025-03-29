@@ -210,6 +210,7 @@ function dotsSlider(options) {
                                       : parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.1;
 
     function setupSlider() {
+      clearInterval(autoSlideInterval);
       slides = Array.from(sliderContainer.children);
       sliderContainer.style.display = 'flex';
       sliderContainer.style.overflow = 'hidden';
