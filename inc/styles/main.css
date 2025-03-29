@@ -1529,33 +1529,33 @@ button:focus {
   # Search
  ***********
 */
-.search-section #search-container {
+.search-section .section-container {
   background-color: var(--white);
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding: 2rem;
   display: block;
   position: relative;
 }
-.search-section #search-container .location-form,
-.search-section #search-container .price-form,
-.search-section #search-container .checkbox-form {
+.search-section .section-container .location-form,
+.search-section .section-container .price-form,
+.search-section .section-container .checkbox-form {
   margin-bottom: 4rem;
 }
-.search-section #search-container .input-group {
+.search-section .section-container .input-group {
   display: block;
   margin-bottom: 2rem;
 }
-.search-section #search-container .input-group input[type=text] {
+.search-section .section-container .input-group input[type=text] {
   width: 10rem;
 }
-.search-section #search-container .input-group label {
+.search-section .section-container .input-group label {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
   display: block;
 }
-.search-section #search-container .input-group select {
+.search-section .section-container .input-group select {
   text-align: left;
   margin-bottom: 1rem;
   font-size: 1.6rem;
@@ -1566,49 +1566,49 @@ button:focus {
   background: var(--lightblue7);
   border: 1px solid var(--lightblue8);
 }
-.search-section #search-container .input-group select option {
+.search-section .section-container .input-group select option {
   padding: 2rem;
   font-size: 1.6rem;
 }
-.search-section #search-container .input-group .no-range {
+.search-section .section-container .input-group .no-range {
   display: flex;
   gap: 2rem;
 }
-.search-section #search-container .input-group .no-range .from,
-.search-section #search-container .input-group .no-range .to {
+.search-section .section-container .input-group .no-range .from,
+.search-section .section-container .input-group .no-range .to {
   display: flex;
   align-items: center;
 }
-.search-section #search-container .input-group .no-range span {
+.search-section .section-container .input-group .no-range span {
   font-size: 1.4rem;
   margin-right: 0.7rem;
 }
-.search-section #search-container .location-form .input-city {
+.search-section .section-container .location-form .input-city {
   width: 17rem !important;
 }
-.search-section #search-container .price-form {
+.search-section .section-container .price-form {
   gap: 2rem;
 }
-.search-section #search-container .checkbox-form {
+.search-section .section-container .checkbox-form {
   gap: 2rem;
 }
-.search-section #search-container .checkbox-form .input-group {
+.search-section .section-container .checkbox-form .input-group {
   display: flex;
   flex: 1 1 15rem;
   align-items: center;
 }
-.search-section #search-container .checkbox-form .input-group label {
+.search-section .section-container .checkbox-form .input-group label {
   margin-left: 1rem;
   margin-bottom: 0;
 }
-.search-section #search-container .btn {
+.search-section .section-container .btn {
   position: absolute;
   right: 0;
   top: -4.1rem;
 }
 
 @media (max-width: 768px) {
-  .search-section #search-container .input-group {
+  .search-section #section-container .input-group {
     margin-bottom: 3rem;
   }
 }

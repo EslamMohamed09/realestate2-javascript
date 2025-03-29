@@ -1430,12 +1430,12 @@ button:focus {border:none;
  ***********
 */
 .search-section {
-      #search-container {background-color:var(--white);
-                         width:90%;
-                         margin:auto;
-                         padding:2rem;
-                         display:block;
-                         position:relative;
+      .section-container {background-color:var(--white);
+                          width:100%;
+                          margin:auto;
+                          padding:2rem;
+                          display:block;
+                          position:relative;
 
             .location-form,
             .price-form,
@@ -1498,7 +1498,7 @@ button:focus {border:none;
 }
 
 @media(max-width:768px){
-      .search-section #search-container .input-group {margin-bottom:3rem;}
+      .search-section #section-container .input-group {margin-bottom:3rem;}
 }
 
 /*
