@@ -181,7 +181,7 @@ function dotsSlider(options) {
         nextArrowSelector = '.arrow-right',
         slidesToShowDefault = 1,
         slidesToScrollDefault = 1,
-        autoplaySpeed = 3000
+        autoplaySpeed = 6000
     } = options;
 
     let sliderSection = document.querySelector(section);
@@ -196,19 +196,18 @@ function dotsSlider(options) {
     let scrollStart = 0;
     let autoSlideInterval;
 
-    const smallScreen = window.innerWidth > 10 && window.innerWidth < 700;
-    const mediumScreen = window.innerWidth > 700 && window.innerWidth < 850;
+    const smallScreen = window.innerWidth > 10 && window.innerWidth < 515;
+    const mediumScreen = window.innerWidth > 515 && window.innerWidth < 850;
     const mediumScreen2 = window.innerWidth > 850 && window.innerWidth < 1200;
 
-    const gapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 4
+    const gapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 7
                   : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 4.1
                   : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 3.05
                                 : parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.7;
 
-    const scrollgapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 0
+    const scrollgapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2
+                        : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 0
                                       : parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.1;
-
-
 
     function setupSlider() {
       slides = Array.from(sliderContainer.children);
@@ -218,32 +217,42 @@ function dotsSlider(options) {
     }
 
     function buildDots() {
-      dotsWrapper.innerHTML = '';
-      const totalDots = Math.ceil(slides.length / slidesToScroll);
-      for (let i=0; i<totalDots; i++) {
-          const dot = document.createElement('span');
-          dot.classList.add('dot');
-          dot.dataset.index = i;
-          dotsWrapper.appendChild(dot);
-      }
-      updateDots();
+        dotsWrapper.innerHTML = '';
+        const totalDots = Math.ceil(slides.length / slidesToScroll);
+        for (let i=0; i<totalDots; i++) {
+            const dot = document.createElement('li');
+            dot.classList.add('dot');
+            dot.dataset.index = i;
+            dotsWrapper.appendChild(dot);
+        }
+        
+        if(window.innerWidth < 500){
+           if(totalDots > 8){
+              dotsWrapper.style.display = 'none';
+           }
+        } else {
+          if(totalDots > 12){
+             dotsWrapper.style.display = 'none';
+          }
+        }
+        updateDots();
     }
 
     function updateDots() {
-	  const dots = dotsWrapper.children;
-	  const activeDotIndex = Math.floor(currentIndex / slidesToScroll);
-	  Array.from(dots).forEach(dot => dot.classList.remove('active'));
-	  if (dots[activeDotIndex]) {
-	  	dots[activeDotIndex].classList.add('active');
-	  }
+	   const dots = dotsWrapper.children;
+	   const activeDotIndex = Math.floor(currentIndex / slidesToScroll);
+	   Array.from(dots).forEach(dot => dot.classList.remove('active'));
+	   if (dots[activeDotIndex]) {
+	   	 dots[activeDotIndex].classList.add('active');
+	   }
     }
 
     function setResponsive() {
         const responsiveSettings = [
             { breakpoint: 10, settings: { slidesToShow: 1, slidesToScroll: 1 }},
-            { breakpoint: 360, settings: { slidesToShow: 2, slidesToScroll: 2 }},
+            { breakpoint: 515, settings: { slidesToShow: 2, slidesToScroll: 2 }},
             { breakpoint: 850, settings: { slidesToShow: 3, slidesToScroll: 3 }},
-            { breakpoint: 1230, settings: { slidesToShow: 4, slidesToScroll: 4 }},
+            { breakpoint: 1200, settings: { slidesToShow: 4, slidesToScroll: 4 }},
             { breakpoint: 1400, settings: { slidesToShow: 5, slidesToScroll: 5 }},
         ];
 
@@ -303,7 +312,7 @@ function dotsSlider(options) {
            requestAnimationFrame(animation);
         }
     
-        animateScroll(sliderContainer.scrollLeft, scrollPosition, 700);        
+        animateScroll(sliderContainer.scrollLeft, scrollPosition, 900);
     
         if (currentIndex >= slides.length) {
             currentIndex = 0;
@@ -345,8 +354,8 @@ function dotsSlider(options) {
       sliderContainer.addEventListener('mousemove', duringDrag);
       sliderContainer.addEventListener('mouseup', endDrag);
       sliderContainer.addEventListener('mouseleave', endDrag);
-        // sliderSection.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
-        // sliderSection.addEventListener('mouseleave', autoSlide);
+      sliderSection.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
+      sliderSection.addEventListener('mouseleave', autoSlide);
     }
 
     function startDrag(e) {
@@ -386,8 +395,7 @@ function dotsSlider(options) {
     }
 
     setupSlider();
-    buildDots();
     setResponsive();
     attachEvents();
-    // autoSlide();
+    autoSlide();
 }

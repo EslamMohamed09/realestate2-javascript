@@ -1013,7 +1013,7 @@ button:focus {border:none;
                              margin:0 auto;
                              padding:1rem;
                              gap:2rem;
-                             background:rgb(187, 220, 233);
+                             background:transparent;
                              overflow:hidden;
 
                   .box {flex:1 1 20rem;
@@ -1079,8 +1079,12 @@ button:focus {border:none;
                                   font-weight:bold;
                                   margin-bottom:1.4rem;}
 
-                              p {font-size:1.7rem;
-                                 color:var(--gray9);}
+                              p {font-size:1.5rem;
+                                 line-height:2rem;
+                                 color:var(--gray9);
+                                 text-transform:lowercase;
+                                 &::first-letter {text-transform:capitalize;}
+                              }
 
                               .specifications {display:flex;
                                                gap:1rem;
@@ -1140,22 +1144,21 @@ button:focus {border:none;
 
                         &:hover .image img {transform:scale(1.03);}
                   }
-
             }
 
             /* <--> */
             .arrows {width:100%;
-                     position:relative;
                      height:0;
                      display:flex !important;
                      flex-direction:row;
                      justify-content:space-between;
                      align-items:center;
                      margin-top:2rem;
+                     position:relative;
 
                   .arrow-left,
                   .arrow-right {position:absolute;
-                                top:1rem;
+                                top:0;
                                 width:3.5rem;
                                 height:3.5rem;
                                 padding:0;
@@ -1169,9 +1172,9 @@ button:focus {border:none;
                                 border:none;
                                 cursor:pointer;}
 
-                  .arrow-left {left:0;}
+                  .arrow-left {left:1rem;}
                      
-                  .arrow-right {right:0;}
+                  .arrow-right {right:1rem;}
             }
 
             #sliderdots {width:fit-content;
@@ -1193,9 +1196,11 @@ button:focus {border:none;
             .box-container .box .image .figure-icons {top:1rem;}
       }
 
-      // @media (max-width:768px) {
-      //       .slider-wrapper {padding:1rem 2rem;}
-      // }
+      @media (max-width:515px) {
+            .slider-wrapper {padding:1rem 2rem 1rem 0.1rem !important;
+                  .box {flex:1 1 10rem;}
+            }
+      }
 
       @media (max-width:400px){
             .box-container .box .content .details {display:block;}
