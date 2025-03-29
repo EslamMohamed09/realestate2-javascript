@@ -873,7 +873,7 @@ button:focus {border:none;
                         }
             }
 
-            .col-right {display:flex;background:rgb(181, 181, 226);
+            .col-right {display:flex;
 
                   .col-content {width:90%;
                                 margin:2rem auto;
@@ -910,8 +910,8 @@ button:focus {border:none;
                                     }
 
                                     p {margin:auto 1rem;
-                                    text-align:left;
-                                    font-weight:bold;}
+                                       text-align:left;
+                                       font-weight:bold;}
                               }
                         }
                   }
@@ -919,25 +919,31 @@ button:focus {border:none;
       }
 
       @media (max-width:1000px){
+            padding:2rem 4% 3rem;
             .section-container {grid-template-columns:60% 40%;
-               .col-left {width:95%;}
+                                gap:0;
+                  .col-left {width:95%;}
 
-               .col-right {background:var(--red7);
-                  .col-content {width:99% !important;
-                        .about-list {grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
-                                     gap:1rem;
-                                    .about-item {margin-bottom:1.5rem;
-                                          span {padding:0.5rem;}
-                                    }
+                  .col-right {
+                        .col-content {width:99%;
+                              .about-list {grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
+                                           gap:1rem;
+                                          .about-item {margin-bottom:1.5rem;
+                                                span {padding:0.5rem;}
+                                          }
+                              }
                         }
                   }
-               }
             }
       }
 
       @media (max-width:768px){
-            .section-container {grid-template-columns:100% 100%;
-               .col-right .col-content {margin-top:6rem;}
+            padding:2rem 7% 3rem;
+            .section-container {grid-template-columns:100%;
+               .col-right .col-content {width:90%;
+                                        margin-top:6rem;
+                  .about-list {grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));}
+               }
             }
       }
 }
