@@ -58,7 +58,7 @@ searchIcon.addEventListener('click', function () {
 });
 
 
-document.body.style.paddingTop = `${header.offsetHeight + 50}px`;
+document.body.style.paddingTop = `${header.offsetHeight}px`;
 
 
 $('.slider-home').owlCarousel({

@@ -913,11 +913,12 @@ button:focus {
   border-radius: 0.5rem;
 }
 .about-section .section-container .col-right {
-  display: flex;
+  background: rgb(183, 240, 183);
 }
 .about-section .section-container .col-right .col-content {
   width: 90%;
   margin: 2rem auto;
+  background: rgb(193, 193, 231);
 }
 .about-section .section-container .col-right .col-content .section-heading {
   text-align: center;
@@ -930,18 +931,23 @@ button:focus {
 .about-section .section-container .col-right .col-content .sec-desc {
   font-size: 2rem;
 }
-.about-section .section-container .col-right .col-content .about-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 3rem;
+.about-section .section-container .col-right .col-content .qualities-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin: 6rem 0 3rem;
   padding: 0;
 }
-.about-section .section-container .col-right .col-content .about-list .about-item {
+.about-section .section-container .col-right .col-content .qualities-list .quality-item {
+  flex: 1 1 20rem;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1rem;
+  background: rgb(245, 216, 216);
 }
-.about-section .section-container .col-right .col-content .about-list .about-item span {
+.about-section .section-container .col-right .col-content .qualities-list .quality-item span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -952,10 +958,10 @@ button:focus {
   background: radial-gradient(var(--blue5), var(--blue17));
   color: var(--white);
 }
-.about-section .section-container .col-right .col-content .about-list .about-item span #ai {
+.about-section .section-container .col-right .col-content .qualities-list .quality-item span svg, .about-section .section-container .col-right .col-content .qualities-list .quality-item span i {
   font-size: 1.7rem;
 }
-.about-section .section-container .col-right .col-content .about-list .about-item p {
+.about-section .section-container .col-right .col-content .qualities-list .quality-item p {
   margin: auto 1rem;
   text-align: left;
   font-weight: bold;
@@ -972,17 +978,7 @@ button:focus {
     width: 95%;
   }
   .about-section .section-container .col-right .col-content {
-    width: 99%;
-  }
-  .about-section .section-container .col-right .col-content .about-list {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 1rem;
-  }
-  .about-section .section-container .col-right .col-content .about-list .about-item {
-    margin-bottom: 1.5rem;
-  }
-  .about-section .section-container .col-right .col-content .about-list .about-item span {
-    padding: 0.5rem;
+    width: 99% !important;
   }
 }
 @media (max-width: 768px) {
@@ -996,8 +992,14 @@ button:focus {
     width: 90%;
     margin-top: 6rem;
   }
-  .about-section .section-container .col-right .col-content .about-list {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  .about-section .section-container .col-right .col-content .sub-title {
+    font-size: 2.1rem;
+  }
+  .about-section .section-container .col-right .col-content .sec-desc {
+    font-size: 1.8rem;
+  }
+  .about-section .section-container .col-right .col-content .qualities-list .quality-item p {
+    font-size: 1.5rem;
   }
 }
 
