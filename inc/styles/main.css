@@ -1336,120 +1336,136 @@ button:focus {
   # Builds & Lands
  *****************
 */
-#builds-sell {
+.sell-builds-section {
   position: relative;
+}
+.sell-builds-section .section-container {
+  position: relative;
+  padding: 0;
+  width: 100%;
   /* <--> */
 }
-#builds-sell .box-container {
+.sell-builds-section .section-container .slider-wrapper {
   width: 100%;
-}
-#builds-sell .box-container .box {
-  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 2rem;
+  background: transparent;
   overflow: hidden;
+}
+.sell-builds-section .section-container .slider-wrapper .box {
+  flex: 1 1 20rem;
   display: block;
   border-radius: 0;
-  margin: 1rem auto;
+  margin: 0;
   transition: all 0.7s linear;
-  box-shadow: var(--box-shadow1);
+  box-shadow: var(--box-shadow7);
 }
-#builds-sell .box-container .box .image {
+.sell-builds-section .section-container .slider-wrapper .box .image {
   position: relative;
   overflow: hidden;
   border-radius: 0;
   height: 30rem;
 }
-#builds-sell .box-container .box .image::before {
+.sell-builds-section .section-container .slider-wrapper .box .image::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
   background: linear-gradient(to top, hsla(0, 0%, 0%, 0.95), transparent 30%);
+  transition: all 0.6s linear;
 }
-#builds-sell .box-container .box .image img {
+.sell-builds-section .section-container .slider-wrapper .box .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.5s linear;
+  transition: all 0.6s ease-in-out;
 }
-#builds-sell .box-container .box .image span {
+.sell-builds-section .section-container .slider-wrapper .box .image span {
   position: absolute;
-  left: 1rem;
+  left: 0.8rem;
   bottom: 1rem;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#builds-sell .box-container .box .image span .fa-map-marker-alt {
-  font-size: 1.7rem;
+.sell-builds-section .section-container .slider-wrapper .box .image span svg, .sell-builds-section .section-container .slider-wrapper .box .image span i {
+  font-size: 1.3rem;
   color: var(--white);
   text-shadow: var(--box-shadow4);
 }
-#builds-sell .box-container .box .image span address {
+.sell-builds-section .section-container .slider-wrapper .box .image span address {
   color: var(--white);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin: 0;
-  margin-left: 1rem;
-  text-shadow: var(--box-shadow4);
+  width: 95%;
+  margin-left: 0.3rem;
 }
-#builds-sell .box-container .box .image .figure-icons {
+.sell-builds-section .section-container .slider-wrapper .box .image .figure-icons {
   position: absolute;
   right: 1rem;
   bottom: 0.1rem;
   display: flex;
   gap: 1rem;
 }
-#builds-sell .box-container .box .image .figure-icons p {
+.sell-builds-section .section-container .slider-wrapper .box .image .figure-icons p {
   color: var(--white);
+  font-size: 1.4rem;
 }
-#builds-sell .box-container .box .image .figure-icons p #api {
-  margin-right: 0.5rem;
+.sell-builds-section .section-container .slider-wrapper .box .image .figure-icons p svg, .sell-builds-section .section-container .slider-wrapper .box .image .figure-icons p i {
+  margin-right: 0.3rem;
 }
-#builds-sell .box-container .box .content,
-#builds-sell .box-container .box .box-footer {
-  padding: 2rem;
+.sell-builds-section .section-container .slider-wrapper .box .content {
+  padding: 1rem;
 }
-#builds-sell .box-container .box .content h3 {
+.sell-builds-section .section-container .slider-wrapper .box .content h3 {
   font-size: 1.6rem;
   color: var(--black);
   font-weight: bold;
   margin-bottom: 1.4rem;
 }
-#builds-sell .box-container .box .content p {
-  font-size: 1.7rem;
+.sell-builds-section .section-container .slider-wrapper .box .content p {
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: var(--gray9);
+  text-transform: lowercase;
 }
-#builds-sell .box-container .box .content .details {
+.sell-builds-section .section-container .slider-wrapper .box .content p::first-letter {
+  text-transform: capitalize;
+}
+.sell-builds-section .section-container .slider-wrapper .box .content .specifications {
   display: flex;
   gap: 1rem;
-  margin-top: 3rem;
+  margin: 1rem 0;
 }
-#builds-sell .box-container .box .content .details p {
+.sell-builds-section .section-container .slider-wrapper .box .content .specifications p {
   padding: 0.4rem 0.1rem;
   flex: 1;
-  background-color: var(--light);
-  font-size: 1.6rem;
-  border-right: 2.8px solid var(--blue14);
+  font-size: 1.4rem;
   text-transform: capitalize;
   display: flex;
   align-items: center;
+  background-color: var(--light);
+  border-right: 2.8px solid var(--blue14);
 }
-#builds-sell .box-container .box .content .details p:last-child {
+.sell-builds-section .section-container .slider-wrapper .box .content .specifications p:last-child {
   border-right: none;
 }
-#builds-sell .box-container .box .content .details p #aps {
+.sell-builds-section .section-container .slider-wrapper .box .content .specifications p svg, .sell-builds-section .section-container .slider-wrapper .box .content .specifications p i {
   margin-right: 1rem;
 }
-#builds-sell .box-container .box .box-footer {
+.sell-builds-section .section-container .slider-wrapper .box .content .box-footer {
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
 }
-#builds-sell .box-container .box .box-footer .buttons {
+.sell-builds-section .section-container .slider-wrapper .box .content .box-footer .buttons {
   display: flex;
   gap: 1rem;
 }
-#builds-sell .box-container .box .box-footer .buttons button {
+.sell-builds-section .section-container .slider-wrapper .box .content .box-footer .buttons button {
   border: none;
   width: 3.5rem;
   height: 3.3rem;
@@ -1457,66 +1473,96 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   background-color: var(--black);
+  border: 1px solid var(--black);
   transition: all 0.3s linear;
 }
-#builds-sell .box-container .box .box-footer .buttons button #aps {
+.sell-builds-section .section-container .slider-wrapper .box .content .box-footer .buttons button svg, .sell-builds-section .section-container .slider-wrapper .box .content .box-footer .buttons button i {
   font-size: 1.5rem;
   color: var(--white);
 }
-#builds-sell .box-container .box .box-footer .buttons button:hover {
-  background-color: var(--lightblue7);
+.sell-builds-section .section-container .slider-wrapper .box .content .box-footer .buttons button:hover {
+  background-color: transparent;
 }
-#builds-sell .box-container .box .box-footer .buttons button:hover #aps {
+.sell-builds-section .section-container .slider-wrapper .box .content .box-footer .buttons button:hover svg, .sell-builds-section .section-container .slider-wrapper .box .content .box-footer .buttons button i {
   color: var(--black);
 }
-#builds-sell .box-container .box .box-footer .price {
+.sell-builds-section .section-container .slider-wrapper .box .content .box-footer .price {
   font-size: 1.7rem;
   max-width: 15rem;
   padding: 0.8rem 1rem 0.8rem 2.4rem;
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
   background: radial-gradient(var(--blue10), var(--blue18));
   color: var(--white);
-  text-shadow: var(--box-shadow);
 }
-#builds-sell .box-container .box:hover .image img {
-  transform: scale(1.04);
+.sell-builds-section .section-container .slider-wrapper .box:hover .image img {
+  transform: scale(1.03);
 }
-#builds-sell .owl-nav #slidder-arrow-left {
+.sell-builds-section .section-container .arrows {
+  width: 100%;
+  height: 0;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+}
+.sell-builds-section .section-container .arrows .arrow-left,
+.sell-builds-section .section-container .arrows .arrow-right {
   position: absolute;
-  top: 100%;
-  left: 3rem;
+  top: 0;
   width: 3.5rem;
-  height: 3rem;
-  font-size: 0.1rem;
+  height: 3.5rem;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  text-align: center;
+  padding: 0;
+  border-radius: 0.2rem;
   color: var(--white);
-  background: radial-gradient(var(--blue14), var(--blue18));
-  box-shadow: var(--box-shadow1);
-  padding: 0.5rem;
-  transition: all 0.7s ease-out;
-  border-radius: 0.3rem;
+  background: radial-gradient(var(--blue10), var(--blue18));
+  border: none;
+  cursor: pointer;
 }
-#builds-sell .owl-nav #slidder-arrow-right {
-  position: absolute;
-  top: 100%;
-  right: 3rem;
-  width: 3.5rem;
-  height: 3rem;
-  padding: 0.5rem;
-  color: var(--white);
-  background: radial-gradient(var(--blue14), var(--blue18));
-  box-shadow: var(--box-shadow1);
-  transition: all 0.7s ease-out;
-  border-radius: 0.3rem;
+.sell-builds-section .section-container .arrows .arrow-left {
+  left: 1rem;
+}
+.sell-builds-section .section-container .arrows .arrow-right {
+  right: 1rem;
+}
+.sell-builds-section .section-container #sliderdots {
+  width: fit-content;
+  margin: 2rem auto 0;
+}
+.sell-builds-section .section-container #sliderdots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sell-builds-section .section-container #sliderdots .dot.active {
+  background-color: #333;
 }
 @media (max-width: 1200px) {
-  #builds-sell .box-container .box .image .figure-icons {
+  .sell-builds-section .box-container .box .image .figure-icons {
     top: 1rem;
   }
 }
+@media (max-width: 515px) {
+  .sell-builds-section .slider-wrapper {
+    padding: 1rem 2rem 1rem 0.1rem !important;
+  }
+  .sell-builds-section .slider-wrapper .box {
+    flex: 1 1 10rem;
+  }
+}
 @media (max-width: 400px) {
-  #builds-sell .box-container .box .content .details {
+  .sell-builds-section .box-container .box .content .details {
     display: block;
   }
 }

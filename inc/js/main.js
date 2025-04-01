@@ -61,59 +61,20 @@ searchIcon.addEventListener('click', function () {
 document.body.style.paddingTop = `${header.offsetHeight}px`;
 
 
-$('.slider-home').owlCarousel({
-    loop:true,
-    autoplay:true,
-    nav:true,
-    dots:false,
-    margin:0,
-    animateOut:"fadeOut",
-    autoplayTimeout:10000,
-    smartSpeed:1500,
-    autoplayHoverPause:false,
-    items:1,
-    navText: [
-        '<i class="fa fa-angle-left" id="slidder-arrow-left"></i>',
-        '<i class="fa fa-angle-right" id="slidder-arrow-right"></i>',
-    ],    
-   
-
-}); 
-
-// $('.realestate-carousel').owlCarousel({
-//     loop:true,
-//     autoplay:true,
-//     dots:false,
-// 	center:false,
-//     margin:0,
-//     autoplayTimeout:9000,
-//     smartSpeed:1500,
-//     autoplayHoverPause:false,
-//     items:3, 
-// 	nav:true,
-// 	navText: [
-// 		'<i class="fa fa-angle-left" id="slidder-arrow-left"></i>',
-// 		'<i class="fa fa-angle-right" id="slidder-arrow-right"></i>',
-// 	], 
-// 	responsive:{
-// 		0:{
-// 			items:1
-// 		},
-// 		600:{
-// 			items:2
-// 		},
-// 		1000:{
-// 			items:3
-// 		}
-// 	}     
-// });
-
 dotsSlider({
     section:'.sell-apartments-section',
     containerSelector:'.sell-apartments-section .slider-wrapper',
     dotsSelector:'.sell-apartments-section #sliderdots',
     prevArrowSelector:'.sell-apartments-section .arrow-left',
     nextArrowSelector:'.sell-apartments-section .arrow-right',
+});
+
+dotsSlider({
+    section:'.sell-builds-section',
+    containerSelector:'.sell-builds-section .slider-wrapper',
+    dotsSelector:'.sell-builds-section #sliderdots',
+    prevArrowSelector:'.sell-builds-section .arrow-left',
+    nextArrowSelector:'.sell-builds-section .arrow-right',
 });
 
 
