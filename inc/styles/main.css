@@ -912,13 +912,9 @@ button:focus {
   box-shadow: var(--box-shadow6);
   border-radius: 0.5rem;
 }
-.about-section .section-container .col-right {
-  background: rgb(183, 240, 183);
-}
 .about-section .section-container .col-right .col-content {
   width: 90%;
   margin: 2rem auto;
-  background: rgb(193, 193, 231);
 }
 .about-section .section-container .col-right .col-content .section-heading {
   text-align: center;
@@ -945,7 +941,6 @@ button:focus {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 1rem;
-  background: rgb(245, 216, 216);
 }
 .about-section .section-container .col-right .col-content .qualities-list .quality-item span {
   display: flex;
