@@ -8,33 +8,27 @@ window.addEventListener("scroll", function () {
 });
 
 
+if(document.querySelector(".open-btn")){
+    const openBtn = document.querySelector("header .top-bar .right-block .open-btn");
+    const bottomBar = document.querySelector("header .bottom-bar");
+    openBtn.onclick = () => {
+      bottomBar.classList.toggle("mobile-header");
 
+      let icon = openBtn.querySelector("i") || openBtn.querySelector("svg");
 
-/**
- * navbar toggle
- */
-const navbar = document.querySelector("[data-navbar]");
-// const overlay = document.querySelector("[data-overlay]");
-const navOpenBtn = document.querySelector("[data-nav-open-btn]");
-const navCloseBtn = document.querySelector("[data-nav-close-btn]");
-// const navbarLinks = document.querySelectorAll("[data-nav-link]");
+      icon.style.transition = "transform 0.2s ease-in-out";
+      icon.style.transform = "rotate(180deg)";
 
-const navElemArr = [navCloseBtn, navOpenBtn];
-
-// close navbar when click on any navbar link
-// for (let i = 0; i < navbarLinks.length; i++) {navElemArr.push(navbarLinks[i]);}
-
-
-// add event on all elements for toggling navbar
-for (let i = 0; i < navElemArr.length; i++) {
-    navElemArr[i].addEventListener("click", function () {
-        elemToggleFunc(navbar);
-        // elemToggleFunc(overlay);
-    });
-}
-
-// element toggle function
-const elemToggleFunc = function (elem) {elem.classList.toggle("active");}
+      setTimeout(() => {
+        if (icon.classList.contains("fa-bars")) {
+            icon.classList.replace("fa-bars", "fa-times");
+        } else {
+            icon.classList.replace("fa-times", "fa-bars");
+        }
+        icon.style.transform = "rotate(0deg)";
+      }, 150);
+    };
+  }
 
     
 //search icon
@@ -89,7 +83,7 @@ function heroSlider(options){
       }
     }
 
-    function buildIndicators (){
+    function buildIndicators(){
         indicatorsMenu = document.createElement('ul');
         indicatorsMenu.classList.add('indicators-menu');
         section.appendChild(indicatorsMenu);
@@ -118,7 +112,7 @@ function heroSlider(options){
         }
     }
 
-    function updateSlides() {
+    function updateSlides(){
        const scrollPosition = currentIndex * slideWidth;
        Array.from(indicatorsMenu.children).forEach(indicator => {indicator.classList.remove('active');});
        indicatorsMenu.children[currentIndex].classList.add('active');
@@ -153,7 +147,7 @@ function heroSlider(options){
             requestAnimationFrame(animation);
         }
     
-        animateScroll(sliderWrapper.scrollLeft, scrollPosition, 900);
+        animateScroll(sliderWrapper.scrollLeft, scrollPosition, 1000);
         
         sliderWrapper.scrollTo({
             left:scrollPosition,
@@ -247,14 +241,13 @@ function heroSlider(options){
     section.querySelectorAll('.hero-slide-item .left-block p').forEach((p) => {
       p.textContent = p.textContent.split(" ").slice(0, 25).join(" ");
     });
-
 }
 
-heroSlider({sectionSelector:'.hero-section', 
-            sliderWrapperSelector:'.hero-section .slider-wrapper', 
-            prevBtnSelector:'.hero-section .prev-btn',
-            nextBtnSelector:'.hero-section .next-btn',
-});
+// heroSlider({sectionSelector:'.hero-section', 
+//             sliderWrapperSelector:'.hero-section .slider-wrapper', 
+//             prevBtnSelector:'.hero-section .prev-btn',
+//             nextBtnSelector:'.hero-section .next-btn',
+// });
 
 }
 
