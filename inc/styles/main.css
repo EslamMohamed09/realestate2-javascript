@@ -313,39 +313,46 @@ section {
 } */
 /*==================== Section Heading ====================*/
 .section-heading {
+  width: fit-content;
   text-align: center;
-  margin-bottom: 2rem;
-  width: 100%;
+  margin: 0 auto 3rem;
+  position: relative;
 }
 .section-heading .sec-title {
-  padding: 1rem 2.7rem;
+  padding: 1rem 0;
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  display: inline-block;
   color: var(--black);
   border-radius: 0.6rem 0.6rem 0 0;
-  text-shadow: 0 0rem 0.5rem rgba(0, 0, 0, 0.3);
-  position: relative;
+  text-shadow: 0 0rem 0.3rem rgba(0, 0, 0, 0.199);
 }
 .section-heading .sec-title::before, .section-heading .sec-title::after {
   content: "";
   position: absolute;
-  width: 9rem;
-  height: 2.5px;
+  bottom: 0;
+  width: 40%;
+  height: 2px;
 }
 .section-heading .sec-title::before {
-  top: 2.4rem;
-  left: -8.5rem;
+  left: 0;
   background-image: linear-gradient(60deg, var(--blue10) 0%, var(--blue18) 100%);
 }
 .section-heading .sec-title::after {
-  top: 2.4rem;
-  right: -8.5rem;
+  right: 0;
   background-image: linear-gradient(60deg, var(--blue18) 0%, var(--blue10) 100%);
 }
 .section-heading .sec-title span {
   color: var(--blue10);
+  text-transform: uppercase;
+}
+.section-heading svg, .section-heading i {
+  position: absolute;
+  bottom: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.7rem;
+  color: rgb(1, 1, 78);
 }
 
 p {
@@ -1660,11 +1667,11 @@ button:focus {
   # Aminities
  **************
 */
-#aminities .cards-container {
+.aminities-section .cards-container {
   width: 90%;
   margin: auto;
 }
-#aminities .cards-container .card-item {
+.aminities-section .cards-container .card-item {
   text-align: center;
   min-height: 25rem;
   padding-top: 2rem;
@@ -1674,7 +1681,7 @@ button:focus {
   border-radius: 0.3rem;
   transition: all 0.3s linear;
 }
-#aminities .cards-container .card-item .icon {
+.aminities-section .cards-container .card-item .icon {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -1685,18 +1692,18 @@ button:focus {
   padding: 2rem;
   background: transparent;
 }
-#aminities .cards-container .card-item .icon #ai {
+.aminities-section .cards-container .card-item .icon #ai {
   width: 4rem;
   font-size: 2.5rem;
   text-align: center;
   color: rgb(0, 68, 255);
 }
-#aminities .cards-container .card-item h3 {
+.aminities-section .cards-container .card-item h3 {
   font-weight: bold;
   margin: 2rem 0;
   color: var(--green22);
 }
-#aminities .cards-container .card-item .desc {
+.aminities-section .cards-container .card-item .desc {
   width: 85%;
   display: flex;
   padding: 0;
@@ -1704,14 +1711,14 @@ button:focus {
   text-align: center;
   justify-content: center;
 }
-#aminities .cards-container .card-item .desc p {
+.aminities-section .cards-container .card-item .desc p {
   color: var(--black);
   text-align: justify;
   font-size: 1.5rem;
   font-weight: normal;
   color: var(--gray8);
 }
-#aminities .cards-container .card-item:hover {
+.aminities-section .cards-container .card-item:hover {
   box-shadow: var(--box-shadow2);
 }
 
@@ -1720,11 +1727,11 @@ button:focus {
   # Interior Design For Floor
  ****************************
 */
-#interiorDesign .tabs_wrap {
+.interior-design-section .tabs_wrap {
   padding: 20px;
   border-bottom: 1px solid #ebedec;
 }
-#interiorDesign .tabs_wrap ul {
+.interior-design-section .tabs_wrap ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1733,7 +1740,7 @@ button:focus {
   -ms-flex-pack: center;
   justify-content: center;
 }
-#interiorDesign .tabs_wrap ul li {
+.interior-design-section .tabs_wrap ul li {
   text-align: center;
   background: #e9ecf1;
   border-right: 1px solid #c1c4c9;
@@ -1744,110 +1751,110 @@ button:focus {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-#interiorDesign .tabs_wrap ul li:first-child {
+.interior-design-section .tabs_wrap ul li:first-child {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
-#interiorDesign .tabs_wrap ul li:last-child {
+.interior-design-section .tabs_wrap ul li:last-child {
   border-right: 0px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-#interiorDesign .tabs_wrap ul li:hover, #interiorDesign .tabs_wrap ul li.btn-active {
+.interior-design-section .tabs_wrap ul li:hover, .interior-design-section .tabs_wrap ul li.btn-active {
   background: var(--blue9);
   color: #fff;
 }
-#interiorDesign .items-group {
+.interior-design-section .items-group {
   width: 90%;
   display: block;
   padding: 0;
   margin: 7rem auto 0;
 }
-#interiorDesign .items-group .item_wrap {
+.interior-design-section .items-group .item_wrap {
   padding: 0;
   cursor: pointer;
   display: none;
 }
-#interiorDesign .items-group .item_wrap .row,
-#interiorDesign .items-group .item_wrap .row .item_left,
-#interiorDesign .items-group .item_wrap .row .item_right {
+.interior-design-section .items-group .item_wrap .row,
+.interior-design-section .items-group .item_wrap .row .item_left,
+.interior-design-section .items-group .item_wrap .row .item_right {
   padding: 0;
   margin: 0;
 }
-#interiorDesign .items-group .item_wrap .item_left {
+.interior-design-section .items-group .item_wrap .item_left {
   display: flex;
 }
-#interiorDesign .items-group .item_wrap .item_left .image {
+.interior-design-section .items-group .item_wrap .item_left .image {
   width: 75%;
   height: 45rem;
   margin: auto;
 }
-#interiorDesign .items-group .item_wrap .item_left .image img {
+.interior-design-section .items-group .item_wrap .item_left .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#interiorDesign .items-group .item_wrap .item_right {
+.interior-design-section .items-group .item_wrap .item_right {
   display: flex;
   align-items: center;
 }
-#interiorDesign .items-group .item_wrap .item_right .details {
+.interior-design-section .items-group .item_wrap .item_right .details {
   width: 100%;
   height: 80%;
   margin: auto;
   padding: 0;
 }
-#interiorDesign .items-group .item_wrap .item_right .details h3 {
+.interior-design-section .items-group .item_wrap .item_right .details h3 {
   font-weight: bold;
 }
-#interiorDesign .items-group .item_wrap .item_right .details ul {
+.interior-design-section .items-group .item_wrap .item_right .details ul {
   padding: 0;
   margin: 0;
   margin-top: 4rem;
 }
-#interiorDesign .items-group .item_wrap .item_right .details ul li {
+.interior-design-section .items-group .item_wrap .item_right .details ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
   margin: 1rem 0;
 }
-#interiorDesign .items-group .item_wrap .item_right .details ul li:nth-child(2), #interiorDesign .items-group .item_wrap .item_right .details ul li:nth-child(4) {
+.interior-design-section .items-group .item_wrap .item_right .details ul li:nth-child(2), .interior-design-section .items-group .item_wrap .item_right .details ul li:nth-child(4) {
   background-color: var(--lightblue5);
 }
-#interiorDesign .items-group .item_wrap .item_right .details ul li span,
-#interiorDesign .items-group .item_wrap .item_right .details ul li p {
+.interior-design-section .items-group .item_wrap .item_right .details ul li span,
+.interior-design-section .items-group .item_wrap .item_right .details ul li p {
   color: var(--gray10);
   font-size: 1.7rem;
 }
-#interiorDesign .items-group .item_wrap .item_right ul li span {
+.interior-design-section .items-group .item_wrap .item_right ul li span {
   font-weight: bold;
 }
-#interiorDesign .items-group .item_wrap .item_right .details ul li p {
+.interior-design-section .items-group .item_wrap .item_right .details ul li p {
   margin: auto 0;
 }
-
 @media (max-width: 700px) {
-  #interiorDesign ul {
+  .interior-design-section ul {
     gap: 2rem;
   }
-  #interiorDesign ul li {
+  .interior-design-section ul li {
     border-radius: 1rem !important;
     border-right: 0px !important;
   }
-  #interiorDesign ul li:first-child, #interiorDesign ul li:last-child {
+  .interior-design-section ul li:first-child, .interior-design-section ul li:last-child {
     border-radius: 1rem !important;
   }
 }
+
 /*
  ******************
    # Property-list
  ******************
 */
-#property-list .section-title {
+.property-list-section .section-title {
   color: #fff;
 }
-#property-list .controls {
+.property-list-section .controls {
   display: flex;
   flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -1856,7 +1863,7 @@ button:focus {
   padding-bottom: 3rem;
   border-bottom: 1px solid #ebedec;
 }
-#property-list .controls li {
+.property-list-section .controls li {
   text-align: center;
   background: #e9ecf1;
   border-right: 1px solid #c1c4c9;
@@ -1867,24 +1874,24 @@ button:focus {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-#property-list .controls li:first-child {
+.property-list-section .controls li:first-child {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
-#property-list .controls li:last-child {
+.property-list-section .controls li:last-child {
   border-right: 0px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-#property-list .controls li:hover {
+.property-list-section .controls li:hover {
   background-color: var(--blue9);
   color: var(--white);
 }
-#property-list .controls .button-active {
+.property-list-section .controls .button-active {
   background-color: var(--blue9);
   color: var(--white);
 }
-#property-list .cards-container {
+.property-list-section .cards-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -1894,7 +1901,7 @@ button:focus {
   margin: 3rem auto 0;
   gap: 2rem;
 }
-#property-list .cards-container .card {
+.property-list-section .cards-container .card {
   flex: 1 1 26rem;
   align-items: center;
   justify-content: center;
@@ -1902,12 +1909,12 @@ button:focus {
   border: 1px solid var(--lightblue8);
   border-radius: 0.5rem;
 }
-#property-list .cards-container .card .card-contain {
+.property-list-section .cards-container .card .card-contain {
   display: block;
   width: 100%;
   padding: 0;
 }
-#property-list .cards-container .card .card-contain .image {
+.property-list-section .cards-container .card .card-contain .image {
   width: 100%;
   min-height: 30rem;
   display: flex;
@@ -1916,67 +1923,67 @@ button:focus {
   border-top-right-radius: 0.5rem;
   background-color: var(--lightblue8);
 }
-#property-list .cards-container .card .card-contain .image img {
+.property-list-section .cards-container .card .card-contain .image img {
   width: 95%;
   height: 100%;
   margin: auto;
   object-fit: cover;
 }
-#property-list .cards-container .card .card-contain ul {
+.property-list-section .cards-container .card .card-contain ul {
   padding: 0;
   margin: 0;
   margin-top: 3rem;
 }
-#property-list .cards-container .card .card-contain ul li {
+.property-list-section .cards-container .card .card-contain ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
   margin: 1rem 0;
 }
-#property-list .cards-container .card .card-contain ul li span,
-#property-list .cards-container .card .card-contain ul li p {
+.property-list-section .cards-container .card .card-contain ul li span,
+.property-list-section .cards-container .card .card-contain ul li p {
   color: var(--gray10);
   font-size: 1.5rem;
 }
-#property-list .cards-container .card .card-contain ul li span {
+.property-list-section .cards-container .card .card-contain ul li span {
   font-weight: bold;
 }
-#property-list .cards-container .card .card-contain ul li p {
+.property-list-section .cards-container .card .card-contain ul li p {
   margin: auto 0;
   text-align: right;
 }
-#property-list .cards-container .card .card-contain .btn {
+.property-list-section .cards-container .card .card-contain .btn {
   width: 90%;
   display: block;
   margin: 2rem auto;
   background-color: var(--lightblue8);
   border: 1px solid var(--lightblue8);
 }
-
 @media (max-width: 768px) {
-  #property-list .cards-container .card .card-contain .item-contain {
+  .property-list-section .cards-container .card .card-contain .item-contain {
     margin-bottom: 3rem;
   }
-  #property-list .cards-container {
+  .property-list-section .cards-container {
     width: 75%;
   }
-  #property-list .cards-container .card .card-contain .image img {
+  .property-list-section .cards-container .card .card-contain .image img {
     width: 70%;
   }
 }
 @media (max-width: 480px) {
-  #property-list .controls {
+  .property-list-section .controls {
     gap: 2rem;
   }
-  #property-list .controls .controls li {
+  .property-list-section .controls .controls li {
     border-radius: 1rem;
     border-right: 0px;
   }
-  #property-list .controls .controls li:first-child, #property-list .controls .controls li:last-child {
+  .property-list-section .controls .controls li:first-child, .property-list-section .controls .controls li:last-child {
     border-radius: 1rem;
   }
 }
+
 /*
  **************
   # Contacting

@@ -80,10 +80,10 @@ dotsSlider({
 
 // InteriorDesign
 let tabs = 'one';
-$('#interiorDesign .item_wrap').not('.' + tabs).hide(0);
-$('#interiorDesign .item_wrap').filter('.' + tabs).show(0);
+$('.interior-design-section .item_wrap').not('.' + tabs).hide(0);
+$('.interior-design-section .item_wrap').filter('.' + tabs).show(0);
 
-$('#interiorDesign li').click(function () {
+$('.interior-design-section li').click(function () {
 	tabs = $(this).attr('data-tabs');
 	$('#interiorDesign .item_wrap').not('.' + tabs).hide(0);
 	$('#interiorDesign .item_wrap').filter('.' + tabs).show(0);
@@ -93,10 +93,10 @@ $('#interiorDesign li').click(function () {
 	
 // Property list
 let filter = 'first';
-$('#property-list .card').not('.' + filter).hide(0);
-$('#property-list .card').filter('.' + filter).show(0);
+$('.property-list-section .card').not('.' + filter).hide(0);
+$('.property-list-section .card').filter('.' + filter).show(0);
 
-$('#property-list li').click(function () {
+$('.property-list-section li').click(function () {
 	filter = $(this).attr('data-filter');
 	$('#property-list .card').not('.' + filter).hide(0);
 	$('#property-list .card').filter('.' + filter).show(0);
