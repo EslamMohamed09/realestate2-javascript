@@ -449,6 +449,36 @@ section {padding:2rem 7%;
                  overflow:hidden;}
 } */
 
+h1, h2, h3, h4, h5 {font-weight:bold;
+                    margin:0;
+                    color:var(--gray11)}
+
+h1 {font-size:2.1rem;}
+h2 {font-size:1.7rem;}
+h3 {font-size:1.4rem;}
+h4 {font-size:1.2rem;}
+h5 {font-size:1rem;}
+
+::placeholder {color:var(--gray4);}
+
+p {font-size:1rem;
+   text-align:justify;}
+
+img {max-width:100%;}
+
+input {padding:0.5rem 1rem;
+       font-size:1.5rem;
+       border:none;
+       outline:none;
+       text-transform:none;
+       background-color:var(--lightblue7);
+       border:1px solid var(--lightblue8);
+       box-shadow:var(--box-shadow2);
+
+      &:focus {outline:none;}
+}
+
+select:focus {outline:none;}  
 
 /*==================== Section Heading ====================*/
 .section-heading {width:fit-content;
@@ -487,26 +517,7 @@ section {padding:2rem 7%;
              transform:translateX(-50%);
              font-size:1rem;
              color:rgb(1, 1, 78);}
-}
-
-p {font-size:1rem;
-   text-align:justify;}
-
-img {max-width:100%;}
-
-input {padding:0.5rem 1rem;
-       font-size:1.5rem;
-       border:none;
-       outline:none;
-       text-transform:none;
-       background-color:var(--lightblue7);
-       border:1px solid var(--lightblue8);
-       box-shadow:var(--box-shadow2);
-
-      &:focus {outline:none;}
-}
-
-select:focus {outline:none;}       
+}     
 
 /***************** BUTTONS ******************/
 
@@ -2039,7 +2050,6 @@ select:focus {outline:none;}
       }
 }
 
-
 /*
  **************
   # Aminities
@@ -2050,8 +2060,8 @@ select:focus {outline:none;}
                         margin:auto;
 
             .card-item {text-align:center;
-                        min-height:25rem;
-                        padding-top:2rem;
+                        min-height:18rem;
+                        padding-top:1rem;
                         background-color:transparent;
                         align-items:center;
                         justify-content:center;
@@ -2064,30 +2074,29 @@ select:focus {outline:none;}
                          display:flex;
                          align-items:center;
                          justify-content:center;
-                         margin:0 auto 3.2rem;
+                         margin:0 auto 2.2rem;
                          padding:2rem;
                          background:transparent;
 
-                        #ai {width:4rem;
-                             font-size:2.5rem;
-                             text-align:center;
-                             color:rgb(0, 68, 255);}
+                        svg,i {width:4rem;
+                               font-size:2rem;
+                               text-align:center;
+                               color:rgb(0, 68, 255);}
                   }
 
-                  h3 {font-weight:bold;
-                      margin:2rem 0;
+                  h4 {margin:1rem 0 0.9rem;
                       color:var(--green22);}
 
                   .desc {width:85%;
-                              display:flex;
-                              padding:0;
-                              margin:auto;
-                              text-align:center;
-                              justify-content:center;
+                         display:flex;
+                         padding:0;
+                         margin:auto;
+                         text-align:center;
+                         justify-content:center;
 
                         p {color:var(--black);
                            text-align:justify;
-                           font-size:1.5rem;
+                           font-size:1.1rem;
                            font-weight:normal;
                            color:var(--gray8);}
                   }
