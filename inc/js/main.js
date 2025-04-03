@@ -332,7 +332,7 @@ function dotsSlider(options) {
         nextArrowSelector = '.arrow-right',
         slidesToShowDefault = 1,
         slidesToScrollDefault = 1,
-        autoplaySpeed = 6000
+        autoplaySpeed = 7000
     } = options;
 
     let sliderSection = document.querySelector(section);
@@ -352,12 +352,13 @@ function dotsSlider(options) {
     const mediumScreen2 = window.innerWidth > 850 && window.innerWidth < 1200;
 
     const gapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 7
-                  : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 4.1
-                  : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 3.05
-                                : parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.7;
+                  : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 3.1
+                  : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.05
+                                : parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.1;
 
     const scrollgapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2
-                        : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 0
+                        : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 1
+                        : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.1
                                       : parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.1;
 
     function setupSlider() {
@@ -431,10 +432,10 @@ function dotsSlider(options) {
       const wrapperWidth = sliderContainer.clientWidth;
       const slideWidth = (wrapperWidth - gapSize * (slidesToShow - 1)) / slidesToShow;
         
-	  Array.from(slides).forEach(slide => {
-	  	slide.style.flex = `0 0 ${slideWidth}px`;
-	  	slide.style.maxWidth = `${slideWidth}px`;
-	  });
+      Array.from(slides).forEach(slide => {
+        slide.style.flex = `0 0 ${slideWidth}px`;
+        slide.style.maxWidth = `${slideWidth}px`;
+      });
     }
 
     function scrollToSlide() {
@@ -464,7 +465,7 @@ function dotsSlider(options) {
            requestAnimationFrame(animation);
         }
     
-        animateScroll(sliderContainer.scrollLeft, scrollPosition, 900);
+        animateScroll(sliderContainer.scrollLeft, scrollPosition, 1000);
     
         if (currentIndex >= slides.length) {
             currentIndex = 0;
