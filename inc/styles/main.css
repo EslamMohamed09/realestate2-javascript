@@ -1458,16 +1458,16 @@ button:focus {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   margin: auto;
 }
 .services-section .box-container .box {
   flex: 1 1 20rem;
 }
-.services-section .box-container figure {
+.services-section .box-container .box figure {
   text-align: center;
   height: fit-content;
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: block;
   align-items: center;
   justify-content: center;
@@ -1476,29 +1476,29 @@ button:focus {
   box-shadow: var(--box-shadow6);
   position: relative;
 }
-.services-section .box-container figure .image-icon {
-  width: 15rem;
-  height: 15rem;
+.services-section .box-container .box figure .image-icon {
+  width: 8rem;
+  height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin: 0 auto 3.2rem;
-  padding: 3rem;
+  margin: 0 auto 1.8rem;
+  padding: 1.5rem;
   background: radial-gradient(var(--blue5), var(--blue16));
   box-shadow: var(--box-shadow1);
 }
-.services-section .box-container figure .image-icon img {
+.services-section .box-container .box figure .image-icon img {
   width: 90%;
   text-align: center;
 }
-.services-section .box-container figure h3 {
+.services-section .box-container .box figure h3 {
   font-weight: bold;
-  font-size: 2rem;
-  margin: 2rem 0;
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
   color: var(--gray11);
 }
-.services-section .box-container figure figcaption {
+.services-section .box-container .box figure figcaption {
   width: 85%;
   display: flex;
   padding: 0;
@@ -1506,14 +1506,14 @@ button:focus {
   text-align: center;
   justify-content: center;
 }
-.services-section .box-container figure p {
+.services-section .box-container .box figure p {
   color: var(--black);
   text-align: justify;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--gray9);
 }
-.services-section .box-container figure::after {
+.services-section .box-container .box figure::after {
   position: absolute;
   content: "";
   left: 0;
@@ -1523,7 +1523,7 @@ button:focus {
   background-color: rgb(0, 204, 255);
   transition: all 0.5s linear;
 }
-.services-section .box-container figure:hover::after {
+.services-section .box-container .box figure:hover::after {
   width: 100%;
 }
 @media (max-width: 1100px) {
