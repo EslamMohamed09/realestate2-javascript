@@ -349,17 +349,19 @@ function dotsSlider(options) {
 
     const smallScreen = window.innerWidth > 10 && window.innerWidth < 515;
     const mediumScreen = window.innerWidth > 515 && window.innerWidth < 850;
-    const mediumScreen2 = window.innerWidth > 850 && window.innerWidth < 1200;
+    const mediumScreen2 = window.innerWidth > 850 && window.innerWidth < 1000;
+    const mediumScreen3 = window.innerWidth > 1000 && window.innerWidth < 1200;
 
     const gapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 7
                   : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 3.1
                   : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.05
-                                : parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.1;
+                                  : parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.1;
 
     const scrollgapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2
                         : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 1
-                        : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.1
-                                      : parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.1;
+                        : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.2
+                        : mediumScreen3 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 0.5
+                                        : parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.2;
 
     function setupSlider() {
       clearInterval(autoSlideInterval);
