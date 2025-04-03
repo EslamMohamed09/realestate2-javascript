@@ -2377,12 +2377,7 @@ select:focus {
   # Interior Design For Floor
  ****************************
 */
-.interior-design-section .tabs_wrap {
-  padding: 0 0 1rem;
-  margin: 0;
-  border-bottom: 1px solid #ebedec;
-}
-.interior-design-section .tabs_wrap ul {
+.interior-design-section .tabs-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2390,8 +2385,11 @@ select:focus {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 0 0 2rem;
+  margin: 0;
+  border-bottom: 1px solid #ebedec;
 }
-.interior-design-section .tabs_wrap ul li {
+.interior-design-section .tabs-menu li {
   text-align: center;
   background: #e9ecf1;
   border-right: 1px solid #c1c4c9;
@@ -2402,18 +2400,18 @@ select:focus {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.interior-design-section .tabs_wrap ul li:first-child {
+.interior-design-section .tabs-menu li:first-child {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
-.interior-design-section .tabs_wrap ul li:last-child {
+.interior-design-section .tabs-menu li:last-child {
   border-right: 0px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-.interior-design-section .tabs_wrap ul li:hover, .interior-design-section .tabs_wrap ul li.btn-active {
+.interior-design-section .tabs-menu li:hover, .interior-design-section .tabs-menu li.btn-active {
   background: var(--blue9);
-  color: #fff;
+  color: var(--white);
 }
 .interior-design-section .items-group {
   width: 90%;
@@ -2504,16 +2502,17 @@ select:focus {
 .property-list-section .section-title {
   color: var(--white);
 }
-.property-list-section .controls {
+.property-list-section .tabs-menu {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  padding: 0 0 1rem;
+  padding: 0 0 2rem;
+  margin: 0;
   border-bottom: 1px solid #ebedec;
 }
-.property-list-section .controls li {
+.property-list-section .tabs-menu li {
   text-align: center;
   background: #e9ecf1;
   border-right: 1px solid #c1c4c9;
@@ -2524,20 +2523,20 @@ select:focus {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.property-list-section .controls li:first-child {
+.property-list-section .tabs-menu li:first-child {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
-.property-list-section .controls li:last-child {
+.property-list-section .tabs-menu li:last-child {
   border-right: 0px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-.property-list-section .controls li:hover {
+.property-list-section .tabs-menu li:hover {
   background-color: var(--blue9);
   color: var(--white);
 }
-.property-list-section .controls .button-active {
+.property-list-section .tabs-menu .button-active {
   background-color: var(--blue9);
   color: var(--white);
 }

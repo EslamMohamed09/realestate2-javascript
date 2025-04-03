@@ -2113,17 +2113,16 @@ select:focus {outline:none;}
 */
 .interior-design-section {
 
-      .tabs_wrap {padding:0 0 1rem;
+      .tabs-menu {display:-webkit-box;
+                  display:-ms-flexbox;
+                  display:flex;
+                  flex-wrap:wrap;
+                  -webkit-box-pack:center;
+                  -ms-flex-pack:center;
+                  justify-content:center;
+                  padding:0 0 2rem;
                   margin:0;
                   border-bottom:1px solid #ebedec;
-
-            ul {display:-webkit-box;
-                display:-ms-flexbox;
-                display:flex;
-                flex-wrap:wrap;
-                -webkit-box-pack:center;
-                -ms-flex-pack:center;
-                justify-content:center;
 
                   li {text-align:center;
                       background:#e9ecf1;
@@ -2144,9 +2143,8 @@ select:focus {outline:none;}
 
                         &:hover,
                         &.btn-active {background:var(--blue9);
-                                      color:#fff;}
+                                      color:var(--white);}
                   }
-            }
       }
 
       .items-group {width:90%;
@@ -2235,13 +2233,14 @@ select:focus {outline:none;}
 .property-list-section {
      .section-title {color:var(--white);}
 
-      .controls {display:flex;
-                 justify-content:center;
-                 flex-wrap:wrap;
-                 -webkit-box-pack:center;
-                 -ms-flex-pack:center;
-                 padding:0 0 1rem;
-                 border-bottom:1px solid #ebedec;
+      .tabs-menu {display:flex;
+                  justify-content:center;
+                  flex-wrap:wrap;
+                  -webkit-box-pack:center;
+                  -ms-flex-pack:center;
+                  padding:0 0 2rem;
+                  margin:0;
+                  border-bottom:1px solid #ebedec;
 
             li {text-align:center;
                 background:#e9ecf1;
