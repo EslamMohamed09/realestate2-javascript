@@ -489,7 +489,7 @@ section {
 }
 .section-heading .sec-title {
   padding: 1rem 0;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--black);
@@ -499,7 +499,7 @@ section {
 .section-heading .sec-title::before, .section-heading .sec-title::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 0.5rem;
   width: 40%;
   height: 2px;
 }
@@ -517,15 +517,15 @@ section {
 }
 .section-heading svg, .section-heading i {
   position: absolute;
-  bottom: -0.6rem;
+  bottom: 0.1rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.7rem;
+  font-size: 1rem;
   color: rgb(1, 1, 78);
 }
 
 p {
-  font-size: 1.7rem;
+  font-size: 1rem;
   text-align: justify;
 }
 
@@ -1339,8 +1339,8 @@ button:focus {
   justify-content: center;
 }
 .about-section .section-container .col-left .image {
-  width: 80%;
-  height: 70rem;
+  width: 33rem;
+  height: 40rem;
   position: relative;
 }
 .about-section .section-container .col-left .image .big-img {
@@ -1357,8 +1357,8 @@ button:focus {
   left: -3rem;
   transform: translateY(-50%);
   object-fit: fill;
-  width: 21rem;
-  height: 13rem;
+  width: 14rem;
+  height: 8rem;
   border: 3px solid var(--white);
   box-shadow: var(--box-shadow6);
   border-radius: 0.5rem;
@@ -1372,42 +1372,42 @@ button:focus {
 }
 .about-section .section-container .col-right .col-content .sub-title {
   font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 .about-section .section-container .col-right .col-content .sec-desc {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
-.about-section .section-container .col-right .col-content .qualities-list {
+.about-section .section-container .col-right .col-content .qualities-menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 6rem 0 3rem;
+  margin: 4rem 0 3rem;
   padding: 0;
 }
-.about-section .section-container .col-right .col-content .qualities-list .quality-item {
-  flex: 1 1 20rem;
+.about-section .section-container .col-right .col-content .qualities-menu .quality-item {
+  flex: 1 1 15rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 1rem;
 }
-.about-section .section-container .col-right .col-content .qualities-list .quality-item span {
+.about-section .section-container .col-right .col-content .qualities-menu .quality-item span {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background: radial-gradient(var(--blue5), var(--blue17));
   color: var(--white);
 }
-.about-section .section-container .col-right .col-content .qualities-list .quality-item span svg, .about-section .section-container .col-right .col-content .qualities-list .quality-item span i {
-  font-size: 1.7rem;
+.about-section .section-container .col-right .col-content .qualities-menu .quality-item span svg, .about-section .section-container .col-right .col-content .qualities-menu .quality-item span i {
+  font-size: 1.2rem;
 }
-.about-section .section-container .col-right .col-content .qualities-list .quality-item p {
+.about-section .section-container .col-right .col-content .qualities-menu .quality-item p {
   margin: auto 1rem;
   text-align: left;
   font-weight: bold;
@@ -1444,7 +1444,7 @@ button:focus {
   .about-section .section-container .col-right .col-content .sec-desc {
     font-size: 1.8rem;
   }
-  .about-section .section-container .col-right .col-content .qualities-list .quality-item p {
+  .about-section .section-container .col-right .col-content .qualities-menu .quality-item p {
     font-size: 1.5rem;
   }
 }

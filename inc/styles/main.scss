@@ -457,7 +457,7 @@ section {padding:2rem 7% 3rem;
                   position:relative;
 
       .sec-title {padding:1rem 0;
-                  font-size:2.5rem;
+                  font-size:1.5rem;
                   font-weight:bold;
                   text-transform:uppercase;
                   color:var(--black);
@@ -467,7 +467,7 @@ section {padding:2rem 7% 3rem;
             &::before,
             &::after  {content:'';
                        position:absolute;
-                       bottom:0;
+                       bottom:0.5rem;
                        width:40%;
                        height:2px;}
 
@@ -482,14 +482,14 @@ section {padding:2rem 7% 3rem;
       }
 
       svg,i {position:absolute;
-             bottom:-0.6rem;
+             bottom:0.1rem;
              left:50%;
              transform:translateX(-50%);
-             font-size:1.7rem;
+             font-size:1rem;
              color:rgb(1, 1, 78);}
 }
 
-p {font-size:1.7rem;
+p {font-size:1rem;
    text-align:justify;}
 
 img {max-width:100%;}
@@ -1180,8 +1180,8 @@ button:focus {border:none;
                        text-align:center;
                        justify-content:center;
 
-                        .image {width:80%;
-                                height:70rem;
+                        .image {width:33rem;
+                                height:40rem;
                                 position:relative;
 
                               .big-img {width:100%;
@@ -1196,8 +1196,8 @@ button:focus {border:none;
                                           left:-3rem;
                                           transform:translateY(-50%);  
                                           object-fit:fill;
-                                          width:21rem;
-                                          height:13rem;
+                                          width:14rem;
+                                          height:8rem;
                                           border:3px solid var(--white);
                                           box-shadow:var(--box-shadow6);
                                           border-radius:0.5rem;}
@@ -1212,19 +1212,19 @@ button:focus {border:none;
                         .section-heading {text-align:center;}
 
                         .sub-title {font-weight:bold;
-                                    font-size:2.5rem;
-                                    margin-bottom:2rem;}
+                                    font-size:1.4rem;
+                                    margin-bottom:1rem;}
 
-                        .sec-desc {font-size:2rem;}
+                        .sec-desc {font-size:1.2rem;}
 
-                        .qualities-list {display:flex;
+                        .qualities-menu {display:flex;
                                          flex-direction:row;
                                          flex-wrap:wrap;
                                          gap:2rem;
-                                         margin:6rem 0 3rem;
+                                         margin:4rem 0 3rem;
                                          padding:0;
 
-                              .quality-item {flex:1 1 20rem;
+                              .quality-item {flex:1 1 15rem;
                                              display:flex;
                                              justify-content:flex-start;
                                              align-items:center;
@@ -1234,13 +1234,13 @@ button:focus {border:none;
                                           align-items:center;
                                           justify-content:center;
                                           padding:1rem;
-                                          width:4rem;
-                                          height:4rem;
+                                          width:3rem;
+                                          height:3rem;
                                           border-radius:50%;
                                           background:radial-gradient(var(--blue5), var(--blue17));
                                           color:var(--white);
 
-                                          svg,i {font-size:1.7rem;}
+                                          svg,i {font-size:1.2rem;}
                                     }
 
                                     p {margin:auto 1rem;
@@ -1276,7 +1276,7 @@ button:focus {border:none;
 
                                           .sec-desc {font-size:1.8rem;}
 
-                                          .qualities-list .quality-item p {font-size:1.5rem;}
+                                          .qualities-menu .quality-item p {font-size:1.5rem;}
                   }
             }
       }
