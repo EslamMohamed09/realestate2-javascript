@@ -472,7 +472,7 @@ body {
 }
 
 section {
-  padding: 2rem 7% 3rem;
+  padding: 2rem 7%;
   margin-bottom: 2rem;
 }
 
@@ -551,43 +551,212 @@ select:focus {
   outline: none;
 }
 
-.btn {
-  font-size: 1.6rem;
+/***************** BUTTONS ******************/
+.black-btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
   font-weight: bold;
-  text-transform: uppercase;
-  color: var(--white);
-  background-color: var(--blue14);
-  border: 1px solid var(--blue14);
-  text-shadow: var(--box-shadow2);
-  padding: 0.7rem 1.5rem;
-  position: relative;
-  z-index: 0;
-  transition: all 0.5s linear;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--white2);
+  border: 1px solid var(--black2);
+  outline: none;
+  background-color: var(--black2);
+  transition: all 0.6s linear;
 }
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: var(--blue9);
-  z-index: -1;
-  clip-path: circle(0% at 0% 0%);
-  transition: all 0.5s linear;
-}
-.btn:hover {
-  color: var(--white);
-  text-shadow: var(--text-shadow2);
-  border: 1px solid var(--blue9);
-}
-.btn:hover::before {
-  clip-path: circle(100%);
+.black-btn:hover {
+  color: var(--black2);
+  background-color: transparent;
 }
 
-button:focus {
+.add-btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--white2);
+  border: 1px solid var(--black2);
+  outline: none;
+  background-color: var(--black2);
+  transition: all 0.6s linear;
+}
+.add-btn:hover {
+  color: var(--black2);
+  background-color: transparent;
+}
+
+.trans-btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+  box-shadow: none;
+  outline: none;
+  color: var(--black2);
+  background-color: transparent;
+  border: 1.5px solid var(--black2);
+  transition: all 0.3s linear;
+}
+.trans-btn:hover {
+  border: 1.5px solid var(--black2);
+  color: var(--white2);
+  background-color: var(--black2);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--white2);
+  background-color: var(--black2);
+  border: 1px solid var(--black2);
+  outline: none;
+  transition: all 0.6s linear;
+}
+.btn:hover {
+  color: var(--black);
+  background-color: transparent;
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 0.7rem 1rem !important;
+  margin: 0;
+  font-size: 14px;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 0.2rem;
   border: none;
   outline: none;
+  color: var(--white2);
+  background-color: var(--blue5);
+  box-shadow: var(--box-shadow5);
+  transition: all 0.3s linear;
+}
+.btn2 :hover {
+  color: var(--white2);
+  box-shadow: 0 0 6px rgba(0, 132, 255, 0.4784313725);
+}
+
+.btn3 {
+  padding: 0.6rem 1.3rem !important;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0.2rem;
+  color: var(--white2);
+  border: 1px solid var(--blue8);
+  background-color: var(--blue8);
+  box-shadow: var(--box-shadow5);
+  transition: all 0.3s linear;
+}
+.btn3:hover {
+  background-color: transparent;
+  color: var(--blue7);
+}
+
+.btn4 {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  color: var(--violet);
+  box-shadow: var(--blue-box-shadow);
+  background: linear-gradient(to right, var(--violet6), rgb(64, 4, 121) 80%);
+}
+.btn4:hover {
+  color: var(--white);
+  background: linear-gradient(to right, #056c9b, rgb(158, 108, 204) 80%);
+}
+
+.btn5 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.1rem;
+  color: var(--navyblue8);
+  outline: none;
+  border: 1px solid var(--yellow10);
+  background: var(--yellow10);
+  box-shadow: var(--blue-box-shadow);
+}
+.btn5:hover {
+  background: transparent;
+  color: var(--navyblue8);
+}
+
+.btn4-trans {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  text-align: center;
+  background: transparent;
+  color: rgb(64, 4, 121);
+  border: 1px solid var(--violet6);
+  transition: all 0.4s linear;
+}
+.btn4-trans:hover {
+  color: #fca4fc;
+  border: none;
+  background: rgb(64, 4, 121);
+  border: 1px solid rgb(64, 4, 121);
+}
+
+.line-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.1rem;
+  color: var(--black2);
+  outline: none;
+  border: none;
+  background: transparent;
+  position: relative;
+}
+.line-btn::before {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+  background-color: var(--black);
+  z-index: 0;
+}
+.line-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+  background-color: var(--gray5);
+  z-index: 20;
+}
+.line-btn:hover {
+  color: var(--black2);
+}
+.line-btn:hover::after {
+  width: 100%;
 }
 
 /*
@@ -2024,17 +2193,16 @@ button:focus {
  ***********
 */
 .search-section .section-container {
-  background-color: var(--white);
   width: 100%;
   margin: auto;
   padding: 2rem;
   display: block;
   position: relative;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow7);
 }
-.search-section .section-container .location-form,
-.search-section .section-container .price-form,
-.search-section .section-container .checkbox-form {
-  margin-bottom: 4rem;
+.search-section .section-container .form-block {
+  margin-bottom: 1rem;
 }
 .search-section .section-container .input-group {
   display: block;
@@ -2042,18 +2210,21 @@ button:focus {
 }
 .search-section .section-container .input-group input[type=text] {
   width: 10rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  box-shadow: var(--box-shadow7);
 }
 .search-section .section-container .input-group label {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   font-weight: bold;
   display: block;
 }
 .search-section .section-container .input-group select {
   text-align: left;
   margin-bottom: 1rem;
-  font-size: 1.6rem;
-  padding: 0.8rem;
+  font-size: 1rem;
+  padding: 0.5rem;
   border-radius: 0.3rem;
   cursor: pointer;
   color: var(--blue19);
@@ -2062,7 +2233,7 @@ button:focus {
 }
 .search-section .section-container .input-group select option {
   padding: 2rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 .search-section .section-container .input-group .no-range {
   display: flex;
@@ -2074,7 +2245,7 @@ button:focus {
   align-items: center;
 }
 .search-section .section-container .input-group .no-range span {
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   margin-right: 0.7rem;
 }
 .search-section .section-container .location-form .input-city {
@@ -2086,26 +2257,32 @@ button:focus {
 .search-section .section-container .checkbox-form {
   gap: 2rem;
 }
-.search-section .section-container .checkbox-form .input-group {
+.search-section .section-container .checkbox-form .input-holder {
   display: flex;
-  flex: 1 1 15rem;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+  gap: 0.4rem;
+  flex: 1 1 15rem;
 }
-.search-section .section-container .checkbox-form .input-group label {
-  margin-left: 1rem;
-  margin-bottom: 0;
+.search-section .section-container .checkbox-form .input-holder label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
 }
-.search-section .section-container .btn {
+.search-section .section-container .btn2 {
   position: absolute;
   right: 0;
-  top: -4.1rem;
+  top: -3.1rem;
+  border-radius: 0.2rem 0.2rem 0 0;
+  background: radial-gradient(var(--blue11), var(--blue18));
 }
-
 @media (max-width: 768px) {
-  .search-section #section-container .input-group {
+  .search-section .section-container .input-group {
     margin-bottom: 3rem;
   }
 }
+
 /*
  **************
   # Aminities
