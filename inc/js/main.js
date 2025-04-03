@@ -251,7 +251,7 @@ function heroSlider(options){
 
 }
 
-dotsSlider({
+dotsFullResponsiveSlider({
     section:'.sell-apartments-section',
     containerSelector:'.sell-apartments-section .slider-wrapper',
     dotsSelector:'.sell-apartments-section #sliderdots',
@@ -259,7 +259,7 @@ dotsSlider({
     nextArrowSelector:'.sell-apartments-section .arrow-right',
 });
 
-dotsSlider({
+dotsFullResponsiveSlider({
     section:'.sell-builds-section',
     containerSelector:'.sell-builds-section .slider-wrapper',
     dotsSelector:'.sell-builds-section #sliderdots',
@@ -323,7 +323,7 @@ window.onload = function(){
  ####### GLOBAL #######
  ######################
 */
-function dotsSlider(options) {
+function dotsFullResponsiveSlider(options) {
     const {
         section = '.slider-section',
         containerSelector = '.slides-container',
