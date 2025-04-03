@@ -2127,8 +2127,8 @@ select:focus {outline:none;}
                   li {text-align:center;
                       background:#e9ecf1;
                       border-right:1px solid #c1c4c9;
-                      padding:1.4rem 3rem 1.3rem;
-                      font-size:1.6rem;
+                      padding:1rem 2rem 1rem;
+                      font-size:1rem;
                       cursor:pointer;
                       -webkit-transition:all 0.2s ease;
                       -o-transition:all 0.2s ease;
@@ -2151,7 +2151,7 @@ select:focus {outline:none;}
       .items-group {width:90%;
                     display:block;
                     padding:0;
-                    margin:7rem auto 0;
+                    margin:1rem auto 0;
 
             .item_wrap {padding:0;
                         cursor:pointer;
@@ -2165,8 +2165,8 @@ select:focus {outline:none;}
 
                   .item_left {display:flex;
 
-                        .image {width:75%;
-                                height:45rem;
+                        .image {width:65%;
+                                height:30rem;
                                 margin:auto;
 
                               img {width:100%;
@@ -2176,18 +2176,18 @@ select:focus {outline:none;}
                   }
 
                   .item_right {display:flex;
+                               flex-direction:column;
+                               justify-content:flex-start;
                                align-items:center;
 
                         .details {width:100%;
-	                            height:80%;
-                                  margin:auto;
+	                            height:60%;
+                                  margin:3rem auto 1rem;
                                   padding:0;
-
-                              h3 {font-weight:bold;}
 
                               ul {padding:0;
                                   margin:0;
-                                  margin-top:4rem;
+                                  margin-top:2rem;
 
                                     li {display:flex;
                                         justify-content:space-between;
@@ -2200,7 +2200,7 @@ select:focus {outline:none;}
 
                                           span,
                                           p {color:var(--gray10);
-                                             font-size:1.7rem;}
+                                             font-size:1rem;}
                                     }
                               }
                         }

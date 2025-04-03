@@ -2394,8 +2394,8 @@ select:focus {
   text-align: center;
   background: #e9ecf1;
   border-right: 1px solid #c1c4c9;
-  padding: 1.4rem 3rem 1.3rem;
-  font-size: 1.6rem;
+  padding: 1rem 2rem 1rem;
+  font-size: 1rem;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -2418,7 +2418,7 @@ select:focus {
   width: 90%;
   display: block;
   padding: 0;
-  margin: 7rem auto 0;
+  margin: 1rem auto 0;
 }
 .interior-design-section .items-group .item_wrap {
   padding: 0;
@@ -2435,8 +2435,8 @@ select:focus {
   display: flex;
 }
 .interior-design-section .items-group .item_wrap .item_left .image {
-  width: 75%;
-  height: 45rem;
+  width: 65%;
+  height: 30rem;
   margin: auto;
 }
 .interior-design-section .items-group .item_wrap .item_left .image img {
@@ -2446,21 +2446,20 @@ select:focus {
 }
 .interior-design-section .items-group .item_wrap .item_right {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 .interior-design-section .items-group .item_wrap .item_right .details {
   width: 100%;
-  height: 80%;
-  margin: auto;
+  height: 60%;
+  margin: 3rem auto 1rem;
   padding: 0;
-}
-.interior-design-section .items-group .item_wrap .item_right .details h3 {
-  font-weight: bold;
 }
 .interior-design-section .items-group .item_wrap .item_right .details ul {
   padding: 0;
   margin: 0;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .interior-design-section .items-group .item_wrap .item_right .details ul li {
   display: flex;
@@ -2475,7 +2474,7 @@ select:focus {
 .interior-design-section .items-group .item_wrap .item_right .details ul li span,
 .interior-design-section .items-group .item_wrap .item_right .details ul li p {
   color: var(--gray10);
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
 .interior-design-section .items-group .item_wrap .item_right ul li span {
   font-weight: bold;
