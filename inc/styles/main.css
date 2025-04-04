@@ -2651,40 +2651,38 @@ select:focus {
   padding: 0;
 }
 .contacting-section .connect-row {
-  min-height: 13rem;
-  background-image: linear-gradient(125deg, var(--blue19) 0%, var(--blue14) 100%);
+  min-height: 6rem;
+  background-image: linear-gradient(125deg, var(--blue19) 0%, var(--blue11) 100%);
 }
 .contacting-section .connect-row .col-left .content {
-  display: flex;
-  text-align: right;
-  align-items: center;
-  justify-content: flex-end;
+  height: 100%;
+  margin: 0;
+  padding: 0 2rem;
 }
 .contacting-section .connect-row .col-left h4 {
-  color: var(--blue9);
-  font-size: 3rem;
+  color: var(--lightblue1);
 }
 .contacting-section .connect-row .col-right .content {
+  width: 100%;
   display: flex;
   align-items: center;
   text-align: left;
   justify-content: space-between;
   padding: 2rem;
-  width: 100%;
-  height: 100%;
 }
 .contacting-section .connect-row .col-right .content span {
   color: var(--white);
-  font-size: 5rem;
+  font-size: 2.5rem;
 }
-.contacting-section .connect-row .col-right .content span .fa-phone {
+.contacting-section .connect-row .col-right .content span svg, .contacting-section .connect-row .col-right .content span i {
+  font-size: 2.7rem;
   padding: 0.5rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: var(--white);
   color: var(--blue16);
 }
 .contacting-section .connect-row .col-right .content .send-button {
-  font-size: 2.7rem;
+  font-size: 1.8rem;
   color: var(--white);
 }
 .contacting-section .owner-row .col-left .content {
@@ -2698,24 +2696,22 @@ select:focus {
   justify-content: center;
 }
 .contacting-section .owner-row .col-left .content img {
-  width: 21rem;
-  height: 21rem;
+  width: 14rem;
+  height: 14rem;
   border-radius: 50%;
   margin-bottom: 2rem;
 }
-.contacting-section .owner-row .col-left .content h3 {
-  font-size: 4rem;
-  font-weight: bold;
+.contacting-section .owner-row .col-left .content h2 {
   text-transform: uppercase;
 }
 .contacting-section .owner-row .col-left .content p {
   font-weight: bold;
   color: var(--blue9);
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 .contacting-section .owner-row .col-right img {
   width: 100%;
-  height: 100%;
+  height: 35rem;
   object-fit: cover;
 }
 

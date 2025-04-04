@@ -2367,38 +2367,36 @@ select:focus {outline:none;}
       .row .col-left,
       .row .col-right {padding:0;}
 
-      .connect-row {min-height:13rem;
-                    background-image:linear-gradient(125deg, var(--blue19) 0%, var(--blue14) 100%);
+      .connect-row {min-height:6rem;
+                    background-image:linear-gradient(125deg, var(--blue19) 0%, var(--blue11) 100%);
 
             .col-left {
-                  .content {display:flex;
-                            text-align:right;
-                            align-items:center;
-                            justify-content:flex-end;}
+                  .content {height:100%;
+                            margin:0;
+                            padding:0 2rem;}
 
-                  h4 {color:var(--blue9);
-                      font-size:3rem;}
+                  h4 {color:var(--lightblue1);}
             }
 
             .col-right {
-                  .content {display:flex;
+                  .content {width:100%;
+                            display:flex;
                             align-items:center;
                             text-align:left;
                             justify-content:space-between;
                             padding:2rem;
-                            width:100%;
-                            height:100%;
 
                         span {color:var(--white);
-                              font-size:5rem;
+                              font-size:2.5rem;
 
-                              .fa-phone {padding:0.5rem;
-                                         border-radius:1rem;
-                                         background-color:var(--white);
-                                         color:var(--blue16);}
+                              svg,i {font-size:2.7rem;
+                                     padding:0.5rem;
+                                     border-radius:0.5rem;
+                                     background-color:var(--white);
+                                     color:var(--blue16);}
                         }
 
-                        .send-button {font-size:2.7rem;
+                        .send-button {font-size:1.8rem;
                                       color:var(--white);}
                   }
             }
@@ -2415,24 +2413,22 @@ select:focus {outline:none;}
                             align-items:center;
                             justify-content:center;
 
-                        img {width:21rem;
-                             height:21rem;
+                        img {width:14rem;
+                             height:14rem;
                              border-radius:50%;
                              margin-bottom:2rem;}
 
-                        h3 {font-size:4rem;
-                            font-weight:bold;
-                            text-transform:uppercase;}
+                        h2 {text-transform:uppercase;}
 
                         p {font-weight:bold;
                            color:var(--blue9);
-                           font-size:2rem;}
+                           font-size:1.2rem;}
                   }
             }
 
             .col-right {
                   img {width:100%;
-                       height:100%;
+                       height:35rem;
                        object-fit:cover;}
             }
       }
