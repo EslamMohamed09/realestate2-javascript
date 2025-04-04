@@ -270,13 +270,13 @@ dotsFullResponsiveSlider({
 
 // InteriorDesign
 let tabs = 'one';
-$('.interior-design-section .item_wrap').not('.' + tabs).hide(0);
-$('.interior-design-section .item_wrap').filter('.' + tabs).show(0);
+$('.interior-design-section .item').not('.' + tabs).hide(0);
+$('.interior-design-section .item').filter('.' + tabs).show(0);
 
 $('.interior-design-section li').click(function () {
 	tabs = $(this).attr('data-tabs');
-	$('#interiorDesign .item_wrap').not('.' + tabs).hide(0);
-	$('#interiorDesign .item_wrap').filter('.' + tabs).show(0);
+	$('.interior-design-section .item').not('.' + tabs).hide(0);
+	$('.interior-design-section .item').filter('.' + tabs).show(0);
 	$(this).addClass('btn-active').siblings().removeClass('btn-active');
 });
 
@@ -288,8 +288,8 @@ $('.property-list-section .card').filter('.' + filter).show(0);
 
 $('.property-list-section li').click(function () {
 	filter = $(this).attr('data-filter');
-	$('#property-list .card').not('.' + filter).hide(0);
-	$('#property-list .card').filter('.' + filter).show(0);
+	$('.property-list-section .card').not('.' + filter).hide(0);
+	$('.property-list-section .card').filter('.' + filter).show(0);
 	$(this).addClass('button-active').siblings().removeClass('button-active');
 });
 
