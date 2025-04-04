@@ -2413,72 +2413,72 @@ select:focus {
   background: var(--blue9);
   color: var(--white);
 }
-.interior-design-section .items-group {
+.interior-design-section .items-holder {
   width: 90%;
   display: block;
   padding: 0;
   margin: 1rem auto 0;
 }
-.interior-design-section .items-group .item {
+.interior-design-section .items-holder .item {
   padding: 0;
   cursor: pointer;
   display: none;
 }
-.interior-design-section .items-group .item .row,
-.interior-design-section .items-group .item .row .col-left,
-.interior-design-section .items-group .item .row .col-right {
+.interior-design-section .items-holder .item .row,
+.interior-design-section .items-holder .item .row .col-left,
+.interior-design-section .items-holder .item .row .col-right {
   padding: 0;
   margin: 0;
 }
-.interior-design-section .items-group .item .col-left {
+.interior-design-section .items-holder .item .col-left {
   display: flex;
 }
-.interior-design-section .items-group .item .col-left .image {
+.interior-design-section .items-holder .item .col-left .image {
   width: 65%;
   height: 30rem;
   margin: auto;
 }
-.interior-design-section .items-group .item .col-left .image img {
+.interior-design-section .items-holder .item .col-left .image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.interior-design-section .items-group .item .col-right {
+.interior-design-section .items-holder .item .col-right {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.interior-design-section .items-group .item .col-right .details {
+.interior-design-section .items-holder .item .col-right .details {
   width: 100%;
   height: 60%;
   margin: 3rem auto 1rem;
   padding: 0;
 }
-.interior-design-section .items-group .item .col-right .details ul {
+.interior-design-section .items-holder .item .col-right .details ul {
   padding: 0;
   margin: 0;
   margin-top: 2rem;
 }
-.interior-design-section .items-group .item .col-right .details ul li {
+.interior-design-section .items-holder .item .col-right .details ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
   margin: 1rem 0;
 }
-.interior-design-section .items-group .item .col-right .details ul li:nth-child(2), .interior-design-section .items-group .item .col-right .details ul li:nth-child(4) {
+.interior-design-section .items-holder .item .col-right .details ul li:nth-child(2), .interior-design-section .items-holder .item .col-right .details ul li:nth-child(4) {
   background-color: var(--lightblue5);
 }
-.interior-design-section .items-group .item .col-right .details ul li span,
-.interior-design-section .items-group .item .col-right .details ul li p {
+.interior-design-section .items-holder .item .col-right .details ul li span,
+.interior-design-section .items-holder .item .col-right .details ul li p {
   color: var(--gray10);
   font-size: 1rem;
 }
-.interior-design-section .items-group .item .col-right ul li span {
+.interior-design-section .items-holder .item .col-right ul li span {
   font-weight: bold;
 }
-.interior-design-section .items-group .item .col-right .details ul li p {
+.interior-design-section .items-holder .item .col-right .details ul li p {
   margin: auto 0;
 }
 @media (max-width: 700px) {
