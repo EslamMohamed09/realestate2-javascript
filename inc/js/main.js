@@ -267,32 +267,21 @@ dotsFullResponsiveSlider({
     nextArrowSelector:'.sell-builds-section .arrow-right',
 });
 
+/* 
+ #################################
+ #### INTERIOR DESIGN SECTION ####
+ #################################
+*/
+filterTabs({tabSelector:'.interior-design-section .tabs-menu li', 
+            itemSelector:'.interior-design-section .items-holder .item'});
 
-// InteriorDesign
-let tabs = 'one';
-$('.interior-design-section .item').not('.' + tabs).hide(0);
-$('.interior-design-section .item').filter('.' + tabs).show(0);
-
-$('.interior-design-section li').click(function () {
-	tabs = $(this).attr('data-tabs');
-	$('.interior-design-section .item').not('.' + tabs).hide(0);
-	$('.interior-design-section .item').filter('.' + tabs).show(0);
-	$(this).addClass('btn-active').siblings().removeClass('btn-active');
-});
-
-	
-// Property list
-let filter = 'first';
-$('.property-list-section .card').not('.' + filter).hide(0);
-$('.property-list-section .card').filter('.' + filter).show(0);
-
-$('.property-list-section li').click(function () {
-	filter = $(this).attr('data-filter');
-	$('.property-list-section .card').not('.' + filter).hide(0);
-	$('.property-list-section .card').filter('.' + filter).show(0);
-	$(this).addClass('button-active').siblings().removeClass('button-active');
-});
-
+/* 
+ ###############################
+ #### PROPERTY LIST SECTION ####
+ ###############################
+*/
+filterTabs({tabSelector:'.property-list-section .tabs-menu li', 
+            itemSelector:'.property-list-section .cards-container .card'});
 
 
 	
@@ -553,4 +542,35 @@ function dotsFullResponsiveSlider(options) {
     setResponsive();
     attachEvents();
     autoSlide();
+}
+
+function filterTabs({ tabSelector, itemSelector, activeClass = 'btn-active' }) {
+  const tabs = document.querySelectorAll(tabSelector);
+  const items = document.querySelectorAll(itemSelector);
+  if (!tabs.length || !items.length) return;
+
+  const defaultClass = [...tabs[0].classList].find(cls => cls !== activeClass);
+  if (!defaultClass) return;
+
+  function setActiveTab(tab) {
+    tabs.forEach(t => t.classList.remove(activeClass));
+    tab.classList.add(activeClass);
+  }
+
+  function updateItems(matchClass) {
+    items.forEach(item => {
+      item.classList.contains(matchClass) ? item.style.display = 'block' : item.style.display = 'none';
+    });
+  }
+
+  setActiveTab(tabs[0]);
+  updateItems(defaultClass);
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const tabClass = [...tab.classList].find(cls => cls !== activeClass);
+      setActiveTab(tab);
+      updateItems(tabClass);
+    });
+  });
 }

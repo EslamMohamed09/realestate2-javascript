@@ -2541,9 +2541,9 @@ select:focus {
   background-color: var(--blue9);
   color: var(--white);
 }
-.property-list-section .tabs-menu .button-active {
-  background-color: var(--blue9);
+.property-list-section .tabs-menu li.btn-active {
   color: var(--white);
+  background-color: var(--blue9);
 }
 .property-list-section .cards-container {
   width: 100%;

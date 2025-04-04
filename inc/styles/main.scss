@@ -2265,10 +2265,10 @@ select:focus {outline:none;}
 
                   &:hover {background-color:var(--blue9);
                            color:var(--white);}
-            }                      
 
-            .button-active {background-color:var(--blue9);
-                            color:var(--white);}
+                  &.btn-active {color:var(--white);
+                                background-color:var(--blue9);}
+            }                      
       }
 
       .cards-container {width:100%;
