@@ -2267,24 +2267,26 @@ select:focus {outline:none;}
                             color:var(--white);}
       }
 
-      .cards-container {display:flex;
-                        flex-wrap:wrap;
-                        flex-direction:row;
-                        justify-content:center;
-                        align-items:center;
-                        width:90%;
+      .cards-container {width:100%;
+                        display:grid;
+                        grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
                         margin:3rem auto 0;
-                        gap:1.1rem;
+                        gap:1.5rem;
 
-            .card {flex:1 1 15rem;
+            .card {display:flex;
+                   flex-direction:column;
+                   justify-content:flex-start;
                    align-items:center;
-                   justify-content:center;
-                   margin:0;
+                   margin:0 auto;
                    border:1px solid var(--lightblue8);
                    border-radius:0.5rem;
 
-                  .card-contain {display:block;
+                  .card-contain {display:flex;
+                                 flex-direction:column;
+                                 justify-content:space-between;
+                                 align-items:center;
                                  width:100%;
+                                 height:34rem;
                                  padding:0;
 
                         .image {width:100%;
@@ -2301,7 +2303,7 @@ select:focus {outline:none;}
                                    object-fit:cover;}
                         }
 
-                        ul {padding:0 0.5rem;
+                        ul {padding:0 0.3rem;
                             margin:0;
                             margin-top:1rem;
  
@@ -2319,15 +2321,18 @@ select:focus {outline:none;}
 
                                     p {margin:auto 0;
                                        text-align:right;
-                                       font-size:0.9rem;}
+                                       font-size:1rem;}
+
+                                    &:first-child p {font-size:0.9rem;}
                               }
                         }
 
                         .btn {width:94%;
                               display:block;
-                              margin:2rem auto 1rem;
-                              background-color:var(--lightblue13);
-                              border:1px solid var(--lightblue13);}
+                              margin:0 auto 1rem;
+                              background-color:var(--blue11);
+                              border:1px solid var(--blue11);
+                              border-radius:0.2rem;}
                   }
             }
       }

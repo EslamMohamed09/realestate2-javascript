@@ -2541,26 +2541,28 @@ select:focus {
   color: var(--white);
 }
 .property-list-section .cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   margin: 3rem auto 0;
-  gap: 1.1rem;
+  gap: 1.5rem;
 }
 .property-list-section .cards-container .card {
-  flex: 1 1 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   border: 1px solid var(--lightblue8);
   border-radius: 0.5rem;
 }
 .property-list-section .cards-container .card .card-contain {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  height: 34rem;
   padding: 0;
 }
 .property-list-section .cards-container .card .card-contain .image {
@@ -2579,7 +2581,7 @@ select:focus {
   object-fit: cover;
 }
 .property-list-section .cards-container .card .card-contain ul {
-  padding: 0 0.5rem;
+  padding: 0 0.3rem;
   margin: 0;
   margin-top: 1rem;
 }
@@ -2601,14 +2603,18 @@ select:focus {
 .property-list-section .cards-container .card .card-contain ul li p {
   margin: auto 0;
   text-align: right;
+  font-size: 1rem;
+}
+.property-list-section .cards-container .card .card-contain ul li:first-child p {
   font-size: 0.9rem;
 }
 .property-list-section .cards-container .card .card-contain .btn {
   width: 94%;
   display: block;
-  margin: 2rem auto 1rem;
-  background-color: var(--lightblue13);
-  border: 1px solid var(--lightblue13);
+  margin: 0 auto 1rem;
+  background-color: var(--blue11);
+  border: 1px solid var(--blue11);
+  border-radius: 0.2rem;
 }
 @media (max-width: 768px) {
   .property-list-section .cards-container .card .card-contain .item-contain {
