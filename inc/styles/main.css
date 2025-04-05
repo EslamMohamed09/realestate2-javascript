@@ -2412,12 +2412,12 @@ select:focus {
 .interior-design-section .items-holder .item .col-left {
   display: flex;
 }
-.interior-design-section .items-holder .item .col-left .image {
+.interior-design-section .items-holder .item .col-left .image-holder {
   width: 65%;
   height: 30rem;
   margin: auto;
 }
-.interior-design-section .items-holder .item .col-left .image img {
+.interior-design-section .items-holder .item .col-left .image-holder img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -2550,7 +2550,7 @@ select:focus {
   gap: 0;
   padding: 0;
 }
-.property-list-section .cards-container .card .card-holder .image {
+.property-list-section .cards-container .card .card-holder .image-holder {
   width: 100%;
   height: 15rem;
   display: flex;
@@ -2559,7 +2559,7 @@ select:focus {
   border-top-right-radius: 0.5rem;
   background-color: var(--lightblue8);
 }
-.property-list-section .cards-container .card .card-holder .image img {
+.property-list-section .cards-container .card .card-holder .image-holder img {
   width: 80%;
   height: 90%;
   margin: auto;

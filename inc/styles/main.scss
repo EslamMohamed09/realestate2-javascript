@@ -2144,9 +2144,9 @@ select:focus {outline:none;}
 
                   .col-left {display:flex;
 
-                        .image {width:65%;
-                                height:30rem;
-                                margin:auto;
+                        .image-holder {width:65%;
+                                       height:30rem;
+                                       margin:auto;
 
                               img {width:100%;
                                    height:100%;
@@ -2274,13 +2274,13 @@ select:focus {outline:none;}
                                 gap:0;
                                 padding:0;
 
-                        .image {width:100%;
-                                height:15rem;
-                                display:flex;
-                                padding:0;
-                                border-top-left-radius:0.5rem;
-                                border-top-right-radius:0.5rem;
-                                background-color:var(--lightblue8);
+                        .image-holder {width:100%;
+                                       height:15rem;
+                                       display:flex;
+                                       padding:0;
+                                       border-top-left-radius:0.5rem;
+                                       border-top-right-radius:0.5rem;
+                                       background-color:var(--lightblue8);
 
                               img {width:80%;
                                    height:90%;
