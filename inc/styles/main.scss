@@ -2572,50 +2572,48 @@ select:focus {outline:none;}
 */
 .post-section  {
 
-    .box-container {margin:auto;
+      .box-container {margin:auto;
 
-        .box {margin-bottom:3rem;
+            .box {margin-bottom:3rem;
 
-                figure {width:90%;
-                        margin:auto;
+                  figure {width:100%;
+                          margin:auto;
 
-                    img {width:100%;
-                         height:26rem;
-                         object-fit:cover;}
+                        img {width:100%;
+                             height:20rem;
+                             object-fit:cover;}
 
-                    .content {padding:2rem 0;
+                        .content {padding:1rem 0;
 
-                        .post-header {display:flex; 
-                                      justify-content:space-between;
+                              .post-header {display:flex; 
+                                            justify-content:space-between;
 
-                            .post-date {font-size:1.6rem;
-                                        color:var(--gray9);}
+                              .post-date {font-size:1.1rem;
+                                          color:var(--gray9);}
 
-                            .post-comments {font-size:1.6rem;
-                                            color:var(--gray9);}
+                              .post-comments {font-size:1rem;
+                                              color:var(--gray9);}
 
-                            #pi {margin-right:0.4rem;}
+                                  svg,i {margin-right:0.4rem;}
+                              }
+
+                              h4 {margin:1.5rem 0 1rem;}
+
+                              p {color:var(--gray9);
+                                 font-size:1rem;
+                                 margin-bottom:1rem;}
+
+                              .post-button {color:var(--black);
+                                            font-size:1.6rem;
+                                            font-weight:bold;
+                                            display:flex;
+                                            align-items:center;
+
+                                    .fa-angle-right {font-size:2rem;
+                                                     margin-left:0.5rem;}
+                              }
                         }
-
-                        h3 {font-size:1.9rem;
-                            font-weight:bold;
-                            margin:1.5rem 0 1rem;}
-
-                        p {color:var(--gray9);
-                           font-size:1.5rem;
-                           margin-bottom:2rem;}
-
-                        .post-button {color:var(--black);
-                                      font-size:1.6rem;
-                                      font-weight:bold;
-                                      display:flex;
-                                      align-items:center;
-
-                            .fa-angle-right {font-size:2rem;
-                                             margin-left:0.5rem;}
-                        }
-                    }
-                }
+                  }
             }
     }
 }

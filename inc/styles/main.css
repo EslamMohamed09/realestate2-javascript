@@ -2849,41 +2849,39 @@ select:focus {
   margin-bottom: 3rem;
 }
 .post-section .box-container .box figure {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 .post-section .box-container .box figure img {
   width: 100%;
-  height: 26rem;
+  height: 20rem;
   object-fit: cover;
 }
 .post-section .box-container .box figure .content {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 .post-section .box-container .box figure .content .post-header {
   display: flex;
   justify-content: space-between;
 }
 .post-section .box-container .box figure .content .post-header .post-date {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   color: var(--gray9);
 }
 .post-section .box-container .box figure .content .post-header .post-comments {
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: var(--gray9);
 }
-.post-section .box-container .box figure .content .post-header #pi {
+.post-section .box-container .box figure .content .post-header svg, .post-section .box-container .box figure .content .post-header i {
   margin-right: 0.4rem;
 }
-.post-section .box-container .box figure .content h3 {
-  font-size: 1.9rem;
-  font-weight: bold;
+.post-section .box-container .box figure .content h4 {
   margin: 1.5rem 0 1rem;
 }
 .post-section .box-container .box figure .content p {
   color: var(--gray9);
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 .post-section .box-container .box figure .content .post-button {
   color: var(--black);
