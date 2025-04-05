@@ -525,8 +525,6 @@ input {
   border: none;
   outline: none;
   text-transform: none;
-  background-color: var(--lightblue7);
-  border: 1px solid var(--lightblue8);
   box-shadow: var(--box-shadow2);
 }
 input:focus {
@@ -2192,21 +2190,47 @@ select:focus {
   background-color: var(--white);
   box-shadow: var(--box-shadow7);
 }
-.search-section .section-container .form-block {
-  margin-bottom: 1rem;
+.search-section .section-container .form-block:not(:last-of-type) {
+  margin-bottom: 2rem;
 }
 .search-section .section-container .location-form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-.search-section .section-container .input-holder {
-  margin-bottom: 2rem;
-  background: var(--red3);
+.search-section .section-container .location-form .input-city {
+  width: 17rem !important;
+}
+.search-section .section-container .price-form {
+  display: grid;
+  grid-template-columns: 30% 50%;
+  gap: 1rem;
+}
+.search-section .section-container .checkbox-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.search-section .section-container .checkbox-form .input-holder {
+  flex: 1 1 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+}
+.search-section .section-container .checkbox-form .input-holder label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
 }
 .search-section .section-container .input-holder input[type=text] {
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   padding: 0.5rem;
   font-size: 1rem;
   background: var(--lightblue1);
@@ -2214,7 +2238,7 @@ select:focus {
 }
 .search-section .section-container .input-holder label {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: bold;
   display: block;
 }
@@ -2249,30 +2273,6 @@ select:focus {
   font-size: 0.9rem;
   margin-right: 0.7rem;
 }
-.search-section .section-container .location-form .input-city {
-  width: 17rem !important;
-}
-.search-section .section-container .price-form {
-  display: grid;
-  grid-template-columns: 35% 35%;
-  gap: 1rem;
-}
-.search-section .section-container .checkbox-form {
-  gap: 2rem;
-}
-.search-section .section-container .checkbox-form .input-holder {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.4rem;
-  flex: 1 1 15rem;
-}
-.search-section .section-container .checkbox-form .input-holder label {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
-}
 .search-section .section-container .btn2 {
   position: absolute;
   right: 0;
@@ -2283,12 +2283,30 @@ select:focus {
 @media (max-width: 850px) {
   .search-section .section-container {
     padding: 1rem;
-    background: rgb(169, 233, 169);
   }
 }
-@media (max-width: 768px) {
-  .search-section .section-container .input-group {
-    margin-bottom: 3rem;
+@media (max-width: 830px) {
+  .search-section .section-container .location-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .search-section .section-container .price-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .search-section .section-container .location-form {
+    grid-template-columns: 1fr;
+  }
+  .search-section .section-container .price-form {
+    grid-template-columns: 1fr;
+  }
+  .search-section .section-container .checkbox-form {
+    gap: 1rem;
+  }
+}
+@media (max-width: 300px) {
+  .search-section .section-container {
+    padding: 0.5rem;
   }
 }
 
@@ -3197,11 +3215,6 @@ footer .footer-bottom .policy a:last-child {
 @keyframes animate {
   to {
     transform: rotate(360deg);
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 50%;
   }
 }
 
