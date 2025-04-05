@@ -4,7 +4,7 @@
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
-    this.window.scrollY > 10 ? header.classList.add("active") : header.classList.remove("active");
+  this.window.scrollY > 10 ? header.classList.add("active") : header.classList.remove("active");
 });
 
 
@@ -280,7 +280,7 @@ filterTabs({tabSelector:'.interior-design-section .tabs-menu li',
  #### PROPERTY LIST SECTION ####
  ###############################
 */
-filterTabs({tabSelector:'.property-list-section .tabs-menu li', 
+filterTabs({tabSelector:'.property-list-section .tabs-menu li',
             itemSelector:'.property-list-section .cards-container .card'});
 
 
