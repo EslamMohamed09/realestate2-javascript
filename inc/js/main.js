@@ -296,7 +296,6 @@ filterTabs({tabSelector:'.interior-design-section .tabs-menu li',
 filterTabs({tabSelector:'.property-list-section .tabs-menu li',
             itemSelector:'.property-list-section .cards-container .card'});
 
-
 	
 function scrollUp(){
 	const scrollUp = document.getElementById('scroll-up');
@@ -307,11 +306,13 @@ function scrollUp(){
 }
 window.addEventListener('scroll', scrollUp);
 
-$('.scrollup').click(function(event){
-	event.preventDefault();
-	$('html, body').animate({
-	  scrollTop:0
-	}, 1000);
+const scrollUpBtn = document.getElementById("scroll-up");
+
+scrollUpBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top:0,
+    behavior: "smooth"
+  });
 });
 
 
