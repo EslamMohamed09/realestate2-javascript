@@ -720,6 +720,7 @@ select:focus {outline:none;}
                   .adding-list-btn {font-size:1rem;
                                     font-weight:bold;
                                     padding:0.3rem 1rem;
+                                    white-space:nowrap;
                                     color:var(--white);
                                     background-color:var(--blue8);
                                     border:1px solid var(--blue8);
@@ -944,7 +945,7 @@ select:focus {outline:none;}
                         .adding-list-btn {font-weight:normal;}
                         .contact-menu li a {
                               span,address {font-size:0.9rem;
-                                                font-weight:normal;}
+                                            font-weight:normal;}
                         }
                   }
 

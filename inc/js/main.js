@@ -35,19 +35,18 @@ if(document.querySelector(".open-btn")){
 const searchIcon = document.getElementById("search-icon");
 const searchFormm = document.getElementById("searchForm");
 let isSearchVisible = false;
-$(searchFormm).hide(0);
 
-searchIcon.addEventListener('click', function () {
-	if (isSearchVisible == true) {
-		searchFormm.style.pointerEvents = 'none';
-		$(searchFormm).hide(0);
-		isSearchVisible = false;
-	} else {
-		searchFormm.style.pointerEvents = 'auto';
-		$(searchFormm).show(0);
-		isSearchVisible = true;
-	}
-});
+// searchIcon.addEventListener('click', function () {
+// 	if (isSearchVisible == true) {
+// 		searchFormm.style.pointerEvents = 'none';
+// 		$(searchFormm).hide(0);
+// 		isSearchVisible = false;
+// 	} else {
+// 		searchFormm.style.pointerEvents = 'auto';
+// 		$(searchFormm).show(0);
+// 		isSearchVisible = true;
+// 	}
+// });
 
 
 document.body.style.paddingTop = `${header.offsetHeight}px`;
