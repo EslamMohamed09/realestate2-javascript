@@ -982,7 +982,7 @@ select:focus {
 }
 .header .bottom-bar #searchForm {
   position: absolute;
-  top: 8.8rem;
+  top: 4rem;
   left: 0;
   right: 0;
   width: 100%;
@@ -994,10 +994,10 @@ select:focus {
   transition: all 0.4s linear;
 }
 .header .bottom-bar #searchForm #searchInput {
-  padding: 1.5rem 2rem;
-  width: 96%;
-  height: 50%;
-  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  width: calc(100% - 3.5rem);
+  height: 2.7rem;
+  font-size: 1rem;
   border: none;
   color: var(--white);
   box-shadow: inset 8px 8px 38px 7px rgba(3, 33, 99, 0.9);
@@ -1011,15 +1011,15 @@ select:focus {
 .header .bottom-bar #searchForm #searchInput::placeholder {
   color: var(--white);
 }
-.header .bottom-bar #searchForm #search-btn {
-  width: 4%;
+.header .bottom-bar #searchForm .submit-search-btn {
+  width: 3.5rem;
   border: none;
   background-color: rgb(10, 142, 182);
   background: radial-gradient(var(--blue10), rgb(0, 64, 83));
 }
-.header .bottom-bar #searchForm #search-btn svg, .header .bottom-bar #searchForm #search-btn i {
+.header .bottom-bar #searchForm .submit-search-btn svg, .header .bottom-bar #searchForm .submit-search-btn i {
   color: var(--white);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .header.active .main-header {
