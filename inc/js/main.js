@@ -28,7 +28,7 @@ if(document.querySelector(".open-btn")){
         icon.style.transform = "rotate(0deg)";
       }, 150);
     };
-  }
+}
 
     
 //search icon
@@ -52,7 +52,11 @@ searchIcon.addEventListener('click', function () {
 
 document.body.style.paddingTop = `${header.offsetHeight}px`;
 
-
+/* 
+ ######################
+ #### HERO SECTION ####
+ ######################
+*/
 if(document.querySelector(".hero-section")){
 
 function heroSlider(options){
@@ -251,6 +255,11 @@ function heroSlider(options){
 
 }
 
+/* 
+ #################################
+ #### SELL APARTMENTS SECTION ####
+ #################################
+*/
 dotsFullResponsiveSlider({
     section:'.sell-apartments-section',
     containerSelector:'.sell-apartments-section .slider-wrapper',
@@ -259,6 +268,11 @@ dotsFullResponsiveSlider({
     nextArrowSelector:'.sell-apartments-section .arrow-right',
 });
 
+/* 
+ #############################
+ #### SELL BUILDS SECTION ####
+ #############################
+*/
 dotsFullResponsiveSlider({
     section:'.sell-builds-section',
     containerSelector:'.sell-builds-section .slider-wrapper',
