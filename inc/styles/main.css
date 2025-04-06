@@ -530,6 +530,10 @@ input:focus {
   outline: none;
 }
 
+ul {
+  padding: 0;
+}
+
 select:focus {
   outline: none;
 }
@@ -947,11 +951,11 @@ select:focus {
   color: var(--white);
   text-shadow: var(--box-shadow6);
 }
-.header .bottom-bar .nav-icons {
+.header .bottom-bar .services-buttons {
   display: flex;
   gap: 1rem;
 }
-.header .bottom-bar .nav-icons #search-icon {
+.header .bottom-bar .services-buttons #search-icon {
   border-radius: 50%;
   width: 1.8rem;
   height: 1.8rem;
@@ -962,7 +966,7 @@ select:focus {
   border: none;
   cursor: pointer;
 }
-.header .bottom-bar .nav-icons #search-icon #search-iconi {
+.header .bottom-bar .services-buttons #search-icon #search-iconi {
   font-size: 1.2rem;
   padding: 0.1rem;
   color: var(--light1);
@@ -970,10 +974,10 @@ select:focus {
   cursor: pointer;
   transition: all 0.7s linear;
 }
-.header .bottom-bar .nav-icons #search-icon:hover {
+.header .bottom-bar .services-buttons #search-icon:hover {
   background-color: var(--white);
 }
-.header .bottom-bar .nav-icons #search-icon:hover #search-iconi {
+.header .bottom-bar .services-buttons #search-icon:hover #search-iconi {
   color: var(--blue14);
 }
 .header .bottom-bar #searchForm {
@@ -1027,24 +1031,25 @@ select:focus {
   .header.active .main-header .navbar {
     background: var(--blue10);
   }
-  .header.active .main-header .navbar .nav-icons #search-icon {
+  .header.active .main-header .navbar .services-buttons #search-icon {
     background-color: var(--blue14);
   }
-  .header.active .main-header .navbar .nav-icons #search-icon:hover {
+  .header.active .main-header .navbar .services-buttons #search-icon:hover {
     background-color: var(--white);
   }
-  .header.active .main-header .navbar .nav-icons #search-icon:hover .fa-search {
+  .header.active .main-header .navbar .services-buttons #search-icon:hover .fa-search {
     color: var(--blue14);
   }
 }
 @media (max-width: 1000px) {
-  .header .bottom-bar .nav-icons {
+  .header .bottom-bar .services-buttons {
     display: none;
   }
 }
 @media (max-width: 768px) {
   .header .top-bar .left-block .adding-list-btn {
     font-weight: normal;
+    padding: 0.2rem 0.6rem;
   }
   .header .top-bar .left-block .contact-menu li a span, .header .top-bar .left-block .contact-menu li a address {
     font-size: 0.9rem;
@@ -1112,6 +1117,17 @@ select:focus {
 @media (max-width: 730px) {
   .header .top-bar .social-menu {
     display: none;
+  }
+}
+@media (max-width: 706px) {
+  .header .top-bar .left-block .contact-menu li a span, .header .top-bar .left-block .contact-menu li a address {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  .header .top-bar .right-block .social-menu li a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 550px) {

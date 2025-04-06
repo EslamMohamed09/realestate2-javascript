@@ -474,6 +474,8 @@ input {padding:0.5rem 1rem;
       &:focus {outline:none;}
 }
 
+ul {padding:0;}
+
 select:focus {outline:none;}  
 
 /*==================== Section Heading ====================*/
@@ -853,7 +855,7 @@ select:focus {outline:none;}
                   }
             }
 
-            .nav-icons {display:flex;
+            .services-buttons {display:flex;
                         gap:1rem;
 
                   #search-icon {border-radius:50%;
@@ -927,25 +929,29 @@ select:focus {outline:none;}
 
             &.active .main-header .navbar {background:var(--blue10);}
 
-            &.active .main-header .navbar .nav-icons #search-icon {background-color:var(--blue14);}
+            &.active .main-header .navbar .services-buttons #search-icon {background-color:var(--blue14);}
 
-            &.active .main-header .navbar .nav-icons #search-icon:hover {background-color:var(--white);}
+            &.active .main-header .navbar .services-buttons #search-icon:hover {background-color:var(--white);}
                                                 
-            &.active .main-header .navbar .nav-icons #search-icon:hover .fa-search {color:var(--blue14);}
+            &.active .main-header .navbar .services-buttons #search-icon:hover .fa-search {color:var(--blue14);}
       }
             
       @media (max-width:1000px){
-            .bottom-bar .nav-icons {display:none;}
+            .bottom-bar .services-buttons {display:none;}
       }
 
       @media (max-width:768px){
 
             .top-bar {
                   .left-block {
-                        .adding-list-btn {font-weight:normal;}
-                        .contact-menu li a {
-                              span,address {font-size:0.9rem;
-                                            font-weight:normal;}
+                        .adding-list-btn {font-weight:normal;
+                                          padding:0.2rem 0.6rem;}
+
+                        .contact-menu {
+                              li a {
+                                    span,address {font-size:0.9rem;
+                                                  font-weight:normal;}
+                              }
                         }
                   }
 
@@ -1005,6 +1011,29 @@ select:focus {outline:none;}
 
       @media (max-width:730px) {
              .top-bar .social-menu {display:none;}
+      }
+
+      @media (max-width:706px) {
+            .top-bar {
+                  .left-block {
+                        .contact-menu {
+                              li {
+                                  a {
+                                    span,address {font-size:0.8rem;
+                                                  font-weight:normal;}
+                                  }
+                              }
+                        }
+                  }
+
+                  .right-block {
+                        .social-menu {
+                              li a {width:2rem;
+                                    height:2rem;
+                                    font-size:1rem;}
+                        }
+                  }
+            }
       }
 
       @media (max-width:550px){
