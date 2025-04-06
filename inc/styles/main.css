@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -2861,19 +2860,19 @@ select:focus {
 .post-section .box-container .box figure .content {
   padding: 1rem 0;
 }
-.post-section .box-container .box figure .content .post-header {
+.post-section .box-container .box figure .content .date-comment-holder {
   display: flex;
   justify-content: space-between;
 }
-.post-section .box-container .box figure .content .post-header .post-date {
+.post-section .box-container .box figure .content .date-comment-holder .post-date {
   font-size: 0.9rem;
   color: var(--gray9);
 }
-.post-section .box-container .box figure .content .post-header .post-comments {
+.post-section .box-container .box figure .content .date-comment-holder .post-comments {
   font-size: 1rem;
   color: var(--gray9);
 }
-.post-section .box-container .box figure .content .post-header svg, .post-section .box-container .box figure .content .post-header i {
+.post-section .box-container .box figure .content .date-comment-holder svg, .post-section .box-container .box figure .content .date-comment-holder i {
   margin-right: 0.4rem;
 }
 .post-section .box-container .box figure .content h5 {
@@ -2882,7 +2881,7 @@ select:focus {
 .post-section .box-container .box figure .content p {
   color: var(--gray9);
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 .post-section .box-container .box figure .content .post-button {
   color: var(--black);
@@ -2978,7 +2977,7 @@ select:focus {
  ***********
 */
 footer {
-  background: linear-gradient(180deg, rgb(55, 55, 163) 5%, var(--blue18) 90%);
+  background: linear-gradient(180deg, var(--blue6) 10%, var(--blue14) 90%);
 }
 footer .footer-container {
   width: 100%;
@@ -2987,90 +2986,48 @@ footer .footer-container {
 }
 footer .footer-container .footer-widget {
   padding: 2rem;
-  /* Third col */
-  /*** UL ***/
-  /*** custom html  ***/
   /*** social links  ***/
+  /* Third col */
 }
 footer .footer-container .footer-widget .footer-title {
-  font-size: 2rem;
-  border-bottom: 1.9px solid #fff;
-  font-weight: bold;
+  border-bottom: 1.9px solid var(--white);
   color: var(--white);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
 footer .footer-container .footer-widget p {
-  color: var(--light1);
-  font-size: 1.5rem;
-  line-height: 2.6rem;
-  font-weight: bold;
-  margin: 2rem 0 3rem;
+  color: var(--gray2);
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin: 2rem 0;
 }
-footer .footer-container .footer-widget .thumb {
-  padding: 0;
-  margin: 0;
-  display: inline;
-}
-footer .footer-container .footer-widget .thumb .thumb-menu {
-  padding: 0;
-  margin: -1px;
-}
-footer .footer-container .footer-widget .thumb .thumb-menu img {
-  width: 9.5rem;
-  height: 8rem;
-  object-fit: cover;
-  padding: 0;
-  margin: -1px;
-}
-footer .footer-container .footer-widget ul {
-  padding: 0;
-}
-footer .footer-container .footer-widget ul li {
-  margin-bottom: 1.5rem;
-}
-footer .footer-container .footer-widget ul li a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--light1);
-}
-footer .footer-container .footer-widget ul li:hover {
-  margin-left: 0.5rem;
-}
-footer .footer-container .footer-widget ul li:hover a {
-  color: blueviolet;
-}
-footer .footer-container .footer-widget .co-details {
-  margin-bottom: 1.4rem;
+footer .footer-container .footer-widget .contact-item {
+  margin-bottom: 0.9rem;
   display: flex;
   align-items: center;
-  color: #999;
+  color: var(--gray2);
 }
-footer .footer-container .footer-widget .co-details #fi {
+footer .footer-container .footer-widget .contact-item svg, footer .footer-container .footer-widget .contact-item i {
   margin-right: 0.8rem;
-  padding: 0.6rem;
+  padding: 0.5rem;
   border-radius: 0.3rem;
-  width: 2.7rem;
-  height: 2.6rem;
-  color: var(--violet14);
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: var(--gray11);
   background-color: rgb(255, 255, 255);
   box-shadow: var(--box-shadow5);
 }
-footer .footer-container .footer-widget .co-details a,
-footer .footer-container .footer-widget .co-details span {
+footer .footer-container .footer-widget .contact-item a,
+footer .footer-container .footer-widget .contact-item span {
   color: var(--light1);
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-shadow: var(--box-shadow);
+  font-size: 1rem;
   letter-spacing: 0.1rem;
-}
-footer .footer-container .footer-widget .co-details span {
-  letter-spacing: 0.3rem;
 }
 footer .footer-container .footer-widget .wp-block-social-links {
   display: flex;
   padding: 0;
-  margin-top: 3rem;
+  margin-top: 2rem;
   gap: 0.5rem;
 }
 footer .footer-container .footer-widget .wp-block-social-links .wp-block-social-link {
@@ -3085,18 +3042,47 @@ footer .footer-container .footer-widget .wp-block-social-links .wp-block-social-
   transition: all 0.3s linear;
 }
 footer .footer-container .footer-widget .wp-block-social-links .wp-block-social-link a {
-  color: #fff;
+  color: var(--white);
   padding: 0;
-  font-size: 1.6rem;
+  font-size: 1rem;
   transition: all 0.3s linear;
 }
 footer .footer-container .footer-widget .wp-block-social-links .wp-block-social-link:hover {
   transform: scale(1.09);
   margin: 0;
-  background-color: #fff;
+  background-color: var(--white);
 }
 footer .footer-container .footer-widget .wp-block-social-links .wp-block-social-link:hover a {
   color: var(--blue18);
+}
+footer .footer-container .footer-widget .thumb {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+footer .footer-container .footer-widget .thumb .thumb-menu {
+  padding: 0;
+  margin: -1px;
+}
+footer .footer-container .footer-widget .thumb .thumb-menu img {
+  width: 5.5rem;
+  height: 5rem;
+  object-fit: cover;
+  padding: 0;
+  margin: -1px;
+}
+footer .footer-container .footer-widget ul {
+  padding: 0;
+}
+footer .footer-container .footer-widget ul li {
+  margin-bottom: 1rem;
+}
+footer .footer-container .footer-widget ul li a {
+  font-size: 1.1rem;
+  color: var(--gray1);
+}
+footer .footer-container .footer-widget ul li:hover {
+  margin-left: 0.5rem;
 }
 footer .footer-bottom {
   display: flex;
@@ -3104,13 +3090,13 @@ footer .footer-bottom {
   justify-content: center;
   background-color: rgb(7, 1, 34);
   box-shadow: 0 0 3px rgb(134, 123, 196);
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 footer .footer-bottom .copyright {
   width: 65%;
   padding-left: 1rem;
   text-align: right;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--white);
 }
@@ -3126,7 +3112,7 @@ footer .footer-bottom .policy {
 }
 footer .footer-bottom .policy a {
   color: rgb(238, 22, 22);
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 footer .footer-bottom .policy a:last-child {
