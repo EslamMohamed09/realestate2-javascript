@@ -307,6 +307,16 @@ window.onload = function(){
 	document.getElementById("loading").style.display = "block";
 }
 
+/* 
+ #######################
+ #### POSTS SECTION ####
+ #######################
+*/
+const postDescriptions = document.querySelectorAll(".post-section .box-container .box p");
+postDescriptions.forEach((postDescription) => {
+  postDescription.textContent = postDescription.textContent.trim().split(/\s+/).slice(0,10).join(" ") + "...";
+});
+
 /*
  ######################
  ####### GLOBAL #######
