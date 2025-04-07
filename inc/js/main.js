@@ -3,12 +3,14 @@
  */
 const header = document.querySelector("header");
 
+// document.body.style.paddingTop = `${header.offsetHeight}px`;
+
 window.addEventListener("scroll", function () {
   this.window.scrollY > 10 ? header.classList.add("active") : header.classList.remove("active");
 });
 
 
-if(document.querySelector(".open-btn")){
+if(document.querySelector(".open-btn") && window.innerWidth < 768){
     const openBtn = document.querySelector("header .top-bar .right-block .open-btn");
     const bottomBar = document.querySelector("header .bottom-bar");
     openBtn.onclick = () => {
@@ -32,24 +34,16 @@ if(document.querySelector(".open-btn")){
 
     
 //search icon
-const searchIcon = document.getElementById("search-icon");
-const searchFormm = document.getElementById("searchForm");
-let isSearchVisible = false;
+const bottomBarHeader = document.querySelector(".header .bottom-bar");
+const headerSearchBtn = document.querySelector(".header .bottom-bar .services-buttons .search-btn");
+const headerSearchForm = document.querySelector("header .bottom-bar .header-search-form");
 
-// searchIcon.addEventListener('click', function () {
-// 	if (isSearchVisible == true) {
-// 		searchFormm.style.pointerEvents = 'none';
-// 		$(searchFormm).hide(0);
-// 		isSearchVisible = false;
-// 	} else {
-// 		searchFormm.style.pointerEvents = 'auto';
-// 		$(searchFormm).show(0);
-// 		isSearchVisible = true;
-// 	}
-// });
+if (window.innerWidth > 768) {
+    headerSearchBtn.addEventListener('click', function () {
+       bottomBarHeader.classList.toggle('view-search-form');
+    });
+}
 
-
-document.body.style.paddingTop = `${header.offsetHeight}px`;
 
 /* 
  ######################
