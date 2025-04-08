@@ -187,6 +187,17 @@
        --lightblue12:#a7b2f0;
        --lightblue13:#a7baf0;
 
+       --grayblue:#bfcfd4;
+       --grayblue1:#adc9d3;
+       --grayblue2:#90b1bd;
+       --grayblue3:#6a92a1;
+       --grayblue4:#4c7c8f;
+       --grayblue5:#08668b;
+       --grayblue6:#054f6d;
+       --grayblue7:#18495c;
+       --grayblue8:#204b5c;
+       --grayblue9:#2a4f5e;
+
        --blue:#60c8fc;
        --blue1:#00b7ff;
        --blue2:#38baf9;
@@ -195,19 +206,18 @@
        --blue5:#099bd4;
        --blue6:#0888bb;
        --blue7:#0a78a3;
-       --blue8:#08668b;
-       --blue9:#054f6d;
-       --blue10:#2085f8;
-       --blue11:#0077ff;
-       --blue12:#0734ca;
-       --blue13:#0c5fbd;
-       --blue14:#074fa1;
-       --blue15:#134d91;
-       --blue16:#0c3e77;
-       --blue17:#052aa1;
-       --blue18:#162753;
-       --blue19:#2b3a5f;
-
+       --blue8:#2085f8;
+       --blue9:#0077ff;
+       --blue10:#0c5fbd;
+       --blue11:#074fa1;
+       --blue12:#134d91;
+       --blue13:#0734ca;
+       --blue14:#0c3e77;
+       --blue15:#052aa1;
+       --blue16:#2b3a5f;
+       --blue17:#162753;
+       --blue18:#0d1a38;
+       
        --navyblue:#8B8E98;
        --navyblue2:#6a7a8d;
        --navyblue3:#424b64;
@@ -705,6 +715,7 @@ select:focus {outline:none;}
 */
 .header {width:100%;
          z-index:1000;
+         position:relative;
 
       .top-bar {display:flex;
                 flex-wrap:nowrap;
@@ -712,7 +723,8 @@ select:focus {outline:none;}
                 justify-content:space-between;
                 align-items:center;
                 padding:0.3rem 1rem;
-                background-color:var(--blue18);
+                background-color:var(--blue17);
+                border-bottom:1px solid var(--grayblue7);
 
             .left-block {gap:1rem;
                   .adding-list-btn {font-size:1rem;
@@ -805,7 +817,7 @@ select:focus {outline:none;}
                    width:100%;
                    height:fit-content;
                    padding:0 2rem;
-                   background-color:var(--blue18);
+                   background-color:var(--blue17);
                    position:relative;
 
             .logo-holder {max-width:7rem;
@@ -833,9 +845,9 @@ select:focus {outline:none;}
                       align-items:center;
                       gap:1rem;
 
+                      li {
                         a {color:var(--white);
                            font-size:1rem;
-                           font-weight:bold;
                            text-transform:uppercase;
                            padding:1rem;
                            transition:all 0.3s linear;
@@ -844,6 +856,7 @@ select:focus {outline:none;}
                               &:focus {color:var(--white);
                                        text-shadow:var(--box-shadow6);}
                         }
+                      }
                   }
             }
 
@@ -862,7 +875,7 @@ select:focus {outline:none;}
 
                         svg,i {font-size:1.2rem;
                                padding:0.1rem;
-                               color:var(--light1);
+                               color:var(--white);
                                border-radius:50%;
                                cursor:pointer;
                                transition:all 0.7s linear;}
@@ -2455,7 +2468,7 @@ select:focus {outline:none;}
       .row .col-right {padding:0;}
 
       .connect-row {min-height:7rem;
-                    background-image:linear-gradient(125deg, var(--blue19) 0%, var(--blue11) 100%);
+                    background-image:linear-gradient(125deg, var(--blue14) 0%, var(--blue5) 100%);
 
             .col-left {min-height:5rem;
                   .content {height:100%;
@@ -2921,7 +2934,7 @@ footer {background: linear-gradient(to top, #0d1833 0%, #0d1833 20%, var(--blue1
            border-radius:50%;
            font-size:1rem;
            color:var(--white);
-           background:radial-gradient(var(--blue10), var(--blue19));
+           background:radial-gradient(var(--blue3), var(--blue14));
            box-shadow:var(--box-shadow7);
            display:flex;
            text-align:center;

@@ -39,8 +39,12 @@ const headerSearchBtn = document.querySelector(".header .bottom-bar .services-bu
 const headerSearchForm = document.querySelector("header .bottom-bar .header-search-form");
 
 if (window.innerWidth > 768) {
-    headerSearchBtn.addEventListener('click', function () {
-       bottomBarHeader.classList.toggle('view-search-form');
+    headerSearchBtn.addEventListener('click', function(){
+      if (!bottomBarHeader.classList.contains('view-search-form')) {
+          bottomBarHeader.classList.add('view-search-form');
+      } else {
+        bottomBarHeader.classList.remove('view-search-form');
+      }
     });
 }
 
@@ -144,7 +148,7 @@ function heroSlider(options){
             requestAnimationFrame(animation);
         }
     
-        animateScroll(sliderWrapper.scrollLeft, scrollPosition, 1000);
+        animateScroll(sliderWrapper.scrollLeft, scrollPosition, 1100);
         
         sliderWrapper.scrollTo({
             left:scrollPosition,
