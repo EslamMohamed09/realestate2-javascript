@@ -2554,11 +2554,22 @@ select:focus {outline:none;}
       @media (max-width:270px){
 
             .tabs-menu {gap:0.5rem;
-
                   li {border-radius:0.3rem !important;
                       border-right:0px !important;}
             }
-      }     
+      }
+
+      @media (max-width:251px){
+            .section-container {grid-template-columns:repeat(auto-fill,minmax(190px,1fr));}
+      }
+
+      @media (max-width:220px){
+            .section-container {grid-template-columns:repeat(auto-fill,minmax(180px,1fr));}
+      }
+
+      @media (max-width:200px){
+            .section-container {grid-template-columns:repeat(auto-fill,minmax(160px,1fr));}
+      }
 }
 
 /*
