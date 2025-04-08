@@ -2155,10 +2155,10 @@ select:focus {outline:none;}
  **************
 */
 .aminities-section {
-      .cards-container {display:grid;
-                        grid-template-columns:repeat(3, 1fr);
-                        gap:2rem;
-                        margin:auto;
+      .section-container {display:grid;
+                          grid-template-columns:repeat(3, 1fr);
+                          gap:2rem;
+                          margin:auto;
 
             .card-item {height:fit-content;
                         padding:1rem;
@@ -2204,11 +2204,11 @@ select:focus {outline:none;}
       }
 
       @media(max-width:1200px){
-            .cards-container {gap:1.5rem;}
+            .section-container {gap:1.5rem;}
       }
 
       @media(max-width:1000px){
-            .cards-container {
+            .section-container {
                   .desc {
                         p {font-size:1rem !important;}
                   }
@@ -2216,11 +2216,11 @@ select:focus {outline:none;}
       }
 
       @media(max-width:900px){
-            .cards-container {grid-template-columns:repeat(2, 1fr);}
+            .section-container {grid-template-columns:repeat(2, 1fr);}
       }
 
       @media(max-width:768px){
-            .cards-container {gap:1rem;
+            .section-container {gap:1rem;
                   .card-item {
                         .icon-holder {width:2rem;
                                       height:2rem;
@@ -2234,7 +2234,7 @@ select:focus {outline:none;}
       }
 
       @media(max-width:500px){
-            .cards-container {grid-template-columns:1fr;
+            .section-container {grid-template-columns:1fr;
                   .card-item {
                         h4 {font-size:1rem;}
 
@@ -2246,12 +2246,12 @@ select:focus {outline:none;}
       }
 
       @media(max-width:260px){
-            .cards-container {
+            .section-container {
                   .card-item {
                         h4 {font-size:0.9rem;}
 
                         .desc {
-                            p {font-size:0.7rem;}
+                            p {font-size:0.8rem !important;}
                         }
                   }
             }
