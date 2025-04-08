@@ -2502,7 +2502,6 @@ select:focus {
 .interior-design-section .tabs-menu li {
   text-align: center;
   background: #e9ecf1;
-  border-right: 1px solid #c1c4c9;
   padding: 1rem 2rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -2510,12 +2509,14 @@ select:focus {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+.interior-design-section .tabs-menu li:not(:last-child) {
+  border-right: 1px solid #c1c4c9;
+}
 .interior-design-section .tabs-menu li:first-child {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
 .interior-design-section .tabs-menu li:last-child {
-  border-right: 0px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
@@ -2591,21 +2592,40 @@ select:focus {
 .interior-design-section .items-holder .item .col-right .details ul li p {
   margin: auto 0;
 }
-@media (max-width: 700px) {
-  .interior-design-section ul {
-    gap: 2rem;
-  }
-  .interior-design-section ul li {
-    border-radius: 1rem !important;
-    border-right: 0px !important;
-  }
-  .interior-design-section ul li:first-child, .interior-design-section ul li:last-child {
-    border-radius: 1rem !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .interior-design-section .tabs-menu li {
     padding: 0.6rem 1rem;
+  }
+}
+@media (max-width: 612px) {
+  .interior-design-section .tabs-menu li {
+    padding: 0.6rem 0.8rem;
+  }
+}
+@media (max-width: 581px) {
+  .interior-design-section .tabs-menu li {
+    padding: 0.6rem 0.5rem;
+  }
+}
+@media (max-width: 535px) {
+  .interior-design-section .tabs-menu li {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 491px) {
+  .interior-design-section .tabs-menu li {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 446px) {
+  .interior-design-section .tabs-menu {
+    gap: 0.6rem;
+  }
+  .interior-design-section .tabs-menu li {
+    border-radius: 0.3rem !important;
+    border-right: 0 !important;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -2614,9 +2634,6 @@ select:focus {
   # Property-list
  *****************
 */
-.property-list-section .section-title {
-  color: var(--white);
-}
 .property-list-section .tabs-menu {
   display: flex;
   justify-content: center;
@@ -2630,13 +2647,15 @@ select:focus {
 .property-list-section .tabs-menu li {
   text-align: center;
   background: #e9ecf1;
-  border-right: 1px solid #c1c4c9;
   padding: 1rem 3rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+.property-list-section .tabs-menu li:not(:last-child) {
+  border-right: 1px solid #c1c4c9;
 }
 .property-list-section .tabs-menu li:first-child {
   border-top-left-radius: 25px;
@@ -2663,11 +2682,6 @@ select:focus {
   gap: 1.5rem;
 }
 .property-list-section .cards-container .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0 auto;
   border: 1px solid var(--lightblue8);
   border-radius: 0.5rem;
 }
@@ -2747,15 +2761,12 @@ select:focus {
 .property-list-section .cards-container .card .card-holder .card-footer .btn:hover {
   color: var(--white);
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .property-list-section .tabs-menu li {
     padding: 0.6rem 2rem;
   }
 }
 @media (max-width: 768px) {
-  .property-list-section .cards-container {
-    width: 75%;
-  }
   .property-list-section .cards-container .card .card-holder .item-contain {
     margin-bottom: 3rem;
   }
@@ -2763,16 +2774,44 @@ select:focus {
     width: 70%;
   }
 }
-@media (max-width: 480px) {
-  .property-list-section .controls {
-    gap: 2rem;
+@media (max-width: 537px) {
+  .property-list-section .tabs-menu li {
+    font-size: 0.9rem;
   }
-  .property-list-section .controls .controls li {
-    border-radius: 1rem;
-    border-right: 0px;
+}
+@media (max-width: 515px) {
+  .property-list-section .tabs-menu li {
+    padding: 0.6rem 1.5rem;
   }
-  .property-list-section .controls .controls li:first-child, .property-list-section .controls .controls li:last-child {
-    border-radius: 1rem;
+}
+@media (max-width: 438px) {
+  .property-list-section .tabs-menu li {
+    padding: 0.6rem 1rem;
+  }
+}
+@media (max-width: 361px) {
+  .property-list-section .tabs-menu li {
+    padding: 0.6rem 0.8rem;
+  }
+}
+@media (max-width: 331px) {
+  .property-list-section .tabs-menu li {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 308px) {
+  .property-list-section .tabs-menu li {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.7rem;
+  }
+}
+@media (max-width: 270px) {
+  .property-list-section .tabs-menu {
+    gap: 0.5rem;
+  }
+  .property-list-section .tabs-menu li {
+    border-radius: 0.3rem !important;
+    border-right: 0px !important;
   }
 }
 
