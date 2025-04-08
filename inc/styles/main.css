@@ -590,6 +590,36 @@ select:focus {
   font-size: 1rem;
   color: rgb(1, 1, 78);
 }
+@media (max-width: 420px) {
+  .section-heading .sec-title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 276px) {
+  .section-heading .sec-title {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 257px) {
+  .section-heading .sec-title {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 238px) {
+  .section-heading .sec-title {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 219px) {
+  .section-heading .sec-title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 200px) {
+  .section-heading .sec-title {
+    font-size: 0.9rem;
+  }
+}
 
 /***************** BUTTONS ******************/
 .black-btn {
