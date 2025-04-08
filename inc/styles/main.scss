@@ -1418,7 +1418,7 @@ select:focus {outline:none;}
                                          margin:4rem 0 3rem;
                                          padding:0;
 
-                              .quality-item {flex:1 1 15rem;
+                              .quality-item {flex:1 1 10rem;
                                              display:flex;
                                              justify-content:flex-start;
                                              align-items:center;
@@ -1431,7 +1431,7 @@ select:focus {outline:none;}
                                           width:3rem;
                                           height:3rem;
                                           border-radius:50%;
-                                          background:radial-gradient(var(--blue5), var(--blue17));
+                                          background:radial-gradient(var(--blue5), var(--blue15));
                                           color:var(--white);
 
                                           svg,i {font-size:1.2rem;}
@@ -1448,12 +1448,15 @@ select:focus {outline:none;}
 
       @media (max-width:1000px){
             padding:2rem 4% 3rem;
-            .section-container {grid-template-columns:60% 40%;
+            .section-container {grid-template-columns:55% 45%;
                                 gap:0;
                   .col-left {width:95%;}
 
                   .col-right {
-                        .col-content {width:99% !important;}
+                        .col-content {width:99% !important;
+                           .sub-title {font-size:1.25rem;}
+                           .sec-desc {font-size:1.1rem;}
+                        }
                   }
             }
       }

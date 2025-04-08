@@ -1596,7 +1596,7 @@ select:focus {
   padding: 0;
 }
 .about-section .section-container .col-right .col-content .qualities-menu .quality-item {
-  flex: 1 1 15rem;
+  flex: 1 1 10rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1610,7 +1610,7 @@ select:focus {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: radial-gradient(var(--blue5), var(--blue17));
+  background: radial-gradient(var(--blue5), var(--blue15));
   color: var(--white);
 }
 .about-section .section-container .col-right .col-content .qualities-menu .quality-item span svg, .about-section .section-container .col-right .col-content .qualities-menu .quality-item span i {
@@ -1626,7 +1626,7 @@ select:focus {
     padding: 2rem 4% 3rem;
   }
   .about-section .section-container {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
     gap: 0;
   }
   .about-section .section-container .col-left {
@@ -1634,6 +1634,12 @@ select:focus {
   }
   .about-section .section-container .col-right .col-content {
     width: 99% !important;
+  }
+  .about-section .section-container .col-right .col-content .sub-title {
+    font-size: 1.25rem;
+  }
+  .about-section .section-container .col-right .col-content .sec-desc {
+    font-size: 1.1rem;
   }
 }
 @media (max-width: 768px) {
