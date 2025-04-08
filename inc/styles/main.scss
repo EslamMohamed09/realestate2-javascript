@@ -3164,6 +3164,12 @@ footer {background: linear-gradient(to top, #0d1833 0%, #0d1833 20%, var(--blue1
            transition:all 0.3s linear;
 
       &:hover {color:var(--black);}
+
+      @media(max-width:465px){
+             right:0.4rem;
+             width:2.4rem;
+             height:2.4rem;
+      }
 }
 
 .show-scrollup {bottom:3.9rem;

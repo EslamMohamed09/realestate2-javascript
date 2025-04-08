@@ -3396,6 +3396,13 @@ footer .footer-bottom .policy a {
 .scrollup:hover {
   color: var(--black);
 }
+@media (max-width: 465px) {
+  .scrollup {
+    right: 0.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
 
 .show-scrollup {
   bottom: 3.9rem;
