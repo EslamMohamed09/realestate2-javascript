@@ -292,7 +292,7 @@ filterTabs({tabSelector:'.interior-design-section .tabs-menu li',
  ###############################
 */
 filterTabs({tabSelector:'.property-list-section .tabs-menu li',
-            itemSelector:'.property-list-section .cards-container .card'});
+            itemSelector:'.property-list-section .section-container .card'});
 
 	
 function scrollUp(){
