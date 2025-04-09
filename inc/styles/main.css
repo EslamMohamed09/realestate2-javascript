@@ -2894,13 +2894,6 @@ select:focus {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-.contacting-section .row {
-  padding: 0;
-}
-.contacting-section .row .col-left,
-.contacting-section .row .col-right {
-  padding: 0;
-}
 .contacting-section .contact-block {
   height: 7rem;
   display: grid;
@@ -2944,8 +2937,12 @@ select:focus {
   margin: 0;
   color: var(--white);
 }
+.contacting-section .owner-block {
+  padding: 0;
+}
 .contacting-section .owner-block .col-left {
   height: 35rem;
+  padding: 0;
 }
 .contacting-section .owner-block .col-left .content {
   width: 100%;
@@ -2973,6 +2970,7 @@ select:focus {
 }
 .contacting-section .owner-block .col-right {
   height: 35rem;
+  padding: 0;
 }
 .contacting-section .owner-block .col-right img {
   width: 100%;
@@ -3294,73 +3292,81 @@ select:focus {
  *********************
 */
 .newsletter-section {
-  min-height: 25rem;
+  min-height: 20rem;
   padding: 0;
+  margin: 0;
   background-color: var(--blue18);
 }
-.newsletter-section .col-left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.newsletter-section .block-holder {
+  min-height: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.newsletter-section .col-left .content h2 {
-  font-size: 3rem;
+.newsletter-section .block-holder .col-left {
+  padding: 0 2rem;
 }
-.newsletter-section .col-left .content h2,
-.newsletter-section .col-left .content p {
-  color: var(--blue9);
+.newsletter-section .block-holder .col-left .content {
+  height: fit-content;
+  padding: 0;
+}
+.newsletter-section .block-holder .col-left .content h3,
+.newsletter-section .block-holder .col-left .content p {
+  color: var(--blue3);
+  margin: 0;
   text-transform: uppercase;
 }
-.newsletter-section .col-right {
-  min-height: 25rem;
-  padding-top: 10rem;
+.newsletter-section .block-holder .col-right {
+  height: 100% !important;
   background-color: var(--blue16);
 }
-.newsletter-section .col-right .form-newsletter {
+.newsletter-section .block-holder .col-right .form-newsletter {
   width: 80%;
   display: flex;
   margin: auto;
 }
-.newsletter-section .col-right .form-newsletter .email-input {
+.newsletter-section .block-holder .col-right .form-newsletter .email-input {
   width: 75%;
-  height: 5rem;
+  height: 3rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  font-weight: normal;
   border: none;
   outline: none;
-  color: #fff;
+  color: var(--white);
   text-transform: lowercase;
-  background-color: var(--blue18);
   border-radius: 0;
+  background-color: var(--blue18);
 }
-.newsletter-section .col-right .form-newsletter .email-input:focus {
+.newsletter-section .block-holder .col-right .form-newsletter .email-input:focus {
   border: none;
   outline: none !important;
 }
-.newsletter-section .col-right .form-newsletter .btn-default {
-  border: none;
-  padding: 0.5rem 1.5rem;
+.newsletter-section .block-holder .col-right .form-newsletter .submit-btn {
+  padding: 0.5rem 0.6rem;
   display: flex;
-  color: #fff;
-  background-color: var(--blue10);
-  font-size: 1.5rem;
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-size: 1rem;
   text-transform: uppercase;
+  color: var(--white);
   border-radius: 0;
+  border: 1px solid var(--blue10);
+  background-color: var(--blue10);
   transition: 0.5s linear;
 }
-.newsletter-section .col-right .form-newsletter .btn-default:hover {
+.newsletter-section .block-holder .col-right .form-newsletter .submit-btn:hover {
   border: none;
   color: var(--blue9);
   background-color: var(--blue18);
 }
-.newsletter-section .col-right .form-newsletter .btn-default .fa-envelope {
+.newsletter-section .block-holder .col-right .form-newsletter .submit-btn svg, .newsletter-section .block-holder .col-right .form-newsletter .submit-btn i {
   background: none;
   padding: 0;
   border-radius: 0;
   margin-left: 4px;
 }
-.newsletter-section .col-right .form-newsletter .btn-default .fa-envelope:hover .fa-envelope {
+.newsletter-section .block-holder .col-right .form-newsletter .submit-btn svg:hover svg, .newsletter-section .block-holder .col-right .form-newsletter .submit-btn svg i, .newsletter-section .block-holder .col-right .form-newsletter .submit-btn i:hover svg, .newsletter-section .block-holder .col-right .form-newsletter .submit-btn i i {
   color: var(--blue9);
 }
 

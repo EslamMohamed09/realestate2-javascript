@@ -2679,11 +2679,6 @@ select:focus {outline:none;}
 .contacting-section {padding-left:0 !important;
                      padding-right:0 !important;
 
-      .row {padding:0;}
-
-      .row .col-left,
-      .row .col-right {padding:0;}
-
       .contact-block {height:7rem;
                       display:grid;
                       grid-template-columns:50% 50%;
@@ -2724,8 +2719,9 @@ select:focus {outline:none;}
             }
       }
 
-      .owner-block {
+      .owner-block {padding:0;
             .col-left {height:35rem;
+                       padding:0;
                   .content {width:100%;
                             height:fit-content;
                             padding:2rem 0;
@@ -2749,6 +2745,7 @@ select:focus {outline:none;}
             }
 
             .col-right {height:35rem;
+                        padding:0;
                   img {width:100%;
                        height:35rem;
                        object-fit:cover;}
@@ -3098,68 +3095,74 @@ select:focus {outline:none;}
  # Newsletter-Section
  *********************
 */
-.newsletter-section {min-height:25rem;
+.newsletter-section {min-height:20rem;
                      padding:0;
+                     margin:0;
                      background-color:var(--blue18);
+      
+      .block-holder {min-height:20rem;
+                     display:grid;
+                     grid-template-columns:1fr 1fr;
 
-      .col-left {display:flex;
-                 justify-content:center;
-                 align-items:center;
+            .col-left {padding:0 2rem;
+                  .content {height:fit-content;
+                            padding:0;
 
-            .content {
-                  h2 {font-size:3rem;}
-
-                  h2,
-                  p {color:var(--blue9);
-                     text-transform:uppercase;}
-            }
-      }
-
-      .col-right {min-height:25rem;
-                  padding-top:10rem;
-                  background-color:var(--blue16);
-
-            .form-newsletter {width:80%;
-                              display:flex;
-                              margin:auto;
-
-                  .email-input {width:75%;
-                                height:5rem;
-                                border:none;
-                                outline:none;
-                                color:#fff;
-                                text-transform:lowercase;
-                                background-color:var(--blue18);
-                                border-radius:0;
-
-                        &:focus {border:none;
-                                 outline:none !important;}
+                        h3,
+                        p {color:var(--blue3);
+                           margin:0;
+                           text-transform:uppercase;}
                   }
+            }
 
-                  .btn-default {border:none;
-                                padding:0.5rem 1.5rem;
-                                display:flex;
-                                color:#fff;
-                                background-color:var(--blue10);
-                                font-size:1.5rem;
-                                text-align:center;
-                                justify-content:center;
-                                align-items:center;
-                                text-transform:uppercase;
-                                border-radius:0;
-                                transition:0.5s linear;
+            .col-right {height:100% !important;
+                        background-color:var(--blue16);
 
-                        &:hover {border:none;
-                                 color:var(--blue9);
-                                 background-color:var(--blue18);}
-                  
+                  .form-newsletter {width:80%;
+                                    display:flex;
+                                    margin:auto;
 
-                        .fa-envelope {background:none;
-                                      padding:0;
+                        .email-input {width:75%;
+                                      height:3rem;
+                                      padding:0.3rem 0.6rem;
+                                      font-size:1rem;
+                                      font-weight:normal;
+                                      border:none;
+                                      outline:none;
+                                      color:var(--white);
+                                      text-transform:lowercase;
                                       border-radius:0;
-                                      margin-left:4px;
+                                      background-color:var(--blue18);
 
-                              &:hover .fa-envelope {color:var(--blue9);}
+                              &:focus {border:none;
+                                       outline:none !important;}
+                        }
+
+                        .submit-btn {padding:0.5rem 0.6rem;
+                                     display:flex;
+                                     text-align:center;
+                                     justify-content:center;
+                                     align-items:center;
+                                     font-size:1rem;
+                                     text-transform:uppercase;
+                                     color:var(--white);
+                                     border-radius:0;
+                                     border:1px solid var(--blue10);
+                                     background-color:var(--blue10);
+                                     transition:0.5s linear;
+
+                              &:hover {border:none;
+                                       color:var(--blue9);
+                                       background-color:var(--blue18);}
+                        
+
+                                    svg,i {background:none;
+                                           padding:0;
+                                           border-radius:0;
+                                           margin-left:4px;
+
+                                    &:hover svg,i {color:var(--blue9);}
+                              }
                         }
                   }
             }
