@@ -2684,10 +2684,12 @@ select:focus {outline:none;}
       .row .col-left,
       .row .col-right {padding:0;}
 
-      .connect-row {min-height:7rem;
-                    background-image:linear-gradient(125deg, var(--blue14) 0%, var(--blue5) 100%);
+      .section-container {height:7rem;
+                          display:grid;
+                          grid-template-columns:50% 50%;
+                          background-image:linear-gradient(125deg, var(--blue14) 0%, var(--blue5) 100%);
 
-            .col-left {min-height:5rem;
+            .col-left {height:100%;
                   .content {height:100%;
                             margin:0;
                             padding:0 2rem;
@@ -2696,7 +2698,7 @@ select:focus {outline:none;}
                   }
             }
 
-            .col-right {min-height:5rem;
+            .col-right {height:100%;
                   .content {width:100%;
                             height:100%;
                             display:flex;
@@ -2762,7 +2764,7 @@ select:focus {outline:none;}
 
       @media (max-width:1000px){
       
-            .connect-row .col-right .content {
+            .section-container .col-right .content {
                                           span {color:var(--white);
                                                 font-size:2rem;
 
@@ -2778,7 +2780,7 @@ select:focus {outline:none;}
 
       @media (max-width:852px){
  
-            .connect-row { 
+            .section-container { 
                         .col-left {text-align:center;
                                    align-items:center;
                                    justify-content:center;
@@ -2799,7 +2801,7 @@ select:focus {outline:none;}
       }
 
       @media (min-width:768) and (max-width:800px){
-            .connect-row { 
+            .section-container { 
                   .col-left {
                         h4 {font-size:1.2rem}
                   }
@@ -2816,17 +2818,22 @@ select:focus {outline:none;}
 
       @media (max-width:767px){
  
-            .connect-row { 
-                        .col-left {text-align:center;
+            .section-container {height:5rem !important;
+                          padding:0;
+                        .col-left {height:2rem !important;background:var(--green14);
+                                   padding:0;
+                                   text-align:center;
                                    align-items:center;
                                    justify-content:center;
 
                               h4 {font-size:1.3rem !important;
-                                  font-weight:normal;}
+                                  font-weight:normal;
+                                  background:blueviolet;}
                         }
       
-                        .col-right {
-                              .content {justify-content:center;
+                        .col-right {height:2rem !important;
+                                    padding:0;
+                              .content {justify-content:center;background:var(--red4);
                                         gap:2rem;
 
                                     span {font-size:1.8rem !important;}
@@ -2837,7 +2844,7 @@ select:focus {outline:none;}
       }
 
       @media (max-width:465px){
-            .connect-row {
+            .section-container {
                   .col-right {
                         .content {
                               span {font-size:1.7rem !important;
@@ -2852,7 +2859,7 @@ select:focus {outline:none;}
       }
 
       @media (max-width:442px){
-            .connect-row {
+            .section-container {
                   .col-left {
                         h4 {font-size:1.2rem !important;}
                   }
@@ -2860,7 +2867,7 @@ select:focus {outline:none;}
       }
 
       @media (max-width:412px){
-            .connect-row {
+            .section-container {
                   .col-right {
                         .content {
                               span {font-size:1.5rem !important;}
@@ -2871,7 +2878,7 @@ select:focus {outline:none;}
       }
 
       @media (max-width:408px){
-            .connect-row {
+            .section-container {
                   .col-left {
                         h4 {font-size:1.1rem !important;}
                   }
@@ -2886,7 +2893,7 @@ select:focus {outline:none;}
       }
 
       @media (max-width:379px){
-            .connect-row {
+            .section-container {
                   .col-left {
                         h4 {font-size:1rem !important;}
                   }
@@ -2902,7 +2909,7 @@ select:focus {outline:none;}
 
       @media (max-width:301px){
  
-            .connect-row { 
+            .section-container { 
                         .col-left {
 
                               h4 {font-size:1.2rem !important;

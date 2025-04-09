@@ -2901,25 +2901,27 @@ select:focus {
 .contacting-section .row .col-right {
   padding: 0;
 }
-.contacting-section .connect-row {
-  min-height: 7rem;
+.contacting-section .section-container {
+  height: 7rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
   background-image: linear-gradient(125deg, var(--blue14) 0%, var(--blue5) 100%);
 }
-.contacting-section .connect-row .col-left {
-  min-height: 5rem;
+.contacting-section .section-container .col-left {
+  height: 100%;
 }
-.contacting-section .connect-row .col-left .content {
+.contacting-section .section-container .col-left .content {
   height: 100%;
   margin: 0;
   padding: 0 2rem;
 }
-.contacting-section .connect-row .col-left .content h4 {
+.contacting-section .section-container .col-left .content h4 {
   color: var(--white);
 }
-.contacting-section .connect-row .col-right {
-  min-height: 5rem;
+.contacting-section .section-container .col-right {
+  height: 100%;
 }
-.contacting-section .connect-row .col-right .content {
+.contacting-section .section-container .col-right .content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -2929,7 +2931,7 @@ select:focus {
   gap: 1rem;
   padding: 0 2rem;
 }
-.contacting-section .connect-row .col-right .content span {
+.contacting-section .section-container .col-right .content span {
   color: var(--white);
   font-size: 2.5rem;
   display: flex;
@@ -2938,7 +2940,7 @@ select:focus {
   align-items: center;
   gap: 0.3rem;
 }
-.contacting-section .connect-row .col-right .content span svg, .contacting-section .connect-row .col-right .content span i {
+.contacting-section .section-container .col-right .content span svg, .contacting-section .section-container .col-right .content span i {
   width: 2.5rem;
   height: 2.5rem;
   font-size: 2.7rem;
@@ -2947,7 +2949,7 @@ select:focus {
   background-color: var(--white);
   color: var(--blue16);
 }
-.contacting-section .connect-row .col-right .content .send-button {
+.contacting-section .section-container .col-right .content .send-button {
   font-size: 1.8rem;
   color: var(--white);
 }
@@ -2981,132 +2983,145 @@ select:focus {
   object-fit: cover;
 }
 @media (max-width: 1000px) {
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     color: var(--white);
     font-size: 2rem;
   }
-  .contacting-section .connect-row .col-right .content span svg, .contacting-section .connect-row .col-right .content span i {
+  .contacting-section .section-container .col-right .content span svg, .contacting-section .section-container .col-right .content span i {
     width: 2rem;
     height: 2rem;
     padding: 0.3rem;
     font-size: 2.4rem;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 852px) {
-  .contacting-section .connect-row .col-left {
+  .contacting-section .section-container .col-left {
     text-align: center;
     align-items: center;
     justify-content: center;
   }
-  .contacting-section .connect-row .col-left h4 {
+  .contacting-section .section-container .col-left h4 {
     font-size: 1.1rem;
     font-weight: normal;
   }
-  .contacting-section .connect-row .col-right {
+  .contacting-section .section-container .col-right {
     padding: 0 0.5rem;
   }
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     font-size: 1.8rem;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 768) and (max-width: 800px) {
-  .contacting-section .connect-row .col-left h4 {
+  .contacting-section .section-container .col-left h4 {
     font-size: 1.2rem;
   }
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     font-size: 2rem;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.4rem;
   }
 }
 @media (max-width: 767px) {
-  .contacting-section .connect-row .col-left {
+  .contacting-section .section-container {
+    height: 5rem !important;
+    padding: 0;
+  }
+  .contacting-section .section-container .col-left {
+    height: 2rem !important;
+    background: var(--green14);
+    padding: 0;
     text-align: center;
     align-items: center;
     justify-content: center;
   }
-  .contacting-section .connect-row .col-left h4 {
+  .contacting-section .section-container .col-left h4 {
     font-size: 1.3rem !important;
     font-weight: normal;
+    background: blueviolet;
   }
-  .contacting-section .connect-row .col-right .content {
+  .contacting-section .section-container .col-right {
+    height: 2rem !important;
+    padding: 0;
+  }
+  .contacting-section .section-container .col-right .content {
     justify-content: center;
+    background: var(--red4);
     gap: 2rem;
   }
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     font-size: 1.8rem !important;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.6rem !important;
   }
 }
 @media (max-width: 465px) {
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     font-size: 1.7rem !important;
   }
-  .contacting-section .connect-row .col-right .content span svg, .contacting-section .connect-row .col-right .content span i {
+  .contacting-section .section-container .col-right .content span svg, .contacting-section .section-container .col-right .content span i {
     width: 1.8rem;
     height: 1.8rem;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.5rem !important;
   }
 }
 @media (max-width: 442px) {
-  .contacting-section .connect-row .col-left h4 {
+  .contacting-section .section-container .col-left h4 {
     font-size: 1.2rem !important;
   }
 }
 @media (max-width: 412px) {
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     font-size: 1.5rem !important;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.4rem !important;
   }
 }
 @media (max-width: 408px) {
-  .contacting-section .connect-row .col-left h4 {
+  .contacting-section .section-container .col-left h4 {
     font-size: 1.1rem !important;
   }
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     font-size: 1.4rem !important;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.3rem !important;
   }
 }
 @media (max-width: 379px) {
-  .contacting-section .connect-row .col-left h4 {
+  .contacting-section .section-container .col-left h4 {
     font-size: 1rem !important;
   }
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     font-size: 1.4rem !important;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.2rem !important;
   }
 }
 @media (max-width: 301px) {
-  .contacting-section .connect-row .col-left h4 {
+  .contacting-section .section-container .col-left h4 {
     font-size: 1.2rem !important;
     font-weight: normal;
   }
-  .contacting-section .connect-row .col-right .content {
+  .contacting-section .section-container .col-right .content {
     justify-content: center;
     gap: 1rem;
   }
-  .contacting-section .connect-row .col-right .content span {
+  .contacting-section .section-container .col-right .content span {
     font-size: 1.5rem !important;
   }
-  .contacting-section .connect-row .col-right .content .send-button {
+  .contacting-section .section-container .col-right .content .send-button {
     font-size: 1.4rem;
   }
 }

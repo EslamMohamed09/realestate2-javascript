@@ -257,26 +257,26 @@ function heroSlider(options){
  #### SELL APARTMENTS SECTION ####
  #################################
 */
-dotsFullResponsiveSlider({
-    section:'.sell-apartments-section',
-    containerSelector:'.sell-apartments-section .slider-wrapper',
-    dotsSelector:'.sell-apartments-section #sliderdots',
-    prevArrowSelector:'.sell-apartments-section .arrow-left',
-    nextArrowSelector:'.sell-apartments-section .arrow-right',
-});
+// dotsFullResponsiveSlider({
+//     section:'.sell-apartments-section',
+//     containerSelector:'.sell-apartments-section .slider-wrapper',
+//     dotsSelector:'.sell-apartments-section #sliderdots',
+//     prevArrowSelector:'.sell-apartments-section .arrow-left',
+//     nextArrowSelector:'.sell-apartments-section .arrow-right',
+// });
 
 /* 
  #############################
  #### SELL BUILDS SECTION ####
  #############################
 */
-dotsFullResponsiveSlider({
-    section:'.sell-builds-section',
-    containerSelector:'.sell-builds-section .slider-wrapper',
-    dotsSelector:'.sell-builds-section #sliderdots',
-    prevArrowSelector:'.sell-builds-section .arrow-left',
-    nextArrowSelector:'.sell-builds-section .arrow-right',
-});
+// dotsFullResponsiveSlider({
+//     section:'.sell-builds-section',
+//     containerSelector:'.sell-builds-section .slider-wrapper',
+//     dotsSelector:'.sell-builds-section #sliderdots',
+//     prevArrowSelector:'.sell-builds-section .arrow-left',
+//     nextArrowSelector:'.sell-builds-section .arrow-right',
+// });
 
 /* 
  #################################
