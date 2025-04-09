@@ -2944,31 +2944,37 @@ select:focus {
   margin: 0;
   color: var(--white);
 }
-.contacting-section .owner-row .col-left .content {
-  padding: 9rem 0;
+.contacting-section .owner-block .col-left {
+  height: 35rem;
+}
+.contacting-section .owner-block .col-left .content {
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
-.contacting-section .owner-row .col-left .content img {
+.contacting-section .owner-block .col-left .content img {
   width: 14rem;
   height: 14rem;
   border-radius: 50%;
   margin-bottom: 2rem;
 }
-.contacting-section .owner-row .col-left .content h2 {
+.contacting-section .owner-block .col-left .content h2 {
   text-transform: uppercase;
 }
-.contacting-section .owner-row .col-left .content p {
+.contacting-section .owner-block .col-left .content p {
   font-weight: bold;
   color: var(--blue9);
   font-size: 1.2rem;
 }
-.contacting-section .owner-row .col-right img {
+.contacting-section .owner-block .col-right {
+  height: 35rem;
+}
+.contacting-section .owner-block .col-right img {
   width: 100%;
   height: 35rem;
   object-fit: cover;
@@ -3034,6 +3040,13 @@ select:focus {
   .contacting-section .contact-block .col-right .send-button {
     font-size: 1.5rem !important;
   }
+  .contacting-section .owner-block .col-left {
+    height: 22rem !important;
+  }
+  .contacting-section .owner-block .col-left .content img {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 @media (max-width: 743px) {
   .contacting-section .contact-block .col-right span {
@@ -3090,6 +3103,14 @@ select:focus {
     justify-content: center;
   }
 }
+@media (max-width: 374px) {
+  .contacting-section .owner-block .col-left .content h2 {
+    font-size: 1.5rem;
+  }
+  .contacting-section .owner-block .col-left .content p {
+    font-size: 1.1rem;
+  }
+}
 @media (max-width: 305px) {
   .contacting-section .contact-block .col-right {
     gap: 1rem;
@@ -3104,6 +3125,12 @@ select:focus {
   }
   .contacting-section .contact-block .col-right .send-button {
     font-size: 0.9rem !important;
+  }
+  .contacting-section .owner-block .col-left .content h2 {
+    font-size: 1.3rem;
+  }
+  .contacting-section .owner-block .col-left .content p {
+    font-size: 1rem;
   }
 }
 @media (max-width: 281px) {
@@ -3152,6 +3179,9 @@ select:focus {
   .contacting-section .contact-block .col-left h4 {
     font-size: 0.6rem !important;
   }
+  .contacting-section .owner-block .col-left .content p {
+    font-size: 0.9rem;
+  }
 }
 @media (max-width: 222px) {
   .contacting-section .contact-block .col-right {
@@ -3189,6 +3219,14 @@ select:focus {
   .contacting-section .contact-block .col-right span svg, .contacting-section .contact-block .col-right span i {
     width: 1rem;
     height: 1rem;
+  }
+  .contacting-section .owner-block .col-left .content p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 180px) {
+  .contacting-section .col-left .content p {
+    font-size: 0.7rem;
   }
 }
 

@@ -2724,11 +2724,11 @@ select:focus {outline:none;}
             }
       }
 
-      .owner-row {
-            .col-left {
-                  .content {padding:9rem 0;
-                            width:100%;
-                            height:100%;
+      .owner-block {
+            .col-left {height:35rem;
+                  .content {width:100%;
+                            height:fit-content;
+                            padding:2rem 0;
                             display:flex;
                             flex-direction:column;
                             text-align:center;
@@ -2748,7 +2748,7 @@ select:focus {outline:none;}
                   }
             }
 
-            .col-right {
+            .col-right {height:35rem;
                   img {width:100%;
                        height:35rem;
                        object-fit:cover;}
@@ -2810,6 +2810,15 @@ select:focus {outline:none;}
 
                               .send-button {font-size:1.5rem !important;}
                         }
+            }
+
+            .owner-block {
+                  .col-left {height:22rem !important;
+                        .content {
+                              img {width:10rem;
+                                   height:10rem;}
+                        }
+                  }
             }
       }
 
@@ -2874,6 +2883,17 @@ select:focus {outline:none;}
             }
       }
 
+      @media (max-width:374px){
+            .owner-block {
+                  .col-left {
+                        .content {
+                              h2 {font-size:1.5rem;}
+                              p {font-size:1.1rem;}
+                        }
+                  }
+            }
+      }
+
       @media (max-width:305px){
              .contact-block {
                   .col-right {gap:1rem;
@@ -2890,6 +2910,15 @@ select:focus {outline:none;}
 
                   .col-right {
                         .send-button {font-size:0.9rem !important;}
+                  }
+             }
+
+             .owner-block {
+                  .col-left {
+                        .content {
+                              h2 {font-size:1.3rem;}
+                              p {font-size:1rem;}
+                        }
                   }
              }
       }
@@ -2946,6 +2975,14 @@ select:focus {outline:none;}
                         h4 {font-size:0.6rem !important;}
                   }
             }
+
+            .owner-block {
+                  .col-left {
+                        .content {
+                              p {font-size:0.9rem;}
+                        }
+                  }
+            }
       }
 
       @media (max-width:222px){
@@ -2984,8 +3021,23 @@ select:focus {outline:none;}
                         }
                   }
             }
+
+            .owner-block {
+                  .col-left {
+                        .content {
+                              p {font-size:0.8rem;}
+                        }
+                  }
+            }
       }
 
+      @media (max-width:180px){
+            .col-left {
+                  .content {
+                        p {font-size:0.7rem;}
+                  }
+            }
+      }
 }
 
 /*
