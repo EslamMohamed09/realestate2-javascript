@@ -466,7 +466,7 @@
 
 *::selection {
   background: var(--blue14);
-  color: #fff;
+  color: var(--white);
 }
 
 html {
@@ -1687,13 +1687,13 @@ select:focus {
     margin-top: 6rem;
   }
   .about-section .section-container .col-right .col-content .sub-title {
-    font-size: 2.1rem;
+    font-size: 1.5rem;
   }
   .about-section .section-container .col-right .col-content .sec-desc {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
   .about-section .section-container .col-right .col-content .qualities-menu .quality-item p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
