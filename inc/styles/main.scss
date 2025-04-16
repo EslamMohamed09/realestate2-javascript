@@ -16,10 +16,11 @@
        --gray6:#888;
        --gray7:#777;
        --gray8:#666;
-       --gray9:#444;
-       --gray10:#333;
-       --gray11:#222;
-       --gray12:#111;
+       --gray9:#555;
+       --gray10:#444;
+       --gray11:#333;
+       --gray12:#222;
+       --gray13:#111;
 
        --lightgray:rgba(230, 229, 229, 0.082);
 
@@ -1999,7 +2000,7 @@ select:focus {outline:none;}
                         background-color:#ccc;
                         border-radius:50%;
                         cursor:pointer;
-                        &.active {background-color:#333;}
+                        &.active {background-color:var(--gray11);}
                   }
             }
       }
@@ -3036,9 +3037,9 @@ select:focus {outline:none;}
 }
 
 /*
- ***********
+ **********
   # Post
- ***********
+ **********
 */
 .post-section {
 

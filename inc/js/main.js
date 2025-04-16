@@ -336,9 +336,8 @@ postDescriptions.forEach((postDescription) => {
 */
 function dotsFullResponsiveSlider(options) {
     const {
-        section = '.slider-section',
+        sectionSelector = '.slider-section',
         containerSelector = '.slides-container',
-        dotsSelector = '#sliderdots',
         prevArrowSelector = '.arrow-left',
         nextArrowSelector = '.arrow-right',
         slidesToShowDefault = 1,
@@ -346,33 +345,33 @@ function dotsFullResponsiveSlider(options) {
         autoplaySpeed = 7000
     } = options;
 
-    let sliderSection = document.querySelector(section);
+    let section = document.querySelector(sectionSelector);
     let sliderContainer = document.querySelector(containerSelector);
     let currentIndex = 0;
     let slides;
     let slidesToShow = slidesToShowDefault;
     let slidesToScroll = slidesToScrollDefault;
-    let dotsWrapper = document.querySelector(dotsSelector);
+    let dotsWrapper;
     let isDragging = false;
     let startX = 0;
     let scrollStart = 0;
     let autoSlideInterval;
 
     const smallScreen = window.innerWidth > 10 && window.innerWidth < 515;
-    const mediumScreen = window.innerWidth > 515 && window.innerWidth < 850;
-    const mediumScreen2 = window.innerWidth > 850 && window.innerWidth < 1000;
+    const mediumScreen = window.innerWidth > 515 && window.innerWidth < 800;
+    const mediumScreen2 = window.innerWidth > 800 && window.innerWidth < 1000;
     const mediumScreen3 = window.innerWidth > 1000 && window.innerWidth < 1200;
+    const underBigScreen = window.innerWidth < 1200;
 
-    const gapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 7
-                  : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 3.1
-                  : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.05
+    const gapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 0
+                  : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 3.5
+                  : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.5
+                  : mediumScreen3 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.5
                                   : parseFloat(getComputedStyle(document.documentElement).fontSize) * 2.1;
 
-    const scrollgapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 2
-                        : mediumScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 1
-                        : mediumScreen2 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.2
-                        : mediumScreen3 ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 0.5
-                                        : parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.2;
+    const scrollgapSize = smallScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.5
+                        : underBigScreen ? parseFloat(getComputedStyle(document.documentElement).fontSize) * - 0.5
+                                         : parseFloat(getComputedStyle(document.documentElement).fontSize) * - 0.2;
 
     function setupSlider() {
       clearInterval(autoSlideInterval);
@@ -383,41 +382,48 @@ function dotsFullResponsiveSlider(options) {
     }
 
     function buildDots() {
-        dotsWrapper.innerHTML = '';
-        const totalDots = Math.ceil(slides.length / slidesToScroll);
-        for (let i=0; i<totalDots; i++) {
-            const dot = document.createElement('li');
-            dot.classList.add('dot');
-            dot.dataset.index = i;
-            dotsWrapper.appendChild(dot);
-        }
-        
-        if(window.innerWidth < 500){
-           if(totalDots > 8){
-              dotsWrapper.style.display = 'none';
-           }
-        } else {
-          if(totalDots > 12){
-             dotsWrapper.style.display = 'none';
+
+      const existingDots = section.querySelector('.dots-menu');
+      if (existingDots) {existingDots.remove();}
+
+      dotsWrapper = document.createElement('ul');
+      dotsWrapper.classList.add('dots-menu');
+      section.appendChild(dotsWrapper);
+
+      const totalDots = Math.ceil(slides.length / slidesToScroll);
+      for (let i=0; i<totalDots; i++) {
+          const dot = document.createElement('li');
+          dot.classList.add('dot');
+          dot.dataset.index = i;
+          dotsWrapper.appendChild(dot);
+      }
+      
+      if(window.innerWidth < 500){
+          if(totalDots > 8){
+            dotsWrapper.style.display = 'none';
           }
+      } else {
+        if(totalDots > 12){
+            dotsWrapper.style.display = 'none';
         }
-        updateDots();
+      }
+      updateDots();
     }
 
     function updateDots() {
-	   const dots = dotsWrapper.children;
-	   const activeDotIndex = Math.floor(currentIndex / slidesToScroll);
-	   Array.from(dots).forEach(dot => dot.classList.remove('active'));
-	   if (dots[activeDotIndex]) {
-	   	 dots[activeDotIndex].classList.add('active');
-	   }
+      const dots = dotsWrapper.children;
+      const activeDotIndex = Math.floor(currentIndex / slidesToScroll);
+      Array.from(dots).forEach(dot => dot.classList.remove('active'));
+      if (dots[activeDotIndex]) {
+          dots[activeDotIndex].classList.add('active');
+      }
     }
 
     function setResponsive() {
         const responsiveSettings = [
             { breakpoint: 10, settings: { slidesToShow: 1, slidesToScroll: 1 }},
             { breakpoint: 515, settings: { slidesToShow: 2, slidesToScroll: 2 }},
-            { breakpoint: 850, settings: { slidesToShow: 3, slidesToScroll: 3 }},
+            { breakpoint: 800, settings: { slidesToShow: 3, slidesToScroll: 3 }},
             { breakpoint: 1200, settings: { slidesToShow: 4, slidesToScroll: 4 }},
             { breakpoint: 1400, settings: { slidesToShow: 5, slidesToScroll: 5 }},
         ];
@@ -428,14 +434,6 @@ function dotsFullResponsiveSlider(options) {
                 slidesToScroll = resp.settings.slidesToScroll;
             }
         });
-
-        if(slides.length === 19 && window.innerWidth <= 1100){
-           slidesToScroll = 3;
-        } else if (slides.length < 18 && window.innerWidth <= 1100) {
-            slidesToScroll = 2;
-        } else if (slides.length < 10 && window.innerWidth <= 1100) {
-            slidesToScroll = 1;
-        }
 
         updateSlidesToShow();
         buildDots();
@@ -509,19 +507,19 @@ function dotsFullResponsiveSlider(options) {
       nextButton.addEventListener('click', nextSlide);
       window.addEventListener('resize', setResponsive);
 
-	  Array.from(dotsWrapper.children).forEach(dot => {
-	  	dot.addEventListener('click', e => {
-	  		currentIndex = parseInt(e.target.dataset.index) * slidesToScroll;
-	  		scrollToSlide();
-	  	});
-	  });
+      Array.from(dotsWrapper.children).forEach(dot => {
+        dot.addEventListener('click', e => {
+          currentIndex = parseInt(e.target.dataset.index) * slidesToScroll;
+          scrollToSlide();
+        });
+	    });    
 
       sliderContainer.addEventListener('mousedown', startDrag);
       sliderContainer.addEventListener('mousemove', duringDrag);
       sliderContainer.addEventListener('mouseup', endDrag);
       sliderContainer.addEventListener('mouseleave', endDrag);
-      sliderSection.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
-      sliderSection.addEventListener('mouseleave', autoSlide);
+      section.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
+      section.addEventListener('mouseleave', autoSlide);
     }
 
     function startDrag(e) {
@@ -531,10 +529,10 @@ function dotsFullResponsiveSlider(options) {
     }
 
     function duringDrag(e) {
-	  if (!isDragging) return;
-	  const currentX = e.clientX;
-	  const dragDistance = currentX - startX;
-	  sliderContainer.scrollLeft = scrollStart - dragDistance;
+      if (!isDragging) return;
+      const currentX = e.clientX;
+      const dragDistance = currentX - startX;
+      sliderContainer.scrollLeft = scrollStart - dragDistance;
     }
 
     function endDrag() {
