@@ -737,6 +737,41 @@ select:focus {outline:none;}
       &:hover::after {width:100%;}
 }
 
+#preloader {position:fixed;
+            width:100%;
+            height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:rgba(60, 75, 158, 0.6);
+            backdrop-filter:blur(80px);
+            z-index:10000;
+
+      #loading {width:100px;
+                height:100px;
+                position:relative;
+                border-radius:50%;
+                border-top:10px solid var(--blue14);
+                animation:animate 2s linear infinite;
+
+
+            &::after,
+            &::before {content:'';
+                       position:absolute;
+                       top:-10px;
+                       left:0;
+                       width:100px;
+                       height:100px;
+                       border-radius:50%;}
+
+            &::before {transform:rotate(240deg);
+                       border-top:10px solid rgb(170, 255, 0);}
+
+            &::after {transform:rotate(120deg);
+                      border-top:10px solid green;}
+      }
+}
+
 /*
  ************
   # Header
@@ -3372,41 +3407,6 @@ footer {background:linear-gradient(to top, var(--blue18) 0%, var(--blue18) 20%, 
                         h4 {margin-bottom:0.9rem;}
                   }
             }
-      }
-}
-
-#preloader {position:fixed;
-            width:100%;
-            height:100vh;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            background:rgba(60, 75, 158, 0.6);
-            backdrop-filter:blur(80px);
-            z-index:10000;
-
-      #loading {width:100px;
-                height:100px;
-                position:relative;
-                border-radius:50%;
-                border-top:10px solid var(--blue14);
-                animation:animate 2s linear infinite;
-
-
-            &::after,
-            &::before {content:'';
-                       position:absolute;
-                       top:-10px;
-                       left:0;
-                       width:100px;
-                       height:100px;
-                       border-radius:50%;}
-
-            &::before {transform:rotate(240deg);
-                       border-top:10px solid rgb(170, 255, 0);}
-
-            &::after {transform:rotate(120deg);
-                      border-top:10px solid green;}
       }
 }
 

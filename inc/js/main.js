@@ -1,3 +1,8 @@
+window.onload = function(){
+	document.getElementById("preloader").style.display = "none";
+	document.getElementById("loading").style.display = "block";
+}
+
 /**
  * Header Active
  */
@@ -31,7 +36,6 @@ if(document.querySelector(".open-btn") && window.innerWidth < 768){
       }, 150);
     };
 }
-
     
 //search icon
 const bottomBarHeader = document.querySelector(".header .bottom-bar");
@@ -294,11 +298,6 @@ filterTabs({tabSelector:'.interior-design-section .tabs-menu li',
 filterTabs({tabSelector:'.property-list-section .tabs-menu li',
             itemSelector:'.property-list-section .section-container .card'});
 
-
-window.onload = function(){
-	document.getElementById("preloader").style.display = "none";
-	document.getElementById("loading").style.display = "block";
-}
 
 /* 
  #######################
