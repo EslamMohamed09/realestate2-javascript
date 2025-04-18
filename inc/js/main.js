@@ -5,7 +5,7 @@ window.onload = function(){
 
 /**
  * Header Active
- */
+*/
 const header = document.querySelector("header");
 
 // document.body.style.paddingTop = `${header.offsetHeight}px`;
@@ -358,8 +358,8 @@ function dotsFullResponsiveSlider(options) {
     let scrollStart = 0;
     let autoSlideInterval;
 
-    const smallScreen = window.innerWidth > 10 && window.innerWidth < 515;
-    const mediumScreen = window.innerWidth > 515 && window.innerWidth < 800;
+    const smallScreen = window.innerWidth > 10 && window.innerWidth < 450;
+    const mediumScreen = window.innerWidth > 450 && window.innerWidth < 800;
     const mediumScreen2 = window.innerWidth > 800 && window.innerWidth < 1000;
     const mediumScreen3 = window.innerWidth > 1000 && window.innerWidth < 1200;
     const underBigScreen = window.innerWidth < 1200;
@@ -399,7 +399,7 @@ function dotsFullResponsiveSlider(options) {
           dotsWrapper.appendChild(dot);
       }
       
-      if(window.innerWidth < 500){
+      if(window.innerWidth < 515){
           if(totalDots > 8){
             dotsWrapper.style.display = 'none';
           }
@@ -423,7 +423,7 @@ function dotsFullResponsiveSlider(options) {
     function setResponsive() {
         const responsiveSettings = [
             { breakpoint: 10, settings: { slidesToShow: 1, slidesToScroll: 1 }},
-            { breakpoint: 515, settings: { slidesToShow: 2, slidesToScroll: 2 }},
+            { breakpoint: 450, settings: { slidesToShow: 2, slidesToScroll: 2 }},
             { breakpoint: 800, settings: { slidesToShow: 3, slidesToScroll: 3 }},
             { breakpoint: 1200, settings: { slidesToShow: 4, slidesToScroll: 4 }},
             { breakpoint: 1400, settings: { slidesToShow: 5, slidesToScroll: 5 }},
