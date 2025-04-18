@@ -8,7 +8,7 @@ window.onload = function(){
 */
 const header = document.querySelector("header");
 
-// document.body.style.paddingTop = `${header.offsetHeight}px`;
+document.body.style.paddingTop = `${header.offsetHeight}px`;
 
 window.addEventListener("scroll", function () {
   this.window.scrollY > 10 ? header.classList.add("active") : header.classList.remove("active");
@@ -67,7 +67,7 @@ function heroSlider(options){
         sliderWrapperSelector = '.slider-wrapper',
         prevBtnSelector = '.prev-btn',
         nextBtnSelector = '.next-btn',
-        playSpeed = 5000
+        playSpeed = 7000
     } = options;
 
     let section = document.querySelector(sectionSelector);
@@ -75,7 +75,7 @@ function heroSlider(options){
     let slides = Array.from(sliderWrapper.children);
     let prevBtn = document.querySelector(prevBtnSelector);
     let nextBtn = document.querySelector(nextBtnSelector);
-    let indicatorsMenu;
+    let dotsWrapper;
     let currentIndex = 0;
     let slideWidth = slides[0].offsetWidth;
     let isDragging = false;
@@ -84,19 +84,19 @@ function heroSlider(options){
     
     function setupSlider(){
       if (currentIndex >= 0 && currentIndex < slides.length) {
-          indicatorsMenu.children[currentIndex]?.classList.add('active');
+          dotsWrapper.children[currentIndex]?.classList.add('active');
       }
     }
 
     function buildIndicators(){
-        indicatorsMenu = document.createElement('ul');
-        indicatorsMenu.classList.add('indicators-menu');
-        section.appendChild(indicatorsMenu);
+        dotsWrapper = document.createElement('ul');
+        dotsWrapper.classList.add('dots-menu');
+        section.appendChild(dotsWrapper);
 
         for (let i=0; i<slides.length; i++) {
             const indicator = document.createElement('li');
             indicator.setAttribute('data-index', i);
-            indicatorsMenu.appendChild(indicator);
+            dotsWrapper.appendChild(indicator);
         
             indicator.addEventListener('click', () => {
               currentIndex = i;
@@ -104,23 +104,23 @@ function heroSlider(options){
             });
         }
 
-        indicatorsMenu.children[currentIndex].classList.add('active');
+        dotsWrapper.children[currentIndex].classList.add('active');
 
         if(window.innerWidth < 500){
-           if(indicatorsMenu.children.length > 8){
-              indicatorsMenu.style.display = 'none';
+           if(dotsWrapper.children.length > 8){
+              dotsWrapper.style.display = 'none';
            }
         } else {
-          if(indicatorsMenu.children.length > 12){
-             indicatorsMenu.style.display = 'none';
+          if(dotsWrapper.children.length > 12){
+             dotsWrapper.style.display = 'none';
           }
         }
     }
 
     function updateSlides(){
        const scrollPosition = currentIndex * slideWidth;
-       Array.from(indicatorsMenu.children).forEach(indicator => {indicator.classList.remove('active');});
-       indicatorsMenu.children[currentIndex].classList.add('active');
+       Array.from(dotsWrapper.children).forEach(indicator => {indicator.classList.remove('active');});
+       dotsWrapper.children[currentIndex].classList.add('active');
 
        slides.forEach((slide, index) => {
         if (index === currentIndex) {
@@ -248,11 +248,13 @@ function heroSlider(options){
     });
 }
 
-// heroSlider({sectionSelector:'.hero-section', 
-//             sliderWrapperSelector:'.hero-section .slider-wrapper', 
-//             prevBtnSelector:'.hero-section .prev-btn',
-//             nextBtnSelector:'.hero-section .next-btn',
-// });
+heroSlider({sectionSelector:'.hero-section', 
+            sliderWrapperSelector:'.hero-section .slider-wrapper', 
+            prevBtnSelector:'.hero-section .prev-btn',
+            nextBtnSelector:'.hero-section .next-btn',
+});
+
+document.querySelector(".hero-section").style.height = (window.innerHeight - header.offsetHeight + 11) + "px";
 
 }
 
