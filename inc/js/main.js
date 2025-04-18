@@ -294,25 +294,6 @@ filterTabs({tabSelector:'.interior-design-section .tabs-menu li',
 filterTabs({tabSelector:'.property-list-section .tabs-menu li',
             itemSelector:'.property-list-section .section-container .card'});
 
-	
-function scrollUp(){
-	const scrollUp = document.getElementById('scroll-up');
-	if(this.scrollY >= 1200) {scrollUp.classList.add('show-scrollup'); 
-    } else {
-	     scrollUp.classList.remove('show-scrollup');
-	};
-}
-window.addEventListener('scroll', scrollUp);
-
-const scrollUpBtn = document.getElementById("scroll-up");
-
-scrollUpBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top:0,
-    behavior: "smooth"
-  });
-});
-
 
 window.onload = function(){
 	document.getElementById("preloader").style.display = "none";
@@ -328,6 +309,27 @@ const postDescriptions = document.querySelectorAll(".post-section .box-container
 postDescriptions.forEach((postDescription) => {
   postDescription.textContent = postDescription.textContent.trim().split(/\s+/).slice(0,10).join(" ") + "...";
 });
+
+
+function scrollUp(){
+	const scrollUp = document.getElementById('scroll-up');
+	if(this.scrollY >= 1600) {
+     scrollUp.classList.add('show-scrollup');
+  } else {
+	     scrollUp.classList.remove('show-scrollup');
+	};
+}
+window.addEventListener('scroll', scrollUp);
+
+const scrollUpBtn = document.getElementById("scroll-up");
+
+scrollUpBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top:0,
+    behavior: "smooth"
+  });
+});
+
 
 /*
  ######################
