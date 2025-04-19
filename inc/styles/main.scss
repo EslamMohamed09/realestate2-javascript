@@ -3349,6 +3349,28 @@ select:focus {outline:none;}
                   }
             }
       }
+
+      @media(min-width:560px) and (max-width:900px){
+            .block-holder {
+                  .col-right {
+                        .form-newsletter {width:90%;}
+                  }
+            }
+      }
+
+      @media(max-width:560px){
+            .block-holder {grid-template-columns:1fr;}
+      }
+
+      @media(max-width:320px){
+            .block-holder {
+                  .col-left {padding:0 1rem;}
+
+                  .col-right {
+                        .form-newsletter {width:95%;}
+                  }
+            }
+      }
 }
 
 .scrollup {position:fixed;
