@@ -1196,7 +1196,7 @@ select:focus {outline:none;}
            
                   .content {width:fit-content;
                             margin:0;
-                            padding:0;
+                            padding:0 0 0 4%;
                             display:flex;
                             flex-direction:column;
                             justify-content:flex-start;
@@ -1429,6 +1429,8 @@ select:focus {outline:none;}
 
         padding:1rem 7%;
 
+        .slider-wrapper .hero-slide-item .content .block-holder {width:80%;}
+
         .prev-btn,
         .next-btn {top:45% !important;}
 
@@ -1437,6 +1439,14 @@ select:focus {outline:none;}
 
         .next-btn {right:1% !important;
                    opacity:1;}
+    }
+
+    @media (max-width:400px) {
+      .slider-wrapper .hero-slide-item .content .block-holder {width:90%;}
+    }
+
+    @media (max-width:340px) {
+      .slider-wrapper .hero-slide-item .content .block-holder {width:95%;}
     }
     
     @media (max-width:238px) { .hero-slide-item .content h2 {font-size:1.3rem;} }

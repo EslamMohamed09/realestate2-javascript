@@ -1303,7 +1303,7 @@ select:focus {
 .hero-section .slider-wrapper .hero-slide-item .content {
   width: fit-content;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 4%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1592,6 +1592,9 @@ select:focus {
   .hero-section {
     padding: 1rem 7%;
   }
+  .hero-section .slider-wrapper .hero-slide-item .content .block-holder {
+    width: 80%;
+  }
   .hero-section .prev-btn,
   .hero-section .next-btn {
     top: 45% !important;
@@ -1603,6 +1606,16 @@ select:focus {
   .hero-section .next-btn {
     right: 1% !important;
     opacity: 1;
+  }
+}
+@media (max-width: 400px) {
+  .hero-section .slider-wrapper .hero-slide-item .content .block-holder {
+    width: 90%;
+  }
+}
+@media (max-width: 340px) {
+  .hero-section .slider-wrapper .hero-slide-item .content .block-holder {
+    width: 95%;
   }
 }
 @media (max-width: 238px) {
