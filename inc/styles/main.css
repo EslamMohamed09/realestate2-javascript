@@ -476,10 +476,25 @@
 }
 
 html {
-  font-size: 83%;
+  font-size: 83% !important;
   scroll-behavior: smooth;
 }
 
+@media (max-width: 900px) {
+  html {
+    font-size: 73% !important;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 55% !important;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 63% !important;
+  }
+}
 body {
   overflow-x: hidden;
   background-color: var(--background-color);
@@ -487,7 +502,6 @@ body {
 
 section {
   padding: 2rem 7%;
-  margin-bottom: 2rem;
 }
 @media (max-width: 270px) {
   section {
@@ -1738,8 +1752,14 @@ select:focus {
   .about-section .section-container .col-right .col-content .sec-desc {
     font-size: 1.1rem;
   }
-  .about-section .section-container .col-right .col-content .quality-item {
-    flex: 1 1 10rem;
+  .about-section .section-container .col-right .col-content .qualities-menu {
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 905px) {
+  .about-section .section-container .col-left .image .small-img {
+    left: -1.5rem;
+    width: 12rem;
   }
 }
 @media (max-width: 768px) {
