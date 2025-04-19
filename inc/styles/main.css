@@ -1824,16 +1824,18 @@ select:focus {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: auto;
 }
 .services-section .box-container .box {
   flex: 1 1 20rem;
+  padding: 0;
 }
 .services-section .box-container .box figure {
   text-align: center;
   height: fit-content;
   padding: 1rem 2rem;
+  margin: 0;
   display: block;
   align-items: center;
   justify-content: center;
