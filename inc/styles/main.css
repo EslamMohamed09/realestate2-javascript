@@ -1641,11 +1641,13 @@ select:focus {
 .about-section .section-container {
   display: grid;
   grid-template-columns: 50% 50%;
+  gap: 2rem;
 }
 .about-section .section-container .col-left {
   display: flex;
   text-align: center;
   justify-content: center;
+  margin: 0;
 }
 .about-section .section-container .col-left .image {
   width: 33rem;
@@ -1672,8 +1674,10 @@ select:focus {
   box-shadow: var(--box-shadow6);
   border-radius: 0.5rem;
 }
+.about-section .section-container .col-right {
+  padding: 0 !important;
+}
 .about-section .section-container .col-right .col-content {
-  width: 90%;
   margin: 2rem auto;
 }
 .about-section .section-container .col-right .col-content .section-heading {
@@ -1727,13 +1731,6 @@ select:focus {
   }
   .about-section .section-container {
     grid-template-columns: 55% 45%;
-    gap: 0;
-  }
-  .about-section .section-container .col-left {
-    width: 95%;
-  }
-  .about-section .section-container .col-right .col-content {
-    width: 99% !important;
   }
   .about-section .section-container .col-right .col-content .sub-title {
     font-size: 1.25rem;
@@ -1751,10 +1748,13 @@ select:focus {
   }
   .about-section .section-container {
     grid-template-columns: 100%;
+    gap: 1rem;
+  }
+  .about-section .section-container .col-right {
+    height: fit-content;
   }
   .about-section .section-container .col-right .col-content {
-    width: 90%;
-    margin-top: 6rem;
+    margin: 0 !important;
   }
   .about-section .section-container .col-right .col-content .sub-title {
     font-size: 1.5rem;
@@ -1762,8 +1762,36 @@ select:focus {
   .about-section .section-container .col-right .col-content .sec-desc {
     font-size: 1.3rem;
   }
+  .about-section .section-container .col-right .col-content .qualities-menu {
+    margin: 2rem 0 3rem;
+  }
   .about-section .section-container .col-right .col-content .qualities-menu .quality-item p {
     font-size: 1.1rem;
+  }
+}
+@media (max-width: 550px) {
+  .about-section .section-container .col-left .image {
+    height: 38rem;
+  }
+  .about-section .section-container .col-right .col-content .qualities-menu {
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 528px) {
+  .about-section .section-container .col-left .image {
+    height: 35rem;
+  }
+  .about-section .section-container .col-left .image .small-img {
+    left: -2rem;
+    width: 13rem;
+  }
+}
+@media (max-width: 430px) {
+  .about-section .section-container .col-left .image {
+    height: 30rem;
+  }
+  .about-section .section-container .col-left .image .small-img {
+    left: -1rem;
   }
 }
 
