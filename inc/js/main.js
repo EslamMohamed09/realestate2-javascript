@@ -254,7 +254,7 @@ heroSlider({sectionSelector:'.hero-section',
             nextBtnSelector:'.hero-section .next-btn',
 });
 
-document.querySelector(".hero-section").style.height = (window.innerHeight - header.offsetHeight + 11) + "px";
+document.querySelector(".hero-section").style.height = (window.innerHeight - header.offsetHeight + 8) + "px";
 
 }
 

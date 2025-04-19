@@ -843,7 +843,7 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(60, 75, 158, 0.6);
+  background: rgba(60, 75, 158, 0.315);
   backdrop-filter: blur(80px);
   z-index: 10000;
 }
@@ -889,7 +889,7 @@ select:focus {
 .header .top-bar {
   display: flex;
   flex-wrap: nowrap;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem 1rem;
@@ -898,6 +898,27 @@ select:focus {
 }
 .header .top-bar .left-block {
   gap: 1rem;
+}
+.header .top-bar .left-block .logo-holder {
+  max-width: 7rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: none;
+}
+.header .top-bar .left-block .logo-holder .logo-brand {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.header .top-bar .left-block .logo-holder .logo-brand img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  object-fit: contain;
 }
 .header .top-bar .left-block .adding-list-btn {
   font-size: 1rem;
@@ -989,21 +1010,21 @@ select:focus {
   gap: 2rem;
   width: 100%;
   height: fit-content;
-  padding: 0 2rem;
+  padding: 0.6rem 2rem;
   background-color: var(--blue17);
   position: relative;
 }
 .header .bottom-bar .logo-holder {
   max-width: 7rem;
-  height: 4rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
 }
 .header .bottom-bar .logo-holder .logo-brand {
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -1071,6 +1092,7 @@ select:focus {
   box-shadow: none;
   z-index: -1;
   transition: all 0.4s linear;
+  visibility: hidden;
 }
 .header .bottom-bar .header-search-form .search-input {
   padding: 1rem 1.5rem;
@@ -1102,7 +1124,8 @@ select:focus {
   font-size: 1rem;
 }
 .header .bottom-bar.view-search-form .header-search-form {
-  top: 4rem;
+  top: 3.7rem;
+  visibility: visible;
 }
 @media (min-width: 768px) {
   .header.active .main-header {
@@ -1128,9 +1151,14 @@ select:focus {
   .header header {
     position: relative;
   }
+  .header .top-bar .left-block .logo-holder {
+    display: block;
+  }
   .header .top-bar .left-block .adding-list-btn {
-    font-weight: normal;
-    padding: 0.2rem 0.6rem;
+    display: none;
+  }
+  .header .top-bar .left-block .contact-menu {
+    display: none;
   }
   .header .top-bar .left-block .contact-menu li a span, .header .top-bar .left-block .contact-menu li a address {
     font-size: 0.9rem;
@@ -1146,9 +1174,11 @@ select:focus {
     width: 0 !important;
     height: 100%;
     padding: 0 2rem 1rem 1rem;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 2rem;
     opacity: 0;
     z-index: 1000;
     overflow-y: auto;
@@ -1161,8 +1191,8 @@ select:focus {
     visibility: visible;
     box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, 0.3);
   }
-  .header .bottom-bar .logo-holder .logo-brand {
-    margin: 0;
+  .header .bottom-bar .logo-holder {
+    margin-top: 1rem;
   }
   .header .bottom-bar nav {
     width: 100%;
@@ -1200,6 +1230,7 @@ select:focus {
     left: unset;
     right: 2rem;
     z-index: 1;
+    visibility: visible;
   }
   .header .bottom-bar .header-search-form .search-input {
     border-top-left-radius: 0.2rem;

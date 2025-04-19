@@ -743,7 +743,7 @@ select:focus {outline:none;}
             display:flex;
             align-items:center;
             justify-content:center;
-            background:rgba(60, 75, 158, 0.6);
+            background:rgba(60, 75, 158, 0.315);
             backdrop-filter:blur(80px);
             z-index:10000;
 
@@ -786,7 +786,7 @@ select:focus {outline:none;}
 
       .top-bar {display:flex;
                 flex-wrap:nowrap;
-                gap:2rem;
+                gap:1rem;
                 justify-content:space-between;
                 align-items:center;
                 padding:0.3rem 1rem;
@@ -794,6 +794,27 @@ select:focus {outline:none;}
                 border-bottom:1px solid var(--grayblue7);
 
             .left-block {gap:1rem;
+
+                  .logo-holder {max-width:7rem;
+                                height:2.5rem;
+                                display:flex;
+                                justify-content:center;
+                                align-items:center;
+                                padding:0;
+                                display:none;
+
+                        .logo-brand {width:100%;
+                                     height:100%;
+                                     padding:0;
+                                     margin:0;
+
+                              img {width:100%;
+                                   height:100%;
+                                   padding:0;
+                                   object-fit:contain;}
+                        }
+                  }
+
                   .adding-list-btn {font-size:1rem;
                                     padding:0.3rem 1rem;
                                     white-space:nowrap;
@@ -883,19 +904,19 @@ select:focus {outline:none;}
       .bottom-bar {gap:2rem;
                    width:100%;
                    height:fit-content;
-                   padding:0 2rem;
+                   padding:0.6rem 2rem;
                    background-color:var(--blue17);
                    position:relative;
 
             .logo-holder {max-width:7rem;
-                          height:4rem;
+                          height:2.5rem;
                           display:flex;
                           justify-content:center;
                           align-items:center;
                           padding:0;
 
-                  .logo-brand {width:fit-content;
-                               height:fit-content;
+                  .logo-brand {width:100%;
+                               height:100%;
                                padding:0;
                                margin:0;
 
@@ -964,6 +985,7 @@ select:focus {outline:none;}
                                  box-shadow:none;
                                  z-index:-1;
                                  transition:all 0.4s linear;
+                                 visibility:hidden;
 
                   .search-input {padding:1rem 1.5rem;
                                  width:calc(100% - 3.3rem);
@@ -992,7 +1014,8 @@ select:focus {outline:none;}
                   }
             }
 
-            &.view-search-form .header-search-form {top:4rem;}
+            &.view-search-form .header-search-form {top:3.7rem;
+                                                    visibility:visible;}
       }
 
       @media (min-width:768px){
@@ -1016,10 +1039,12 @@ select:focus {outline:none;}
 
             .top-bar {
                   .left-block {
-                        .adding-list-btn {font-weight:normal;
-                                          padding:0.2rem 0.6rem;}
 
-                        .contact-menu {
+                        .logo-holder {display:block;}
+
+                        .adding-list-btn {display:none;}
+
+                        .contact-menu {display:none;
                               li a {
                                     span,address {font-size:0.9rem;
                                                   font-weight:normal;}
@@ -1038,9 +1063,11 @@ select:focus {outline:none;}
                          width:0 !important;
                          height:100%;
                          padding:0 2rem 1rem 1rem;
+                         display:flex;
                          flex-direction:column;
                          justify-content:flex-start;
                          align-items:flex-start;
+                         gap:2rem;
                          opacity:0;
                          z-index:1000;
                          overflow-y:auto;
@@ -1052,9 +1079,7 @@ select:focus {outline:none;}
                                    visibility:visible;
                                    box-shadow:100vh 100vh 100vh 100vh rgba(0,0,0,0.3);}
 
-                  .logo-holder {
-                        .logo-brand {margin:0;}
-                  }
+                  .logo-holder {margin-top:1rem;}
 
                   nav {width:100%;
                         ul {flex-direction:column;
@@ -1086,6 +1111,7 @@ select:focus {outline:none;}
                                        left:unset;
                                        right:2rem;
                                        z-index:1;
+                                       visibility:visible;
 
                                     .search-input {border-top-left-radius:0.2rem;
                                                    border-bottom-left-radius:0.2rem;
