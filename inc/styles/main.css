@@ -2127,11 +2127,11 @@ select:focus {
 .sell-apartments-section .section-container .arrows .arrow-right {
   right: 1rem;
 }
-.sell-apartments-section .section-container #sliderdots {
+.sell-apartments-section .section-container .dots-menu {
   width: fit-content;
   margin: 1rem auto 0;
 }
-.sell-apartments-section .section-container #sliderdots .dot {
+.sell-apartments-section .section-container .dots-menu .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -2140,8 +2140,8 @@ select:focus {
   border-radius: 50%;
   cursor: pointer;
 }
-.sell-apartments-section .section-container #sliderdots .dot.active {
-  background-color: #333;
+.sell-apartments-section .section-container .dots-menu .dot.active {
+  background-color: var(--gray11);
 }
 @media (max-width: 1000px) {
   .sell-apartments-section .section-container .slider-wrapper {
@@ -2363,11 +2363,11 @@ select:focus {
 .sell-builds-section .section-container .arrows .arrow-right {
   right: 1rem;
 }
-.sell-builds-section .section-container #sliderdots {
+.sell-builds-section .section-container .dots-menu {
   width: fit-content;
   margin: 1rem auto 0;
 }
-.sell-builds-section .section-container #sliderdots .dot {
+.sell-builds-section .section-container .dots-menu .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -2376,7 +2376,7 @@ select:focus {
   border-radius: 50%;
   cursor: pointer;
 }
-.sell-builds-section .section-container #sliderdots .dot.active {
+.sell-builds-section .section-container .dots-menu .dot.active {
   background-color: var(--gray11);
 }
 @media (max-width: 1000px) {

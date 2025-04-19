@@ -1924,7 +1924,7 @@ select:focus {outline:none;}
                   .arrow-right {right:1rem;}
             }
 
-            #sliderdots {width:fit-content;
+            .dots-menu {width:fit-content;
                          margin:1rem auto 0;
 
                   .dot {display:inline-block;
@@ -1934,7 +1934,7 @@ select:focus {outline:none;}
                         background-color:#ccc;
                         border-radius:50%;
                         cursor:pointer;
-                        &.active {background-color:#333;}
+                        &.active {background-color:var(--gray11);}
                   }
             }
       }
@@ -2139,7 +2139,7 @@ select:focus {outline:none;}
                   .arrow-right {right:1rem;}
             }
 
-            #sliderdots {width:fit-content;
+            .dots-menu {width:fit-content;
                          margin:1rem auto 0;
 
                   .dot {display:inline-block;
