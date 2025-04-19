@@ -1642,46 +1642,38 @@ select:focus {outline:none;}
                       gap:1.5rem;
                       margin:auto;
 
-            .box {flex:1 1 20rem;
+            .box {flex:1 1 25rem;
                   padding:0;
 
-                  figure {text-align:center;
-                          height:fit-content;
-                          padding:1rem 2rem;
+                  figure {min-height:19rem;
+                          padding:1rem 1rem 0.4rem;
                           margin:0;
                           display:block;
-                          align-items:center;
-                          justify-content:center;
+                          text-align:center;
                           border-radius:0.3rem;
                           background-color:var(--lightblue5);
                           box-shadow:var(--box-shadow6);
                           position:relative;
 
-                        .image-icon {width:8rem;
-                                     height:8rem;
-                                     display:flex;
-                                     justify-content:center;
-                                     align-items:center;
-                                     border-radius:50%;
-                                     margin:0 auto 1.8rem;
-                                     padding:1.5rem;
-                                     background:radial-gradient(var(--blue5), var(--blue16));
-                                     box-shadow:var(--box-shadow1);
-                                    img {width:90%;
-                                         text-align:center;}
+                        .image {width:8rem;
+                                height:8rem;
+                                display:flex;
+                                justify-content:center;
+                                align-items:center;
+                                border-radius:50%;
+                                margin:0 auto 1.8rem;
+                                padding:1.5rem;
+                                background:radial-gradient(var(--blue5), var(--blue16));
+                                box-shadow:var(--box-shadow1);
+                              img {width:90%;
+                                   object-fit:contain;
+                                   text-align:center;}
                         }
 
                         h3 {font-weight:bold;
                             font-size:1.1rem;
                             margin:1rem 0 0.5rem;
                             color:var(--gray11);}
-
-                        figcaption {width:85%;
-                                    display:flex;
-                                    padding:0;
-                                    margin:auto;
-                                    text-align:center;
-                                    justify-content:center;}
 
                         p {color:var(--black);
                            text-align:justify;
@@ -1694,7 +1686,7 @@ select:focus {outline:none;}
                                   left:0;
                                   bottom:0;
                                   width:0;
-                                  height:0.2rem;
+                                  height:0.15rem;
                                   background-color:rgb(0, 204, 255);
                                   transition:all 0.5s linear;}
 
@@ -1707,18 +1699,48 @@ select:focus {outline:none;}
             .figure {
                   .image-icon {width:13rem !important;
                                height:13rem !important;}
-
-                  p {text-align:left !important;
-                     font-size:1.4rem !important;}
             }
       }
 
       @media (max-width:768px){
-            .box-container {width:80%;
-                            flex-direction:column;
-                        .box {flex:1 1 5rem;
+            .box-container {
+                        .box figure {
                             p {text-align:left;}
                         }
+            }
+      }
+
+      @media (max-width:535px){
+            .box-container {
+                  .box {flex:1 1 15rem;
+                        figure {
+                              .image {width:6rem;
+                                      height:6rem;
+                                    img {width:95%;}
+                              }
+                        }
+                  }
+            }
+      }
+
+      @media (min-width:375px) and (max-width:435px){
+            .box-container {gap:0.7rem;
+                  .box figure {padding:1rem 1rem 0.1rem;
+                     .image {width:5rem;
+                             height:5rem;
+                             margin:0 auto 1rem !important;
+
+                             img {width:100%;}
+                     }
+                  }
+            }
+      }
+
+      @media (max-width:375px){
+            .box-container {
+                  .box {
+                        figure {min-height:fit-content !important;}
+                  }
             }
       }
 }
