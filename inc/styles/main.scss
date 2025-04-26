@@ -75,8 +75,22 @@
        --transparent-orange:#af5e392a;
        --transparent-orange1:#fdad0125;
        
+       --brown6:#c8a97e;
+       --brown7:#cca061;
+       --brown8:#b1884e;
+       --brown9:#9e7842;
+       --brown10:#836131;
        --brown11:rgb(185, 121, 0);
        --brown12:rgb(151, 99, 1);
+       --brown13:#683d02;
+       --brown14:#502f02;
+       --brown15:#3f2502;
+       --brown16:#2c1901;
+       --brown17:#241401;
+       --brown18:#140b01;
+
+       --graybrown:#582f22;
+       --graybrown2:#52271b;
 
        --red:#ffdada;
        --red2:#f8baba;
@@ -253,8 +267,6 @@
        --orange-red1:#ff2002;
        --orange-red2:rgb(255, 38, 0);
        --orange-red3:#d33505;
-       --darkbrown:rgb(88, 48, 33);
-       --darkbrown1:rgb(83, 59, 50);
        --darkred:#801b1b;
        --darkred1:#790303;
        --darkred2:#530303;
@@ -293,33 +305,37 @@
        --font-mont:'Mont', cursive;
        --font-Rale:'Rale', cursive;
 
-       --box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.7);
-       --box-shadow1:0 0.1rem 1rem rgba(2, 2, 2, 0.4);
-       --box-shadow2:0 0.5rem 1.5rem #0d2e2e23;
-       --box-shadow3:0 0.3rem 4rem #252c2c2f;
-       --box-shadow4:0 0 3px #eee;
+       --box-shadow:0 0 2px #eeeeee50;
+       --box-shadow1:0 0 2px #eeeeee27;
+       --box-shadow2:0 0 3px #9e9d9d38;
+       --box-shadow3:0 0 3px #7e7d7d21;
+       --box-shadow4:0 0 3px #252c2c2f;
        --box-shadow5:0 0 6px rgba(0, 0, 0, 0.13);
        --box-shadow6:0 0 3px rgba(2, 2, 2, 0.199);
        --box-shadow7:0 0 3px rgba(27, 27, 27, 0.116);
        --box-shadow8:0 0 6px rgba(2, 2, 2, 0.199);
        --box-shadow9:-5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
 
-       --orange-box-shadow:0 1px 0.9rem #fd9103c5;
+       --orange-box-shadow:0 0 3px #d47a032f;
        --red-box-shadow:0 0.1rem 1rem #e9290779;
-       --aqua-box-shadow:0 0 6px #00c7c7;
+       --aqua-box-shadow:0 0 4px #00c7c7;
        --blue-box-shadow:0 0 3px #3356ca48;
        --blue2-box-shadow:0 0 3px #3356ca65;
        --blue3-box-shadow:0 4px 6px rgba(39, 94, 254, 0.28);
-       --blue4-box-shadow:0 16px 12px rgba(39, 94, 254, 0.28);
        --blue5-box-shadow:0 0 6px #3356ca;
        --green-box-shadow:0 0 6px #09995d;
-       --yellow-box-shadow:0 0.1rem 0.5rem #fce07b46;
+       --yellow-box-shadow:0 0 3px #fce07b46;
+       --brown-box-shadow:0 0 3px #5f280246;
 
-       --text-shadow:0 0 2px rgba(5, 5, 5, 0.315);
-       --text-shadow2:0 0 4px rgba(5, 5, 5, 0.692);
-       --text-shadow3:0 0 4px #fff;
-       --text-shadow4:0 0 4px #00ffff9f;
-       --text-shadow5:0 0 4px rgb(6, 150, 42);}
+       --text-shadow:0 0 4px #fff;
+       --text-shadow2:0 0 3px #ffffff7c;
+       --text-shadow3:0 0 3px rgba(5, 5, 5, 0.315);
+       --text-shadow4:0 0 3px rgba(5, 5, 5, 0.692);
+       --text-shadow5:0 0 3px rgba(5, 5, 5, 0.404);
+       --text-shadow6:0 0 3px rgba(5, 5, 5, 0.226);
+       --text-shadow7:0 0 3px rgba(27, 27, 27, 0.116);
+       --aqua-text-shadow:0 0 4px #00ffff7a;
+       --green-text-shadow:0 0 4px rgba(6, 150, 42, 0.555);}
 
 .d-flex-r-st-st {display:flex;
                  flex-direction:row;
@@ -776,9 +792,9 @@ select:focus {outline:none;}
 }
 
 /*
- ************
+ **********
   # Header
- ************
+ **********
 */
 .header {position:fixed;
          top:0;
@@ -1630,9 +1646,9 @@ select:focus {outline:none;}
 }
 
 /*
- *************
+ ************
   # services
- *************
+ ************
 */
 .services-section {
 
@@ -3406,9 +3422,9 @@ select:focus {outline:none;}
 }
 
 /*
- ***********
+ **********
   # Footer
- ***********
+ **********
 */
 footer {background:linear-gradient(to top, var(--blue18) 0%, var(--blue18) 20%, var(--blue17) 50%, var(--blue18) 80%, var(--blue18) 100%);
 

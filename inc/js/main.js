@@ -38,8 +38,8 @@ if(document.querySelector(".open-btn") && window.innerWidth < 768){
 }
     
 //search icon
-const bottomBarHeader = document.querySelector(".header .bottom-bar");
-const headerSearchBtn = document.querySelector(".header .bottom-bar .services-buttons .search-btn");
+const bottomBarHeader = document.querySelector("header .bottom-bar");
+const headerSearchBtn = document.querySelector("header .bottom-bar .services-buttons .search-btn");
 const headerSearchForm = document.querySelector("header .bottom-bar .header-search-form");
 
 if (window.innerWidth > 768) {
@@ -193,26 +193,26 @@ function heroSlider(options){
     }
 
     function duringDrag(e) {
-        if (!isDragging) return;
-        const currentX = e.clientX;
-        const dragDistance = currentX - startX;
-        sliderWrapper.scrollLeft = scrollStart - dragDistance;
+      if (!isDragging) return;
+      const currentX = e.clientX;
+      const dragDistance = currentX - startX;
+      sliderWrapper.scrollLeft = scrollStart - dragDistance;
     }
 
     function endDrag() {
-        if (!isDragging) return;
-        isDragging = false;
-        const scrollLeft = sliderWrapper.scrollLeft;
+      if (!isDragging) return;
+      isDragging = false;
+      const scrollLeft = sliderWrapper.scrollLeft;
 
-        if (Math.abs(scrollLeft - currentIndex * slideWidth) > slideWidth / 4) { // Snap to nearest slide after drag
-            if (scrollLeft > currentIndex * slideWidth) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
-        } else {
-            updateSlides();
-        }
+      if (Math.abs(scrollLeft - currentIndex * slideWidth) > slideWidth / 4) { // Snap to nearest slide after drag
+          if (scrollLeft > currentIndex * slideWidth) {
+              nextSlide();
+          } else {
+              prevSlide();
+          }
+      } else {
+          updateSlides();
+      }
     }
 
     prevBtn.addEventListener('click', prevSlide);
