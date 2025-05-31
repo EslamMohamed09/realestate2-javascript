@@ -37,7 +37,7 @@ if(document.querySelector(".open-btn") && window.innerWidth < 768){
     };
 }
     
-//search icon
+//header search form
 const bottomBarHeader = document.querySelector("header .bottom-bar");
 const headerSearchBtn = document.querySelector("header .bottom-bar .services-buttons .search-btn");
 const headerSearchForm = document.querySelector("header .bottom-bar .header-search-form");
