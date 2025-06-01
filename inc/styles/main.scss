@@ -349,6 +349,24 @@
        --blue-text-shadow:0 0 3px #00b7ff27;
        --green-text-shadow:0 0 4px rgba(6, 150, 42, 0.555);}
 
+.dark-theme-variable {--background-color:#181a1e;
+                      --black:#fff;
+                      --black2:rgb(52, 65, 82);
+                      --white:#202528;
+                      --white2:#000;
+                      --gray10:#fff;
+                      --gray11:#fff;
+                      --blue4:#e5e5e7;
+                      --blue2:#dce1eb;
+                      --gray:#343535;
+                      --gray1:#cbe8ff;
+                      --gray4:#1d1d1d;
+                      --gray8:#f0eded;
+                      --primary10:rgb(230, 130, 0);
+                      --gray-yellow6:rgb(255, 196, 0);
+                      --box-shadow6:0 0 3px rgb(0, 0, 0);
+                      --blue-box-shadow:0 0 3px #0240696c;}
+
 .d-flex-r-st-st {display:flex;
                  flex-direction:row;
                  justify-content:flex-start;
@@ -469,23 +487,28 @@
                    justify-content:flex-end;
                    align-items:flex-end}
 
-::-webkit-scrollbar {width:8px;}
-
-::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--blue14) 0%, var(--blue6) 100%);
-                           border-radius:10px;}
-
-*::selection {background:var(--blue14);
-              color:var(--white);}
+body {overflow-x:hidden;
+      background-color:var(--background-color);}
 
 html {font-size:83% !important;
       scroll-behavior:smooth;}
 
 @media(max-width:900px){ html {font-size:73% !important;} }
-@media(max-width:768px){ html {font-size:55% !important;} }
-@media(max-width:500px){ html {font-size:63% !important;} }
+@media(max-width:768px){ html {font-size:70% !important;} }
+@media(max-width:500px){ html {font-size:65% !important;} }
 
-body {overflow-x:hidden;
-      background-color:var(--background-color);}
+::-webkit-scrollbar {width:0.6rem;}
+
+::-webkit-scrollbar-thumb {background-image:linear-gradient(125deg, var(--blue14) 0%, var(--blue6) 100%);
+                           border-radius:0;}
+
+*::selection {background:var(--blue14);
+              color:var(--white);}
+
+
+
+
+
 
 section {padding:2rem 7%;
 

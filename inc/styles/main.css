@@ -71,6 +71,11 @@
   --orange10:rgb(248, 191, 85);
   --transparent-orange:#af5e392a;
   --transparent-orange1:#fdad0125;
+  --brown1:#f1e6d6;
+  --brown2:#ecdac1;
+  --brown3:#ebd3b3;
+  --brown4:#ebcea6;
+  --brown5:#d8bb93;
   --brown6:#c8a97e;
   --brown7:#cca061;
   --brown8:#b1884e;
@@ -141,19 +146,23 @@
   --olive9:#5ff7f7;
   --olive10:#44f7f7;
   --olive11:#04f7f7;
-  --olive12:#02a8a8;
-  --olive13:#028d8d;
-  --olive14:#3e8181;
-  --olive15:#026b6b;
-  --olive16:#015050;
-  --olive17:#004242;
-  --olive18:#013535;
-  --olive19:#b9c2c2;
-  --olive20:#9ab1b1;
-  --olive21:#7b9494;
-  --olive22:#616666;
-  --olive23:#536e6e;
-  --olive24:#4a7474;
+  --olive12:#04d4d4;
+  --olive13:#02a8a8;
+  --olive14:#028d8d;
+  --olive15:#3e8181;
+  --olive16:#026b6b;
+  --olive17:#015050;
+  --olive18:#004242;
+  --olive19:#013535;
+  --olive20:#012727;
+  --olive21:#011f1f;
+  --olive22:#001313;
+  --navyolive1:#b9c2c2;
+  --navyolive2:#9ab1b1;
+  --navyolive3:#7b9494;
+  --navyolive4:#616666;
+  --navyolive5:#536e6e;
+  --navyolive6:#4a7474;
   --transparent-olive:#0aa0a01e;
   --milky:#eef2f7;
   --milky2:#e8ebf0;
@@ -292,19 +301,21 @@
   --aqua-box-shadow:0 0 4px #00c7c7;
   --blue-box-shadow:0 0 3px #3356ca48;
   --blue2-box-shadow:0 0 3px #3356ca65;
-  --blue3-box-shadow:0 4px 6px rgba(39, 94, 254, 0.28);
+  --blue3-box-shadow:0 0 5px #3356ca65;
   --blue5-box-shadow:0 0 6px #3356ca;
   --green-box-shadow:0 0 6px #09995d;
   --yellow-box-shadow:0 0 3px #fce07b46;
   --brown-box-shadow:0 0 3px #5f280246;
+  --brown-box-shadow2:0 0.1rem 1rem rgba(165, 88, 1, 0.7);
   --text-shadow:0 0 4px #fff;
   --text-shadow2:0 0 3px #ffffff7c;
-  --text-shadow3:0 0 3px rgba(5, 5, 5, 0.315);
+  --text-shadow3:0 0 3px rgba(80, 80, 80, 0.315);
   --text-shadow4:0 0 3px rgba(5, 5, 5, 0.692);
   --text-shadow5:0 0 3px rgba(5, 5, 5, 0.404);
   --text-shadow6:0 0 3px rgba(5, 5, 5, 0.226);
   --text-shadow7:0 0 3px rgba(27, 27, 27, 0.116);
-  --aqua-text-shadow:0 0 4px #00ffff7a;
+  --aqua-text-shadow:0 0 3px #00ffff27;
+  --blue-text-shadow:0 0 3px #00b7ff27;
   --green-text-shadow:0 0 4px rgba(6, 150, 42, 0.555);
 }
 
@@ -477,12 +488,12 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0.6rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(125deg, var(--blue14) 0%, var(--blue6) 100%);
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 *::selection {
@@ -502,12 +513,12 @@ html {
 }
 @media (max-width: 768px) {
   html {
-    font-size: 55% !important;
+    font-size: 70% !important;
   }
 }
 @media (max-width: 500px) {
   html {
-    font-size: 63% !important;
+    font-size: 65% !important;
   }
 }
 body {
