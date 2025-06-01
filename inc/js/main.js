@@ -3,9 +3,7 @@ window.onload = function(){
 	document.getElementById("loading").style.display = "block";
 }
 
-/**
- * Header Active
-*/
+/** Header Active **/
 const header = document.querySelector("header");
 
 document.body.style.paddingTop = `${header.offsetHeight}px`;
