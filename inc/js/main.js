@@ -5,19 +5,32 @@ window.onload = function(){
 
 /** Header Active **/
 const header = document.querySelector("header");
+const topBar = document.querySelector('header .top-bar');
 
 document.body.style.paddingTop = `${header.offsetHeight}px`;
 
 window.addEventListener("scroll", function () {
-  this.window.scrollY > 10 ? header.classList.add("active") : header.classList.remove("active");
-});
+  if (window.innerWidth >= 768 && window.scrollY > 30) {
+      header.classList.add("header-scroll");
+  } else {
+    header.classList.remove("header-scroll");
+    if (header.classList.length === 0) {header.removeAttribute('class');}
+  }
 
+  if (window.innerWidth < 768 && window.scrollY > 30) {
+      topBar.classList.add("header-scroll");
+  } else {
+    topBar.classList.remove("header-scroll");
+    if (topBar.classList.length === 0) {topBar.removeAttribute('class');}
+  }
+});
 
 if(document.querySelector(".open-btn") && window.innerWidth < 768){
     const openBtn = document.querySelector("header .top-bar .right-block .open-btn");
     const bottomBar = document.querySelector("header .bottom-bar");
     openBtn.onclick = () => {
       bottomBar.classList.toggle("mobile-header");
+      if (header.classList.length === 0) {header.removeAttribute('class');}
 
       let icon = openBtn.querySelector("i") || openBtn.querySelector("svg");
 

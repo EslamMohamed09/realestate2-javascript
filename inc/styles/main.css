@@ -1188,23 +1188,9 @@ header .bottom-bar.view-search-form .header-search-form {
   visibility: visible;
 }
 @media (min-width: 768px) {
-  header.active .main-header {
-    top: 0;
-    background: var(--blue10);
+  header.header-scroll {
     box-shadow: 0 0.5rem 2rem rgba(55, 0, 255, 0.7);
     transition: all 1s linear;
-  }
-  header.active .main-header .navbar {
-    background: var(--blue10);
-  }
-  header.active .main-header .navbar .services-buttons #search-icon {
-    background-color: var(--blue14);
-  }
-  header.active .main-header .navbar .services-buttons #search-icon:hover {
-    background-color: var(--white);
-  }
-  header.active .main-header .navbar .services-buttons #search-icon:hover .fa-search {
-    color: var(--blue14);
   }
 }
 @media (max-width: 768px) {
@@ -1226,6 +1212,10 @@ header .bottom-bar.view-search-form .header-search-form {
   }
   header .top-bar .right-block .open-btn {
     display: block;
+  }
+  header .top-bar.header-scroll {
+    box-shadow: 0 0.5rem 2rem rgba(55, 0, 255, 0.7);
+    transition: all 1s linear;
   }
   header .bottom-bar {
     position: fixed;
