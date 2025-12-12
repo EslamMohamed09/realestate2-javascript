@@ -100,32 +100,32 @@ function heroSlider(options){
     }
 
     function buildIndicators(){
-        dotsWrapper = document.createElement('ul');
-        dotsWrapper.classList.add('dots-menu');
-        section.appendChild(dotsWrapper);
+      dotsWrapper = document.createElement('ul');
+      dotsWrapper.classList.add('dots-menu');
+      section.appendChild(dotsWrapper);
 
-        for (let i=0; i<slides.length; i++) {
-            const indicator = document.createElement('li');
-            indicator.setAttribute('data-index', i);
-            dotsWrapper.appendChild(indicator);
-        
-            indicator.addEventListener('click', () => {
-              currentIndex = i;
-              updateSlides();
-            });
-        }
+      for (let i=0; i<slides.length; i++) {
+          const indicator = document.createElement('li');
+          indicator.setAttribute('data-index', i);
+          dotsWrapper.appendChild(indicator);
+      
+          indicator.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlides();
+          });
+      }
 
-        dotsWrapper.children[currentIndex].classList.add('active');
+      dotsWrapper.children[currentIndex].classList.add('active');
 
-        if(window.innerWidth < 500){
-           if(dotsWrapper.children.length > 8){
-              dotsWrapper.style.display = 'none';
-           }
-        } else {
-          if(dotsWrapper.children.length > 12){
-             dotsWrapper.style.display = 'none';
+      if(window.innerWidth < 500){
+          if(dotsWrapper.children.length > 8){
+            dotsWrapper.style.display = 'none';
           }
+      } else {
+        if(dotsWrapper.children.length > 12){
+            dotsWrapper.style.display = 'none';
         }
+      }
     }
 
     function updateSlides(){
@@ -141,40 +141,40 @@ function heroSlider(options){
         }
       });
 
-        function animateScroll(start, end, duration) {
-            let startTime = null;
-    
-            function animation(currentTime) {
-                if (!startTime) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = easeInOutQuad(timeElapsed, start, end - start, duration);
-    
-                sliderWrapper.scrollLeft = run;
-                if (timeElapsed < duration) requestAnimationFrame(animation);
-            }
-    
-            function easeInOutQuad(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
-    
-            requestAnimationFrame(animation);
-        }
-    
-        animateScroll(sliderWrapper.scrollLeft, scrollPosition, 1100);
-        
-        sliderWrapper.scrollTo({
-            left:scrollPosition,
-            behavior:"smooth"
-        });
-    
-        if (currentIndex >= slides.length) {
-            currentIndex = 0;
-            sliderWrapper.scrollLeft = 0;
-        }
-    }
+      function animateScroll(start, end, duration) {
+          let startTime = null;
+  
+          function animation(currentTime) {
+              if (!startTime) startTime = currentTime;
+              const timeElapsed = currentTime - startTime;
+              const run = easeInOutQuad(timeElapsed, start, end - start, duration);
+  
+              sliderWrapper.scrollLeft = run;
+              if (timeElapsed < duration) requestAnimationFrame(animation);
+          }
+  
+          function easeInOutQuad(t, b, c, d) {
+              t /= d / 2;
+              if (t < 1) return c / 2 * t * t + b;
+              t--;
+              return -c / 2 * (t * (t - 2) - 1) + b;
+          }
+  
+          requestAnimationFrame(animation);
+      }
+  
+      animateScroll(sliderWrapper.scrollLeft, scrollPosition, 1100);
+      
+      sliderWrapper.scrollTo({
+        left:scrollPosition,
+        behavior:"smooth"
+      });
+  
+      if (currentIndex >= slides.length) {
+          currentIndex = 0;
+          sliderWrapper.scrollLeft = 0;
+      }
+  }
 
     function prevSlide() {
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
@@ -198,9 +198,9 @@ function heroSlider(options){
     }
 
     function startDrag(e) {
-        isDragging = true;
-        startX = e.clientX;
-        scrollStart = sliderWrapper.scrollLeft;
+      isDragging = true;
+      startX = e.clientX;
+      scrollStart = sliderWrapper.scrollLeft;
     }
 
     function duringDrag(e) {

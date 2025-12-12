@@ -53,9 +53,10 @@
   --yellow8:#ffeba2;
   --yellow9:#fde077;
   --yellow10:#fdd852;
-  --yellow11:#ffcc14;
-  --yellow12:#f7c205;
-  --yellow13:#dfb006;
+  --yellow11:#fad13d;
+  --yellow12:#ffcc14;
+  --yellow13:#f7c205;
+  --yellow14:#dfb006;
   --transparent-yellow:#f7db6b4f;
   --transparent-yellow2:#b6b61d27;
   --shin-orange:rgb(255, 153, 0);
@@ -115,7 +116,7 @@
   --green3:#d1f7dc;
   --green4:#c0f3cf;
   --green5:#aef0c2;
-  --green6:#658f72;
+  --green6:#98f1b3;
   --green7:#7ef8a3;
   --green8:#60d480;
   --green9:#27fc67;
@@ -124,16 +125,19 @@
   --green12:#03ce40;
   --green13:#00b135;
   --green14:#03912e;
-  --green15:#00A97F;
-  --green16:#209978;
-  --green17:#17795E;
-  --green18:#017524;
-  --green19:#045a1e;
-  --green20:#044919;
-  --green21:#053a15;
-  --green22:#063113;
-  --green23:#05270f;
-  --green24:#031a0a;
+  --green15:#017524;
+  --green16:#025f09;
+  --green17:#024e08;
+  --green18:#045a1e;
+  --green19:#044919;
+  --green20:#053a15;
+  --green21:#063113;
+  --green22:#05270f;
+  --green23:#031a0a;
+  --green24:#658f72;
+  --green25:#209978;
+  --green26:#00A97F;
+  --green27:#17795E;
   --olive:#eff7f7;
   --olive1:#e5f5f5;
   --olive2:#def3f3;
@@ -303,7 +307,8 @@
   --blue2-box-shadow:0 0 3px #3356ca65;
   --blue3-box-shadow:0 0 5px #3356ca65;
   --blue5-box-shadow:0 0 6px #3356ca;
-  --green-box-shadow:0 0 6px #09995d;
+  --green-box-shadow:0 0 5px #09995da2;
+  --green2-box-shadow:0 0 6px rgba(9, 153, 93, 0.781);
   --yellow-box-shadow:0 0 3px #fce07b46;
   --brown-box-shadow:0 0 3px #5f280246;
   --brown-box-shadow2:0 0.1rem 1rem rgba(165, 88, 1, 0.7);
@@ -1339,6 +1344,7 @@ header .bottom-bar.view-search-form .header-search-form {
   display: flex;
   flex-direction: row !important;
   overflow: hidden;
+  scroll-behavior: auto;
 }
 .hero-section .slider-wrapper .hero-slide-item {
   flex: 0 0 100%;
@@ -1984,6 +1990,7 @@ header .bottom-bar.view-search-form .header-search-form {
   gap: 1.5rem;
   background: transparent;
   overflow: hidden;
+  scroll-behavior: auto;
 }
 .sell-apartments-section .section-container .slider-wrapper .box {
   flex: 1 1 20rem;
@@ -2220,6 +2227,7 @@ header .bottom-bar.view-search-form .header-search-form {
   gap: 1.5rem;
   background: transparent;
   overflow: hidden;
+  scroll-behavior: auto;
 }
 .sell-builds-section .section-container .slider-wrapper .box {
   flex: 1 1 20rem;

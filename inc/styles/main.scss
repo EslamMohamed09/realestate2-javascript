@@ -1234,6 +1234,7 @@ header {position:fixed;
                        display:flex;
                        flex-direction:row !important;
                        overflow:hidden;
+                       scroll-behavior:auto;
 
             .hero-slide-item {flex:0 0 100%;
                               max-width:100%;
@@ -1807,6 +1808,7 @@ header {position:fixed;
                              gap:1.5rem;
                              background:transparent;
                              overflow:hidden;
+                             scroll-behavior:auto;
 
                   .box {flex:1 1 20rem;
                         display:block;
@@ -2022,6 +2024,7 @@ header {position:fixed;
                              gap:1.5rem;
                              background:transparent;
                              overflow:hidden;
+                             scroll-behavior:auto;
 
                   .box {flex:1 1 20rem;
                         display:block;
