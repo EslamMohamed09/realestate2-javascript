@@ -939,9 +939,9 @@ select:focus {
 }
 
 /*
- **********
+ *********
   # Header
- **********
+ *********
 */
 header {
   position: fixed;
@@ -1324,9 +1324,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- ***********
+ ******
  # Hero
- ***********
+ ******
 */
 .hero-section {
   width: 100%;
@@ -1686,9 +1686,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- **********
+ ********
   # About
- **********
+ ********
 */
 .about-section .section-heading {
   text-align: left;
@@ -1858,9 +1858,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- ************
+ ***********
   # services
- ************
+ ***********
 */
 .services-section .box-container {
   width: 100%;
@@ -1973,9 +1973,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- *******************
+ ******************
   # Apartments-Sell
- *******************
+ ******************
 */
 .sell-apartments-section .section-container {
   position: relative;
@@ -2207,9 +2207,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- ******************
+ *****************
   # Builds & Lands
- ******************
+ *****************
 */
 .sell-builds-section {
   position: relative;
@@ -2444,9 +2444,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- ***********
+ *********
   # Search
- ***********
+ *********
 */
 .search-section .section-container {
   width: 100%;
@@ -2617,9 +2617,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- **************
+ ************
   # Aminities
- **************
+ ************
 */
 .aminities-section .section-container {
   display: grid;
@@ -2902,9 +2902,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- *****************
+ ****************
   # Property-list
- *****************
+ ****************
 */
 .property-list-section .tabs-menu {
   display: flex;
@@ -3101,9 +3101,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- **************
+ *************
   # Contacting
- **************
+ *************
 */
 .contacting-section {
   padding-left: 0 !important;
@@ -3502,9 +3502,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- *********************
+ ********************
  # Newsletter-Section
- *********************
+ ********************
 */
 .newsletter-section {
   min-height: 20rem;
@@ -3640,9 +3640,9 @@ header .bottom-bar.view-search-form .header-search-form {
 }
 
 /*
- **********
+ *********
   # Footer
- **********
+ *********
 */
 footer {
   background: linear-gradient(to top, var(--blue18) 0%, var(--blue18) 20%, var(--blue17) 50%, var(--blue18) 80%, var(--blue18) 100%);
